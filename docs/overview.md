@@ -25,7 +25,7 @@ The parent organization can support future software products and services while 
 
 Keep revenue and expenses separate by business unit, including the GeoPoliticalMedia channel. An internal transfer from a channel to its parent is not new consolidated revenue.
 
-**Current repository:** branding assets and concept galleries exist, including [the latest logo concepts](../public/assets/concepts/finalizing/README.md). There is no implemented application, authenticated dashboard, connected channel, or production pipeline yet.
+**Current repository:** branding assets and concept galleries exist, including [the proof-of-concept logo studies](../public/assets/concepts/poc/README.md) and [alternate logo directions](../public/assets/concepts/alternate/README.md). There is no implemented application, authenticated dashboard, connected channel, or production pipeline yet.
 
 ## 2. Starting Strategy
 

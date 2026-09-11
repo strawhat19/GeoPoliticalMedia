@@ -13,4 +13,4 @@ The refinement rounds between the initial concepts and the latest Earth-with-clo
 
 The last two rounds establish the current geometry: clearance between the ring and both G tips, and a more conventional P with a smaller round Earth inset and longer stem.
 
-[Initial concepts](../initial/README.md) · [Finalizing concepts](../finalizing/README.md) · [All stages](../README.md)
+[Initial concepts](../initial/README.md) · [Proof-of-concept studies](../poc/README.md) · [All stages](../README.md)

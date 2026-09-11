@@ -1,6 +1,6 @@
-# Finalizing Logo Concepts
+# Proof-of-Concept Logo Studies
 
-Refinements of the Orbital G and Global Signal families, with red rings and blue-green Earths. The newest round adds four examples with dark and light presentations, followed by the earlier eight dark-background explorations and cloud studies.
+Preserved proof-of-concept refinements of the Orbital G and Global Signal families, with red rings and blue-green Earths. The newest round adds four examples with dark and light presentations, followed by the earlier eight dark-background explorations and cloud studies.
 
 ## Additional Orbital G Variants
 
