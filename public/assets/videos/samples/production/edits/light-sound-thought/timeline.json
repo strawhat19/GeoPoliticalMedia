@@ -1,0 +1,61 @@
+{
+  "duration": 31.2,
+  "scenes": [
+    {
+      "kind": "image",
+      "source": "speed-lightning.png",
+      "start": 0,
+      "end": 3.066666666666667,
+      "zoom": 1.02,
+      "focus": 0.3
+    },
+    {
+      "kind": "image",
+      "source": "el-nino-ocean.png",
+      "start": 3.066666666666667,
+      "end": 7.566666666666666,
+      "zoom": 1.03,
+      "focus": 0.28
+    },
+    {
+      "kind": "image",
+      "source": "speed-lightning.png",
+      "start": 7.566666666666666,
+      "end": 12.233333333333333,
+      "zoom": 1.15,
+      "focus": 0.45
+    },
+    {
+      "kind": "image",
+      "source": "speed-neuron.png",
+      "start": 12.233333333333333,
+      "end": 18.166666666666668,
+      "zoom": 1.04,
+      "focus": 0.45
+    },
+    {
+      "kind": "image",
+      "source": "speed-neuron.png",
+      "start": 18.166666666666668,
+      "end": 23.5,
+      "zoom": 1.16,
+      "focus": 0.26
+    },
+    {
+      "kind": "image",
+      "source": "el-nino-ocean.png",
+      "start": 23.5,
+      "end": 27.566666666666666,
+      "zoom": 1.15,
+      "focus": 0.22
+    },
+    {
+      "kind": "image",
+      "source": "speed-neuron.png",
+      "start": 27.566666666666666,
+      "end": 31.2,
+      "zoom": 1.02,
+      "focus": 0.35
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "duration": 27.533333333333335,
+  "scenes": [
+    {
+      "kind": "image",
+      "source": "india-himalaya.png",
+      "start": 0,
+      "end": 5.933333333333334,
+      "zoom": 1.02,
+      "focus": 0.4
+    },
+    {
+      "kind": "video",
+      "source": "india-underthrust.mp4",
+      "start": 5.933333333333334,
+      "end": 8.7,
+      "source_start": 0,
+      "source_length": 4.2
+    },
+    {
+      "kind": "image",
+      "source": "india-himalaya.png",
+      "start": 8.7,
+      "end": 12.933333333333334,
+      "zoom": 1.17,
+      "focus": 0.55
+    },
+    {
+      "kind": "video",
+      "source": "india-underthrust.mp4",
+      "start": 12.933333333333334,
+      "end": 20.933333333333334,
+      "source_start": 4.0,
+      "source_length": 6.0
+    },
+    {
+      "kind": "image",
+      "source": "india-himalaya.png",
+      "start": 20.933333333333334,
+      "end": 27.533333333333335,
+      "zoom": 1.04,
+      "focus": 0.38
+    }
+  ]
+}

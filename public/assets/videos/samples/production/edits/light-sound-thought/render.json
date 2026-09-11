@@ -1,0 +1,16 @@
+{
+  "slug": "light-sound-thought",
+  "duration": 31.2,
+  "size": [
+    720,
+    1280
+  ],
+  "fps": 30,
+  "output": "light-sound-thought.mp4",
+  "poster": "light-sound-thought-poster.jpg",
+  "scene_count": 7,
+  "audio_source": "audio/light-sound-thought.wav",
+  "script_sha256": "c179f76d8f192339366758bb079fb3475d9384c234947c44df4cc07bb7aa2906",
+  "synthetic_voice": true,
+  "visuals": "AI-generated scenes, cinematic camera moves, and explanatory animation"
+}

@@ -1,0 +1,16 @@
+{
+  "slug": "el-nino-2026",
+  "duration": 31.366666666666667,
+  "size": [
+    720,
+    1280
+  ],
+  "fps": 30,
+  "output": "el-nino-2026.mp4",
+  "poster": "el-nino-2026-poster.jpg",
+  "scene_count": 6,
+  "audio_source": "audio/el-nino-2026.wav",
+  "script_sha256": "113cfa3bff849153b4f87cd56b39db9877bd86827f6582d5a4581a7f81998066",
+  "synthetic_voice": true,
+  "visuals": "AI-generated scenes, cinematic camera moves, and explanatory animation"
+}

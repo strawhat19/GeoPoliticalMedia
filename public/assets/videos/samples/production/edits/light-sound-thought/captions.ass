@@ -1,0 +1,53 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 720
+PlayResY: 1280
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Caption,Arial,36,&H00F7F5EE,&H00F7F5EE,&H00140F0A,&H80000000,-1,0,0,0,100,100,0,0,1,1.6,1.1,2,52,52,155,1
+Style: Hook,Arial,58,&H00F7F5EE,&H00F7F5EE,&H00312011,&H80000000,-1,0,0,0,100,100,-1,0,1,1,1,8,38,38,112,1
+Style: Key,Arial,33,&H00F7F5EE,&H00F7F5EE,&H00140F0A,&H80000000,-1,0,0,0,100,100,0,0,1,1,1,5,46,46,0,1
+Style: Number,Arial,80,&H008FD3FF,&H008FD3FF,&H00140F0A,&H80000000,-1,0,0,0,100,100,-1,0,1,1,1,5,38,38,0,1
+Style: Note,Arial,17,&H00ECE5DA,&H00ECE5DA,&H00140F0A,&H80000000,0,0,0,0,100,100,.8,0,1,.8,.7,7,40,40,48,1
+Style: Brand,Arial,22,&H00F7F5EE,&H00F7F5EE,&H00140F0A,&H80000000,-1,0,0,0,100,100,3,0,1,1,0,2,40,40,110,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 5,0:00:00.09,0:00:00.87,Caption,,0,0,0,,{\fad(100,90)}What's faster:
+Dialogue: 5,0:00:01.23,0:00:02.81,Caption,,0,0,0,,{\fad(100,90)}light, sound, or a thought?
+Dialogue: 5,0:00:03.06,0:00:04.75,Caption,,0,0,0,,{\fad(100,90)}Light in a vacuum travels
+Dialogue: 5,0:00:04.75,0:00:06.37,Caption,,0,0,0,,{\fad(100,90)}almost three hundred million
+Dialogue: 5,0:00:06.37,0:00:07.34,Caption,,0,0,0,,{\fad(100,90)}meters per second.
+Dialogue: 5,0:00:07.58,0:00:08.47,Caption,,0,0,0,,{\fad(100,90)}Sound in air
+Dialogue: 5,0:00:08.50,0:00:10.12,Caption,,0,0,0,,{\fad(100,90)}at twenty degrees Celsius?
+Dialogue: 5,0:00:10.37,0:00:11.99,Caption,,0,0,0,,{\fad(100,90)}About three hundred forty-three.
+Dialogue: 5,0:00:12.24,0:00:13.27,Caption,,0,0,0,,{\fad(100,90)}Your nerve signals?
+Dialogue: 5,0:00:13.53,0:00:14.70,Caption,,0,0,0,,{\fad(100,90)}Roughly half a meter
+Dialogue: 5,0:00:14.78,0:00:15.60,Caption,,0,0,0,,{\fad(100,90)}to over a hundred
+Dialogue: 5,0:00:15.60,0:00:16.60,Caption,,0,0,0,,{\fad(100,90)}meters per second,
+Dialogue: 5,0:00:16.83,0:00:17.91,Caption,,0,0,0,,{\fad(100,90)}depending on the fiber.
+Dialogue: 5,0:00:18.18,0:00:19.12,Caption,,0,0,0,,{\fad(100,90)}But a thought doesn't have
+Dialogue: 5,0:00:19.12,0:00:20.26,Caption,,0,0,0,,{\fad(100,90)}one travel speed.
+Dialogue: 5,0:00:20.51,0:00:22.21,Caption,,0,0,0,,{\fad(100,90)}It's signals plus processing
+Dialogue: 5,0:00:22.21,0:00:23.26,Caption,,0,0,0,,{\fad(100,90)}across a network.
+Dialogue: 5,0:00:23.50,0:00:25.25,Caption,,0,0,0,,{\fad(100,90)}Imagining the Moon instantly
+Dialogue: 5,0:00:25.25,0:00:27.27,Caption,,0,0,0,,{\fad(100,90)}doesn't send anything there.
+Dialogue: 5,0:00:27.58,0:00:29.29,Caption,,0,0,0,,{\fad(100,90)}Thinking time and travel speed
+Dialogue: 5,0:00:29.37,0:00:30.40,Caption,,0,0,0,,{\fad(100,90)}aren't the same thing.
+Dialogue: 2,0:00:00.05,0:00:02.95,Hook,,0,0,0,,{\fad(100,90)}LIGHT. SOUND.\NTHOUGHT.
+Dialogue: 2,0:00:03.07,0:00:07.57,Number,,0,0,0,,{\fad(100,90)\fs66\pos(360,380)}≈300,000,000
+Dialogue: 2,0:00:03.07,0:00:07.57,Key,,0,0,0,,{\fad(100,90)\pos(360,475)}METERS / SECOND\NLIGHT IN VACUUM
+Dialogue: 2,0:00:07.57,0:00:12.23,Number,,0,0,0,,{\fad(100,90)\pos(360,370)}≈343 m/s
+Dialogue: 2,0:00:07.57,0:00:12.23,Key,,0,0,0,,{\fad(100,90)\pos(360,460)}SOUND IN AIR · 20°C
+Dialogue: 2,0:00:12.23,0:00:18.17,Number,,0,0,0,,{\fad(100,90)\fs52\pos(360,190)}≈0.5 TO >100 m/s
+Dialogue: 2,0:00:12.23,0:00:18.17,Note,,0,0,0,,{\fad(100,90)\an5\pos(360,250)}AXON SIGNALS · DEPENDS ON FIBER
+Dialogue: 2,0:00:18.17,0:00:23.50,Key,,0,0,0,,{\fad(100,90)\pos(360,790)}THOUGHT HAS\NNO SINGLE TRAVEL SPEED
+Dialogue: 2,0:00:27.57,0:00:30.20,Key,,0,0,0,,{\fad(100,90)\fs42\pos(360,780)}THINKING TIME\N≠\NTRAVEL SPEED
+Dialogue: 1,0:00:07.57,0:00:09.57,Key,,0,0,0,,{\fad(100,90)\an5\pos(360,665)\p1\bord1.3\shad0\1a&HFF&\3c&HD6EFFF&\fscx50\fscy50\t(0,1950,\fscx650\fscy650\3a&HFF&)}m -45 0 b -45 -25 -25 -45 0 -45 b 25 -45 45 -25 45 0 b 45 25 25 45 0 45 b -25 45 -45 25 -45 0
+Dialogue: 1,0:00:08.27,0:00:10.27,Key,,0,0,0,,{\fad(100,90)\an5\pos(360,665)\p1\bord1.3\shad0\1a&HFF&\3c&HD6EFFF&\fscx50\fscy50\t(0,1950,\fscx650\fscy650\3a&HFF&)}m -45 0 b -45 -25 -25 -45 0 -45 b 25 -45 45 -25 45 0 b 45 25 25 45 0 45 b -25 45 -45 25 -45 0
+Dialogue: 1,0:00:08.97,0:00:10.97,Key,,0,0,0,,{\fad(100,90)\an5\pos(360,665)\p1\bord1.3\shad0\1a&HFF&\3c&HD6EFFF&\fscx50\fscy50\t(0,1950,\fscx650\fscy650\3a&HFF&)}m -45 0 b -45 -25 -25 -45 0 -45 b 25 -45 45 -25 45 0 b 45 25 25 45 0 45 b -25 45 -45 25 -45 0
+Dialogue: 2,0:00:00.10,0:00:30.45,Note,,0,0,0,,{\fad(100,90)}Illustrative timing · Not a shared real-time scale
+Dialogue: 2,0:00:30.35,0:00:31.12,Brand,,0,0,0,,{\fad(100,90)}GEO DATA

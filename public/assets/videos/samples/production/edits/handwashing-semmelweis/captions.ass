@@ -1,0 +1,49 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 720
+PlayResY: 1280
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Caption,Arial,36,&H00F7F5EE,&H00F7F5EE,&H00140F0A,&H80000000,-1,0,0,0,100,100,0,0,1,1.6,1.1,2,52,52,155,1
+Style: Hook,Arial,58,&H00F7F5EE,&H00F7F5EE,&H00312011,&H80000000,-1,0,0,0,100,100,-1,0,1,1,1,8,38,38,112,1
+Style: Key,Arial,33,&H00F7F5EE,&H00F7F5EE,&H00140F0A,&H80000000,-1,0,0,0,100,100,0,0,1,1,1,5,46,46,0,1
+Style: Number,Arial,80,&H008FD3FF,&H008FD3FF,&H00140F0A,&H80000000,-1,0,0,0,100,100,-1,0,1,1,1,5,38,38,0,1
+Style: Note,Arial,17,&H00ECE5DA,&H00ECE5DA,&H00140F0A,&H80000000,0,0,0,0,100,100,.8,0,1,.8,.7,7,40,40,48,1
+Style: Brand,Arial,22,&H00F7F5EE,&H00F7F5EE,&H00140F0A,&H80000000,-1,0,0,0,100,100,3,0,1,1,0,2,40,40,110,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 5,0:00:00.09,0:00:01.05,Caption,,0,0,0,,{\fad(100,90)}These hands look clean.
+Dialogue: 5,0:00:01.31,0:00:02.57,Caption,,0,0,0,,{\fad(100,90)}Under ultraviolet light?
+Dialogue: 5,0:00:02.83,0:00:04.94,Caption,,0,0,0,,{\fad(100,90)}That's training lotion\Nshowing missed spots,
+Dialogue: 5,0:00:05.05,0:00:05.91,Caption,,0,0,0,,{\fad(100,90)}not germs.
+Dialogue: 5,0:00:06.17,0:00:08.62,Caption,,0,0,0,,{\fad(100,90)}Now rewind to\Neighteen forty-seven.
+Dialogue: 5,0:00:08.88,0:00:11.74,Caption,,0,0,0,,{\fad(100,90)}Ignaz Semmelweis linked\Ndeadly childbed fever
+Dialogue: 5,0:00:11.74,0:00:13.47,Caption,,0,0,0,,{\fad(100,90)}to doctors coming\Nfrom autopsies.
+Dialogue: 5,0:00:13.73,0:00:16.19,Caption,,0,0,0,,{\fad(100,90)}He introduced chlorinated-lime\Nhand cleaning.
+Dialogue: 5,0:00:16.45,0:00:17.15,Caption,,0,0,0,,{\fad(100,90)}Deaths fell.
+Dialogue: 5,0:00:17.41,0:00:18.96,Caption,,0,0,0,,{\fad(100,90)}Soap washing already existed.
+Dialogue: 5,0:00:19.23,0:00:20.77,Caption,,0,0,0,,{\fad(100,90)}Today, scrub with soap
+Dialogue: 5,0:00:20.77,0:00:22.41,Caption,,0,0,0,,{\fad(100,90)}for at least twenty seconds.
+Dialogue: 5,0:00:22.68,0:00:23.86,Caption,,0,0,0,,{\fad(100,90)}Between fingers.
+Dialogue: 5,0:00:24.11,0:00:24.94,Caption,,0,0,0,,{\fad(100,90)}Around nails.
+Dialogue: 5,0:00:25.20,0:00:26.58,Caption,,0,0,0,,{\fad(100,90)}Rinse with clean running water,
+Dialogue: 5,0:00:26.72,0:00:27.33,Caption,,0,0,0,,{\fad(100,90)}and dry.
+Dialogue: 5,0:00:27.59,0:00:29.67,Caption,,0,0,0,,{\fad(100,90)}This simulated\Nbefore-and-after shows
+Dialogue: 5,0:00:29.67,0:00:31.63,Caption,,0,0,0,,{\fad(100,90)}how a tracer can reveal residue.
+Dialogue: 5,0:00:31.87,0:00:34.05,Caption,,0,0,0,,{\fad(100,90)}Less glow doesn't\Nmean sterile hands.
+Dialogue: 2,0:00:00.05,0:00:02.57,Hook,,0,0,0,,{\fad(100,90)}THESE HANDS\NLOOK CLEAN.
+Dialogue: 2,0:00:01.30,0:00:06.17,Key,,0,0,0,,{\fad(100,90)\fs27\pos(360,195)}BEFORE WASHING\NFLUORESCENT TRAINING LOTION
+Dialogue: 2,0:00:06.17,0:00:08.87,Key,,0,0,0,,{\fad(100,90)\pos(360,200)}VIENNA · 1847
+Dialogue: 2,0:00:08.87,0:00:13.73,Key,,0,0,0,,{\fad(100,90)\fs28\pos(360,170)}IGNAZ SEMMELWEIS
+Dialogue: 2,0:00:13.73,0:00:19.23,Note,,0,0,0,,{\fad(100,90)\an5\pos(360,85)}HISTORICAL RECONSTRUCTION
+Dialogue: 2,0:00:19.23,0:00:22.67,Key,,0,0,0,,{\fad(100,90)\fs38\pos(360,195)}SCRUB FOR AT LEAST\N20 SECONDS
+Dialogue: 2,0:00:19.23,0:00:27.60,Note,,0,0,0,,{\fad(100,90)\an5\fs15\pos(360,325)}MODERN SOAP + WATER · CONDENSED ILLUSTRATION
+Dialogue: 2,0:00:27.60,0:00:34.13,Key,,0,0,0,,{\fad(100,90)\fs27\pos(185,220)}BEFORE
+Dialogue: 2,0:00:27.60,0:00:34.13,Key,,0,0,0,,{\fad(100,90)\fs27\pos(535,220)}AFTER
+Dialogue: 2,0:00:27.60,0:00:34.13,Key,,0,0,0,,{\fad(100,90)\fs27\pos(360,930)}LESS TRACER ≠ STERILE HANDS
+Dialogue: 2,0:00:00.10,0:00:34.08,Note,,0,0,0,,{\fad(100,90)}UV TRACER SIMULATION · NOT ACTUAL GERMS
+Dialogue: 2,0:00:33.98,0:00:34.75,Brand,,0,0,0,,{\fad(100,90)}GEO LABS

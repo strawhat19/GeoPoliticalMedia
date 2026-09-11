@@ -1,0 +1,48 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 720
+PlayResY: 1280
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Caption,Arial,36,&H00F7F5EE,&H00F7F5EE,&H00140F0A,&H80000000,-1,0,0,0,100,100,0,0,1,1.6,1.1,2,52,52,155,1
+Style: Hook,Arial,58,&H00F7F5EE,&H00F7F5EE,&H00312011,&H80000000,-1,0,0,0,100,100,-1,0,1,1,1,8,38,38,112,1
+Style: Key,Arial,33,&H00F7F5EE,&H00F7F5EE,&H00140F0A,&H80000000,-1,0,0,0,100,100,0,0,1,1,1,5,46,46,0,1
+Style: Number,Arial,80,&H008FD3FF,&H008FD3FF,&H00140F0A,&H80000000,-1,0,0,0,100,100,-1,0,1,1,1,5,38,38,0,1
+Style: Note,Arial,17,&H00ECE5DA,&H00ECE5DA,&H00140F0A,&H80000000,0,0,0,0,100,100,.8,0,1,.8,.7,7,40,40,48,1
+Style: Brand,Arial,22,&H00F7F5EE,&H00F7F5EE,&H00140F0A,&H80000000,-1,0,0,0,100,100,3,0,1,1,0,2,40,40,110,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 5,0:00:00.09,0:00:01.18,Caption,,0,0,0,,{\fad(100,90)}This year's El Niño
+Dialogue: 5,0:00:01.18,0:00:02.18,Caption,,0,0,0,,{\fad(100,90)}could break a record.
+Dialogue: 5,0:00:02.43,0:00:04.30,Caption,,0,0,0,,{\fad(100,90)}NOAA's September tenth forecast
+Dialogue: 5,0:00:04.33,0:00:05.79,Caption,,0,0,0,,{\fad(100,90)}gives it a seventy-five percent
+Dialogue: 5,0:00:05.79,0:00:06.93,Caption,,0,0,0,,{\fad(100,90)}chance this fall
+Dialogue: 5,0:00:06.93,0:00:08.29,Caption,,0,0,0,,{\fad(100,90)}of beating past events
+Dialogue: 5,0:00:08.29,0:00:09.41,Caption,,0,0,0,,{\fad(100,90)}since nineteen fifty.
+Dialogue: 5,0:00:09.66,0:00:10.53,Caption,,0,0,0,,{\fad(100,90)}Why so strong?
+Dialogue: 5,0:00:10.79,0:00:12.91,Caption,,0,0,0,,{\fad(100,90)}Exceptional heat at the surface,
+Dialogue: 5,0:00:13.01,0:00:14.48,Caption,,0,0,0,,{\fad(100,90)}and deeper in the Pacific,
+Dialogue: 5,0:00:14.60,0:00:15.72,Caption,,0,0,0,,{\fad(100,90)}is helping it strengthen.
+Dialogue: 5,0:00:16.02,0:00:17.14,Caption,,0,0,0,,{\fad(100,90)}For America's winter,
+Dialogue: 5,0:00:17.36,0:00:19.30,Caption,,0,0,0,,{\fad(100,90)}forecasts favor a wetter South
+Dialogue: 5,0:00:19.30,0:00:20.28,Caption,,0,0,0,,{\fad(100,90)}and warmer North.
+Dialogue: 5,0:00:20.55,0:00:22.39,Caption,,0,0,0,,{\fad(100,90)}Elsewhere, shifting\Nrain patterns
+Dialogue: 5,0:00:22.39,0:00:24.38,Caption,,0,0,0,,{\fad(100,90)}change flood and drought risks.
+Dialogue: 5,0:00:24.64,0:00:25.96,Caption,,0,0,0,,{\fad(100,90)}But stronger doesn't mean
+Dialogue: 5,0:00:25.96,0:00:27.12,Caption,,0,0,0,,{\fad(100,90)}worse everywhere.
+Dialogue: 5,0:00:27.38,0:00:29.15,Caption,,0,0,0,,{\fad(100,90)}El Niño changes the odds,
+Dialogue: 5,0:00:29.39,0:00:30.56,Caption,,0,0,0,,{\fad(100,90)}not the weather on your street.
+Dialogue: 2,0:00:00.05,0:00:02.95,Hook,,0,0,0,,{\fad(100,90)}THIS EL NIÑO\NCOULD MAKE HISTORY
+Dialogue: 2,0:00:02.43,0:00:09.67,Number,,0,0,0,,{\fad(100,90)\pos(360,380)}75%
+Dialogue: 2,0:00:02.43,0:00:09.67,Key,,0,0,0,,{\fad(100,90)\pos(360,480)}CHANCE OF EXCEEDING\NPAST EVENTS SINCE 1950
+Dialogue: 2,0:00:02.43,0:00:09.67,Note,,0,0,0,,{\fad(100,90)\an5\pos(360,565)}OCT–DEC 2026 · THREE-MONTH RONI
+Dialogue: 2,0:00:16.00,0:00:20.53,Key,,0,0,0,,{\fad(100,90)\pos(360,200)}U.S. WINTER OUTLOOK\NWETTER SOUTH · WARMER NORTH
+Dialogue: 2,0:00:16.00,0:00:20.53,Note,,0,0,0,,{\fad(100,90)\an5\pos(360,295)}FAVORED, NOT GUARANTEED · CPC AUG 20
+Dialogue: 2,0:00:24.63,0:00:30.37,Key,,0,0,0,,{\fad(100,90)\pos(360,210)}CHANGES THE ODDS
+Dialogue: 2,0:00:00.10,0:00:09.67,Note,,0,0,0,,{\fad(100,90)}FORECAST · NOAA · SEPTEMBER 10, 2026
+Dialogue: 2,0:00:16.00,0:00:30.62,Note,,0,0,0,,{\fad(100,90)}FORECAST · NOAA · SEPTEMBER 10, 2026
+Dialogue: 2,0:00:30.52,0:00:31.29,Brand,,0,0,0,,{\fad(100,90)}GEO DATA

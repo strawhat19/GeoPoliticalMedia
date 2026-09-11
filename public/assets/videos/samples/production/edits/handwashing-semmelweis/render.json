@@ -1,0 +1,16 @@
+{
+  "slug": "handwashing-semmelweis",
+  "duration": 34.833333333333336,
+  "size": [
+    720,
+    1280
+  ],
+  "fps": 30,
+  "output": "handwashing-semmelweis.mp4",
+  "poster": "handwashing-semmelweis-poster.jpg",
+  "scene_count": 9,
+  "audio_source": "audio/handwashing-semmelweis.wav",
+  "script_sha256": "14dd9b22c278dd52bc78c33d4411eb1ef094409dcad1d944742d1fed4aedab7a",
+  "synthetic_voice": true,
+  "visuals": "AI-generated scenes, cinematic camera moves, and explanatory animation"
+}

@@ -1,0 +1,44 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 720
+PlayResY: 1280
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Caption,Arial,36,&H00F7F5EE,&H00F7F5EE,&H00140F0A,&H80000000,-1,0,0,0,100,100,0,0,1,1.6,1.1,2,52,52,155,1
+Style: Hook,Arial,58,&H00F7F5EE,&H00F7F5EE,&H00312011,&H80000000,-1,0,0,0,100,100,-1,0,1,1,1,8,38,38,112,1
+Style: Key,Arial,33,&H00F7F5EE,&H00F7F5EE,&H00140F0A,&H80000000,-1,0,0,0,100,100,0,0,1,1,1,5,46,46,0,1
+Style: Number,Arial,80,&H008FD3FF,&H008FD3FF,&H00140F0A,&H80000000,-1,0,0,0,100,100,-1,0,1,1,1,5,38,38,0,1
+Style: Note,Arial,17,&H00ECE5DA,&H00ECE5DA,&H00140F0A,&H80000000,0,0,0,0,100,100,.8,0,1,.8,.7,7,40,40,48,1
+Style: Brand,Arial,22,&H00F7F5EE,&H00F7F5EE,&H00140F0A,&H80000000,-1,0,0,0,100,100,3,0,1,1,0,2,40,40,110,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 5,0:00:00.09,0:00:00.68,Caption,,0,0,0,,{\fad(100,90)}You wake up.
+Dialogue: 5,0:00:00.93,0:00:02.01,Caption,,0,0,0,,{\fad(100,90)}You sense someone in the room.
+Dialogue: 5,0:00:02.27,0:00:04.01,Caption,,0,0,0,,{\fad(100,90)}You try to move... nothing.
+Dialogue: 5,0:00:04.26,0:00:05.66,Caption,,0,0,0,,{\fad(100,90)}That can be sleep paralysis.
+Dialogue: 5,0:00:05.89,0:00:07.10,Caption,,0,0,0,,{\fad(100,90)}Awareness returns while
+Dialogue: 5,0:00:07.10,0:00:10.72,Caption,,0,0,0,,{\fad(100,90)}REM sleep's muscle\Nstillness briefly continues.
+Dialogue: 5,0:00:10.97,0:00:13.29,Caption,,0,0,0,,{\fad(100,90)}Dreamlike sights\Nor chest pressure
+Dialogue: 5,0:00:13.41,0:00:14.47,Caption,,0,0,0,,{\fad(100,90)}can feel real.
+Dialogue: 5,0:00:14.72,0:00:15.95,Caption,,0,0,0,,{\fad(100,90)}Breathing continues.
+Dialogue: 5,0:00:16.19,0:00:17.25,Caption,,0,0,0,,{\fad(100,90)}If you feel it starting,
+Dialogue: 5,0:00:17.38,0:00:19.16,Caption,,0,0,0,,{\fad(100,90)}remind yourself it passes.
+Dialogue: 5,0:00:19.42,0:00:20.60,Caption,,0,0,0,,{\fad(100,90)}Relax, and try
+Dialogue: 5,0:00:20.60,0:00:22.00,Caption,,0,0,0,,{\fad(100,90)}one tiny finger movement.
+Dialogue: 5,0:00:22.25,0:00:22.94,Caption,,0,0,0,,{\fad(100,90)}It may help.
+Dialogue: 5,0:00:23.18,0:00:24.86,Caption,,0,0,0,,{\fad(100,90)}There's no guaranteed\Noff switch.
+Dialogue: 5,0:00:25.12,0:00:27.49,Caption,,0,0,0,,{\fad(100,90)}Regular sleep may\Nreduce episodes.
+Dialogue: 5,0:00:27.76,0:00:28.78,Caption,,0,0,0,,{\fad(100,90)}If it keeps happening
+Dialogue: 5,0:00:28.83,0:00:30.48,Caption,,0,0,0,,{\fad(100,90)}or leaves you very sleepy,
+Dialogue: 5,0:00:30.58,0:00:31.52,Caption,,0,0,0,,{\fad(100,90)}talk to a clinician.
+Dialogue: 2,0:00:00.05,0:00:02.95,Hook,,0,0,0,,{\fad(100,90)}AWAKE.\NCAN'T MOVE.
+Dialogue: 2,0:00:05.90,0:00:10.97,Key,,0,0,0,,{\fad(100,90)\pos(360,800)}AWARENESS RETURNS\NREM STILLNESS LINGERS
+Dialogue: 2,0:00:16.20,0:00:19.40,Key,,0,0,0,,{\fad(100,90)\pos(360,200)}TEMPORARY. IT PASSES.
+Dialogue: 2,0:00:22.27,0:00:25.13,Key,,0,0,0,,{\fad(100,90)\pos(360,220)}MAY HELP\NNO GUARANTEED OFF SWITCH
+Dialogue: 2,0:00:25.13,0:00:27.77,Key,,0,0,0,,{\fad(100,90)\pos(360,185)}REGULAR SLEEP
+Dialogue: 2,0:00:00.10,0:00:31.58,Note,,0,0,0,,{\fad(100,90)}Illustrative reenactment
+Dialogue: 2,0:00:31.48,0:00:32.25,Brand,,0,0,0,,{\fad(100,90)}GEO LABS

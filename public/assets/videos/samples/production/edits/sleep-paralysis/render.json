@@ -1,0 +1,16 @@
+{
+  "slug": "sleep-paralysis",
+  "duration": 32.333333333333336,
+  "size": [
+    720,
+    1280
+  ],
+  "fps": 30,
+  "output": "sleep-paralysis.mp4",
+  "poster": "sleep-paralysis-poster.jpg",
+  "scene_count": 4,
+  "audio_source": "audio/sleep-paralysis.wav",
+  "script_sha256": "5f05a2f5c0697f4356f895a9424967d1811ca6c112c9baf4702f82291b762636",
+  "synthetic_voice": true,
+  "visuals": "AI-generated scenes, cinematic camera moves, and explanatory animation"
+}

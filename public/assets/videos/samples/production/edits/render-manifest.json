@@ -1,0 +1,66 @@
+[
+  {
+    "slug": "sleep-paralysis",
+    "duration": 32.333333333333336,
+    "size": [
+      720,
+      1280
+    ],
+    "fps": 30,
+    "output": "sleep-paralysis.mp4",
+    "poster": "sleep-paralysis-poster.jpg",
+    "scene_count": 4,
+    "audio_source": "audio/sleep-paralysis.wav",
+    "script_sha256": "5f05a2f5c0697f4356f895a9424967d1811ca6c112c9baf4702f82291b762636",
+    "synthetic_voice": true,
+    "visuals": "AI-generated scenes, cinematic camera moves, and explanatory animation"
+  },
+  {
+    "slug": "el-nino-2026",
+    "duration": 31.366666666666667,
+    "size": [
+      720,
+      1280
+    ],
+    "fps": 30,
+    "output": "el-nino-2026.mp4",
+    "poster": "el-nino-2026-poster.jpg",
+    "scene_count": 6,
+    "audio_source": "audio/el-nino-2026.wav",
+    "script_sha256": "113cfa3bff849153b4f87cd56b39db9877bd86827f6582d5a4581a7f81998066",
+    "synthetic_voice": true,
+    "visuals": "AI-generated scenes, cinematic camera moves, and explanatory animation"
+  },
+  {
+    "slug": "india-beneath-tibet",
+    "duration": 27.533333333333335,
+    "size": [
+      720,
+      1280
+    ],
+    "fps": 30,
+    "output": "india-beneath-tibet.mp4",
+    "poster": "india-beneath-tibet-poster.jpg",
+    "scene_count": 5,
+    "audio_source": "audio/india-beneath-tibet.wav",
+    "script_sha256": "93fa5e75ad71b7d3f5d9ee120fc0610e5800dda1b080db3567d3cdbcc8105b5d",
+    "synthetic_voice": true,
+    "visuals": "AI-generated scenes, cinematic camera moves, and explanatory animation"
+  },
+  {
+    "slug": "light-sound-thought",
+    "duration": 31.2,
+    "size": [
+      720,
+      1280
+    ],
+    "fps": 30,
+    "output": "light-sound-thought.mp4",
+    "poster": "light-sound-thought-poster.jpg",
+    "scene_count": 7,
+    "audio_source": "audio/light-sound-thought.wav",
+    "script_sha256": "c179f76d8f192339366758bb079fb3475d9384c234947c44df4cc07bb7aa2906",
+    "synthetic_voice": true,
+    "visuals": "AI-generated scenes, cinematic camera moves, and explanatory animation"
+  }
+]

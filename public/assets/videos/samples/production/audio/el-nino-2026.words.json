@@ -1,0 +1,407 @@
+[
+  {
+    "text": "This",
+    "start": 0.093458,
+    "end": 0.245333
+  },
+  {
+    "text": "year's",
+    "start": 0.245333,
+    "end": 0.537374
+  },
+  {
+    "text": "El",
+    "start": 0.549083,
+    "end": 0.712624
+  },
+  {
+    "text": "Niño",
+    "start": 0.712625,
+    "end": 1.16825
+  },
+  {
+    "text": "could",
+    "start": 1.179916,
+    "end": 1.331791
+  },
+  {
+    "text": "break",
+    "start": 1.343458,
+    "end": 1.588791
+  },
+  {
+    "text": "a",
+    "start": 1.600458,
+    "end": 1.635499
+  },
+  {
+    "text": "record",
+    "start": 1.647208,
+    "end": 2.056083
+  },
+  {
+    "text": "NOAA's",
+    "start": 2.429916,
+    "end": 2.745332
+  },
+  {
+    "text": "September",
+    "start": 2.757,
+    "end": 3.18925
+  },
+  {
+    "text": "tenth",
+    "start": 3.18925,
+    "end": 3.434583
+  },
+  {
+    "text": "forecast",
+    "start": 3.434583,
+    "end": 4.182249
+  },
+  {
+    "text": "gives",
+    "start": 4.334125,
+    "end": 4.544375
+  },
+  {
+    "text": "it",
+    "start": 4.544375,
+    "end": 4.602791
+  },
+  {
+    "text": "a",
+    "start": 4.602791,
+    "end": 4.637832
+  },
+  {
+    "text": "seventy-five",
+    "start": 4.649541,
+    "end": 5.350457
+  },
+  {
+    "text": "percent",
+    "start": 5.362166,
+    "end": 5.794374
+  },
+  {
+    "text": "chance",
+    "start": 5.794375,
+    "end": 6.273333
+  },
+  {
+    "text": "this",
+    "start": 6.343458,
+    "end": 6.506999
+  },
+  {
+    "text": "fall",
+    "start": 6.518708,
+    "end": 6.927583
+  },
+  {
+    "text": "of",
+    "start": 6.927583,
+    "end": 7.067749
+  },
+  {
+    "text": "beating",
+    "start": 7.126166,
+    "end": 7.453249
+  },
+  {
+    "text": "past",
+    "start": 7.464958,
+    "end": 7.803749
+  },
+  {
+    "text": "events",
+    "start": 7.80375,
+    "end": 8.18925
+  },
+  {
+    "text": "since",
+    "start": 8.294375,
+    "end": 8.492958
+  },
+  {
+    "text": "nineteen",
+    "start": 8.493,
+    "end": 8.831791
+  },
+  {
+    "text": "fifty",
+    "start": 8.831791,
+    "end": 9.287416
+  },
+  {
+    "text": "Why",
+    "start": 9.661208,
+    "end": 9.789708
+  },
+  {
+    "text": "so",
+    "start": 9.789708,
+    "end": 9.988291
+  },
+  {
+    "text": "strong",
+    "start": 10.0,
+    "end": 10.408875
+  },
+  {
+    "text": "Exceptional",
+    "start": 10.794375,
+    "end": 11.285041
+  },
+  {
+    "text": "heat",
+    "start": 11.296708,
+    "end": 11.682208
+  },
+  {
+    "text": "at",
+    "start": 11.869166,
+    "end": 11.950916
+  },
+  {
+    "text": "the",
+    "start": 11.950916,
+    "end": 12.020999
+  },
+  {
+    "text": "surface",
+    "start": 12.021041,
+    "end": 12.792082
+  },
+  {
+    "text": "and",
+    "start": 13.014,
+    "end": 13.1425
+  },
+  {
+    "text": "deeper",
+    "start": 13.212625,
+    "end": 13.598125
+  },
+  {
+    "text": "in",
+    "start": 13.598125,
+    "end": 13.656541
+  },
+  {
+    "text": "the",
+    "start": 13.656541,
+    "end": 13.738332
+  },
+  {
+    "text": "Pacific",
+    "start": 13.738333,
+    "end": 14.357499
+  },
+  {
+    "text": "is",
+    "start": 14.602791,
+    "end": 14.742957
+  },
+  {
+    "text": "helping",
+    "start": 14.754666,
+    "end": 15.023374
+  },
+  {
+    "text": "it",
+    "start": 15.023375,
+    "end": 15.081791
+  },
+  {
+    "text": "strengthen",
+    "start": 15.081791,
+    "end": 15.595791
+  },
+  {
+    "text": "For",
+    "start": 16.016375,
+    "end": 16.156541
+  },
+  {
+    "text": "America's",
+    "start": 16.156541,
+    "end": 16.588791
+  },
+  {
+    "text": "winter",
+    "start": 16.588791,
+    "end": 17.021041
+  },
+  {
+    "text": "forecasts",
+    "start": 17.359791,
+    "end": 17.978957
+  },
+  {
+    "text": "favor",
+    "start": 17.990666,
+    "end": 18.306082
+  },
+  {
+    "text": "a",
+    "start": 18.306083,
+    "end": 18.422916
+  },
+  {
+    "text": "wetter",
+    "start": 18.434583,
+    "end": 18.714958
+  },
+  {
+    "text": "South",
+    "start": 18.714958,
+    "end": 19.182249
+  },
+  {
+    "text": "and",
+    "start": 19.299083,
+    "end": 19.427583
+  },
+  {
+    "text": "warmer",
+    "start": 19.43925,
+    "end": 19.754666
+  },
+  {
+    "text": "North",
+    "start": 19.754666,
+    "end": 20.163541
+  },
+  {
+    "text": "Elsewhere",
+    "start": 20.549083,
+    "end": 21.063083
+  },
+  {
+    "text": "shifting",
+    "start": 21.42525,
+    "end": 21.787416
+  },
+  {
+    "text": "rain",
+    "start": 21.799083,
+    "end": 21.985999
+  },
+  {
+    "text": "patterns",
+    "start": 21.986,
+    "end": 22.383208
+  },
+  {
+    "text": "change",
+    "start": 22.394875,
+    "end": 22.733666
+  },
+  {
+    "text": "flood",
+    "start": 22.745333,
+    "end": 23.165874
+  },
+  {
+    "text": "and",
+    "start": 23.247666,
+    "end": 23.329457
+  },
+  {
+    "text": "drought",
+    "start": 23.329458,
+    "end": 23.691624
+  },
+  {
+    "text": "risks",
+    "start": 23.70325,
+    "end": 24.264
+  },
+  {
+    "text": "But",
+    "start": 24.637833,
+    "end": 24.719624
+  },
+  {
+    "text": "stronger",
+    "start": 24.731291,
+    "end": 25.385499
+  },
+  {
+    "text": "doesn't",
+    "start": 25.478958,
+    "end": 25.735958
+  },
+  {
+    "text": "mean",
+    "start": 25.736,
+    "end": 25.957958
+  },
+  {
+    "text": "worse",
+    "start": 25.957958,
+    "end": 26.308416
+  },
+  {
+    "text": "everywhere",
+    "start": 26.42525,
+    "end": 26.997666
+  },
+  {
+    "text": "El",
+    "start": 27.383166,
+    "end": 27.523332
+  },
+  {
+    "text": "Niño",
+    "start": 27.523375,
+    "end": 27.920583
+  },
+  {
+    "text": "changes",
+    "start": 27.93225,
+    "end": 28.387833
+  },
+  {
+    "text": "the",
+    "start": 28.387833,
+    "end": 28.504666
+  },
+  {
+    "text": "odds",
+    "start": 28.504666,
+    "end": 29.030374
+  },
+  {
+    "text": "not",
+    "start": 29.392541,
+    "end": 29.544374
+  },
+  {
+    "text": "the",
+    "start": 29.544375,
+    "end": 29.614458
+  },
+  {
+    "text": "weather",
+    "start": 29.626166,
+    "end": 29.894874
+  },
+  {
+    "text": "on",
+    "start": 29.906541,
+    "end": 29.999999
+  },
+  {
+    "text": "your",
+    "start": 30.0,
+    "end": 30.070083
+  },
+  {
+    "text": "street",
+    "start": 30.070083,
+    "end": 30.443916
+  }
+]

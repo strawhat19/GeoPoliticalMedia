@@ -1,0 +1,53 @@
+{
+  "duration": 31.366666666666667,
+  "scenes": [
+    {
+      "kind": "image",
+      "source": "el-nino-ocean.png",
+      "start": 0,
+      "end": 2.433333333333333,
+      "zoom": 1.02,
+      "focus": 0.35
+    },
+    {
+      "kind": "image",
+      "source": "el-nino-ocean.png",
+      "start": 2.433333333333333,
+      "end": 9.666666666666666,
+      "zoom": 1.16,
+      "focus": 0.55
+    },
+    {
+      "kind": "video",
+      "source": "el-nino-heat.mp4",
+      "start": 9.666666666666666,
+      "end": 16.0,
+      "source_start": 0,
+      "source_length": 8
+    },
+    {
+      "kind": "image",
+      "source": "el-nino-rain.png",
+      "start": 16.0,
+      "end": 20.533333333333335,
+      "zoom": 1.03,
+      "focus": 0.4
+    },
+    {
+      "kind": "image",
+      "source": "el-nino-rain.png",
+      "start": 20.533333333333335,
+      "end": 24.633333333333333,
+      "zoom": 1.15,
+      "focus": 0.55
+    },
+    {
+      "kind": "image",
+      "source": "el-nino-ocean.png",
+      "start": 24.633333333333333,
+      "end": 31.366666666666667,
+      "zoom": 1.03,
+      "focus": 0.35
+    }
+  ]
+}

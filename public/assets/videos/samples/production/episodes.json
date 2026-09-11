@@ -1,0 +1,56 @@
+{
+  "format": {
+    "width": 720,
+    "height": 1280,
+    "fps": 30,
+    "branding": "Final second only",
+    "style": "Cinematic short documentary, full-frame scenes and restrained captions"
+  },
+  "voice": {
+    "name": "en-US-AndrewMultilingualNeural",
+    "rate": "+7%",
+    "pitch": "+0Hz"
+  },
+  "episodes": [
+    {
+      "slug": "sleep-paralysis",
+      "channel": "Geo Labs",
+      "title": "Awake, But You Can't Move",
+      "hook": "AWAKE.\nCAN'T MOVE.",
+      "script": "You wake up. You sense someone in the room. You try to move... nothing. That can be sleep paralysis. Awareness returns while REM sleep's muscle stillness briefly continues. Dreamlike sights or chest pressure can feel real. Breathing continues. If you feel it starting, remind yourself it passes. Relax, and try one tiny finger movement. It may help. There's no guaranteed off switch. Regular sleep may reduce episodes. If it keeps happening or leaves you very sleepy, talk to a clinician.",
+      "note": "Illustrative reenactment • General education"
+    },
+    {
+      "slug": "el-nino-2026",
+      "channel": "Geo Data",
+      "title": "The El Niño That Could Make History",
+      "hook": "THIS EL NIÑO\nCOULD MAKE HISTORY",
+      "script": "This year's El Niño could break a record. NOAA's September tenth forecast gives it a seventy-five percent chance this fall of beating past events since nineteen fifty. Why so strong? Exceptional heat at the surface, and deeper in the Pacific, is helping it strengthen. For America's winter, forecasts favor a wetter South and warmer North. Elsewhere, shifting rain patterns change flood and drought risks. But stronger doesn't mean worse everywhere. El Niño changes the odds, not the weather on your street.",
+      "note": "Forecast snapshot • September 10, 2026"
+    },
+    {
+      "slug": "india-beneath-tibet",
+      "channel": "Geo Labs",
+      "title": "What's Happening Beneath Tibet?",
+      "hook": "INDIA IS MOVING\nUNDER TIBET",
+      "script": "India's tectonic plate is pushing under Tibet. But the weird part is what may be happening underneath. That slow collision helps build the Himalayas. Now, a twenty twenty-five seismic study suggests something deeper: parts of the plate's mantle layer may be tearing and peeling away from its crust. That's inferred from seismic evidence, not a surface split. The country isn't disappearing. Those enormous mountains are just the surface of a much bigger collision.",
+      "note": "Scientific illustration • Geological time compressed"
+    },
+    {
+      "slug": "light-sound-thought",
+      "channel": "Geo Data",
+      "title": "Can A Thought Outrun Thunder?",
+      "hook": "LIGHT. SOUND.\nTHOUGHT.",
+      "script": "What's faster: light, sound, or a thought? Light in a vacuum travels almost three hundred million meters per second. Sound in air at twenty degrees Celsius? About three hundred forty-three. Your nerve signals? Roughly half a meter to over a hundred meters per second, depending on the fiber. But a thought doesn't have one travel speed. It's signals plus processing across a network. Imagining the Moon instantly doesn't send anything there. Thinking time and travel speed aren't the same thing.",
+      "note": "Illustrative animation • Speeds depend on conditions"
+    },
+    {
+      "slug": "handwashing-semmelweis",
+      "channel": "Geo Labs",
+      "title": "The Doctor Who Changed Handwashing",
+      "hook": "THESE HANDS\nLOOK CLEAN.",
+      "script": "These hands look clean. Under ultraviolet light? That's training lotion showing missed spots, not germs. Now rewind to eighteen forty-seven. Ignaz Semmelweis linked deadly childbed fever to doctors coming from autopsies. He introduced chlorinated-lime hand cleaning. Deaths fell. Soap washing already existed. Today, scrub with soap for at least twenty seconds. Between fingers. Around nails. Rinse with clean running water, and dry. This simulated before-and-after shows how a tracer can reveal residue. Less glow doesn't mean sterile hands.",
+      "note": "UV tracer simulation • Not actual germs"
+    }
+  ]
+}

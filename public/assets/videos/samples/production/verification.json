@@ -1,0 +1,2159 @@
+{
+  "verified_at_utc": "2026-09-11T20:07:55.033855+00:00",
+  "ffmpeg_version": "ffmpeg version 7.1-essentials_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers",
+  "utility": {
+    "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\verify_exports.py",
+    "exists": true,
+    "bytes": 14926,
+    "sha256": "ad1de8c228fda3b2a17e356be0c223b827f1a8ce90fac7bc787f3f681c9a9b2b"
+  },
+  "episodes_source": {
+    "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\episodes.json",
+    "exists": true,
+    "bytes": 4093,
+    "sha256": "d6a4deaa6e5690d91eab93ebce802b07f012478741398b5f275f6a1ee703ad14"
+  },
+  "audio_manifest": {
+    "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\audio\\manifest.json",
+    "exists": true,
+    "bytes": 4928,
+    "sha256": "485f40f38edff1bfa3a352af8b28f79e594e9e0090b6be9f8ac35ff18796f944"
+  },
+  "scope": "Actual exported MP4 decode, format, duration, measured mixed-audio loudness, source hashes, caption transcript/timing, and source-level qualifiers/branding.",
+  "limitations": [
+    "No aesthetic or narration-naturalness judgment is automated.",
+    "Subtitle-source checks require review of extracted frames to confirm final rendered placement and appearance.",
+    "Script hashes establish agreement with the narration manifest; they are not independent speech recognition of the mixed soundtrack."
+  ],
+  "episodes": [
+    {
+      "slug": "sleep-paralysis",
+      "checks": [
+        {
+          "name": "Export Exists And Nonempty",
+          "passed": true,
+          "detail": {
+            "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\sleep-paralysis.mp4",
+            "exists": true,
+            "bytes": 5625770,
+            "sha256": "15714b9ff1de875e070cb4239c9c0200c0b35e150d08133a549bb900ddcb6dc0"
+          }
+        },
+        {
+          "name": "Source Files Available",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "Video Format",
+          "passed": true,
+          "detail": {
+            "expected": "720x1280, 30 fps, H.264",
+            "size": [
+              720,
+              1280
+            ],
+            "fps": 30.0,
+            "codec": "h264"
+          }
+        },
+        {
+          "name": "Timeline Duration",
+          "passed": true,
+          "detail": {
+            "actual": 32.33,
+            "expected": 32.333333333333336,
+            "difference": -0.003333,
+            "tolerance": 0.12
+          }
+        },
+        {
+          "name": "Full Audio And Video Decode",
+          "passed": true,
+          "detail": {
+            "returncode": 0,
+            "decoded_frames": 970,
+            "audio_streams": [
+              "Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, mono, fltp, 193 kb/s (default)"
+            ],
+            "completed": true,
+            "stderr_tail": "lMedia\\public\\assets\\videos\\samples\\sleep-paralysis.mp4':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf61.7.100\n  Duration: 00:00:32.33, start: 0.000000, bitrate: 1391 kb/s\n  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 720x1280 [SAR 1:1 DAR 9:16], 1189 kb/s, 30 fps, 30 tbr, 15360 tbn (default)\n      Metadata:\n        handler_name    : VideoHandler\n        vendor_id       : [0][0][0][0]\n        encoder         : Lavc61.19.100 libx264\n  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, mono, fltp, 193 kb/s (default)\n      Metadata:\n        handler_name    : SoundHandler\n        vendor_id       : [0][0][0][0]\nStream mapping:\n  Stream #0:0 -> #0:0 (h264 (native) -> wrapped_avframe (native))\n  Stream #0:1 -> #0:1 (aac (native) -> pcm_s16le (native))\nOutput #0, null, to 'pipe:':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf61.7.100\n  Stream #0:0(und): Video: wrapped_avframe, yuv420p(progressive), 720x1280 [SAR 1:1 DAR 9:16], q=2-31, 200 kb/s, 30 fps, 30 tbn (default)\n      Metadata:\n        handler_name    : VideoHandler\n        vendor_id       : [0][0][0][0]\n        encoder         : Lavc61.19.100 wrapped_avframe\n  Stream #0:1(und): Audio: pcm_s16le, 48000 Hz, mono, s16, 768 kb/s (default)\n      Metadata:\n        handler_name    : SoundHandler\n        vendor_id       : [0][0][0][0]\n        encoder         : Lavc61.19.100 pcm_s16le\n[out#0/null @ 0000022c90f781c0] video:417KiB audio:3028KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown\nframe=  970 fps=0.0 q=-0.0 Lsize=N/A time=00:00:32.33 bitrate=N/A speed= 117x    \n"
+          }
+        },
+        {
+          "name": "Decoded Frame Count",
+          "passed": true,
+          "detail": {
+            "actual": 970,
+            "expected": 970
+          }
+        },
+        {
+          "name": "Integrated Loudness",
+          "passed": true,
+          "detail": {
+            "actual_lufs": -16.69,
+            "allowed_lufs": [
+              -18,
+              -14
+            ]
+          }
+        },
+        {
+          "name": "True Peak",
+          "passed": true,
+          "detail": {
+            "actual_dbtp": -1.49,
+            "maximum_dbtp": -0.8
+          }
+        },
+        {
+          "name": "Narration Script Hash",
+          "passed": true,
+          "detail": {
+            "script": "5f05a2f5c0697f4356f895a9424967d1811ca6c112c9baf4702f82291b762636",
+            "audio_manifest": "5f05a2f5c0697f4356f895a9424967d1811ca6c112c9baf4702f82291b762636"
+          }
+        },
+        {
+          "name": "Caption JSON Transcript Complete",
+          "passed": true,
+          "detail": {
+            "script_tokens": 82,
+            "caption_tokens": 82
+          }
+        },
+        {
+          "name": "ASS Caption Transcript Complete",
+          "passed": true,
+          "detail": {
+            "script_tokens": 82,
+            "ass_tokens": 82
+          }
+        },
+        {
+          "name": "Caption Timing",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "Branding Only In Final Second",
+          "passed": true,
+          "detail": {
+            "events": [
+              {
+                "layer": "2",
+                "start": 31.48,
+                "end": 32.25,
+                "style": "Brand",
+                "name": "",
+                "marginl": "0",
+                "marginr": "0",
+                "marginv": "0",
+                "effect": "",
+                "text": "GEO LABS"
+              }
+            ],
+            "early_or_late": [],
+            "outside_brand_style": [],
+            "reference_duration": 32.33
+          }
+        },
+        {
+          "name": "Topic Qualifiers In Script And Subtitle Sources",
+          "passed": true,
+          "detail": [
+            {
+              "location": "script",
+              "phrase": "can be sleep paralysis",
+              "present": true
+            },
+            {
+              "location": "script",
+              "phrase": "Breathing continues",
+              "present": true
+            },
+            {
+              "location": "script",
+              "phrase": "It may help",
+              "present": true
+            },
+            {
+              "location": "script",
+              "phrase": "no guaranteed off switch",
+              "present": true
+            },
+            {
+              "location": "script",
+              "phrase": "talk to a clinician",
+              "present": true
+            },
+            {
+              "location": "ass",
+              "phrase": "Illustrative reenactment",
+              "present": true
+            },
+            {
+              "location": "ass",
+              "phrase": "NO GUARANTEED OFF SWITCH",
+              "present": true
+            }
+          ]
+        },
+        {
+          "name": "Review Frames Extracted",
+          "passed": true,
+          "detail": 6
+        },
+        {
+          "name": "Export Unchanged During Verification",
+          "passed": true,
+          "detail": {
+            "before_bytes": 5625770,
+            "after_bytes": 5625770
+          }
+        }
+      ],
+      "review_required": true,
+      "export": {
+        "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\sleep-paralysis.mp4",
+        "exists": true,
+        "bytes": 5625770,
+        "sha256": "15714b9ff1de875e070cb4239c9c0200c0b35e150d08133a549bb900ddcb6dc0"
+      },
+      "timeline_duration": 32.333333333333336,
+      "sources": [
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\assets\\sleep-bedroom.png",
+          "exists": true,
+          "bytes": 1535529,
+          "sha256": "4fffb597c47eb796c51897ebed96c947b8429521029c7cdd622723b7e58d5be4"
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\assets\\sleep-finger.png",
+          "exists": true,
+          "bytes": 1548778,
+          "sha256": "435d65bac17f43aa34eddd312a20c41df4d39a2c8d07bc7d347526de0362f0f0"
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\assets\\sleep-morning.png",
+          "exists": true,
+          "bytes": 1730388,
+          "sha256": "1adaa8b4715dcc42ba9c438947f242e05586f15c2ab3036c195a03e756834100"
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\audio\\manifest.json",
+          "exists": true,
+          "bytes": 4928,
+          "sha256": "485f40f38edff1bfa3a352af8b28f79e594e9e0090b6be9f8ac35ff18796f944"
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\audio\\sleep-paralysis.captions.json",
+          "exists": true,
+          "bytes": 1884,
+          "sha256": "8ac086d175c0451c70461446fa94bd76ac8d78641e4302a37155ca261dba7466"
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\audio\\sleep-paralysis.mp3",
+          "exists": true,
+          "bytes": 190512,
+          "sha256": "eb1aa9b40a93b16454d83a8182365abf3bb288bb64aee6b68fc6a601c05e4f60"
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\audio\\sleep-paralysis.wav",
+          "exists": true,
+          "bytes": 3048270,
+          "sha256": "af9c1d94234bc5c80d01a1a2cc9032fa370b1ad19cce201e5e5db58a08c76df4"
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\audio\\sleep-paralysis.words.json",
+          "exists": true,
+          "bytes": 6308,
+          "sha256": "d3821b254d6bb34bbca61174c549f71c1f644c96e4782245b9c14f98ae47f959"
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\edits\\sleep-paralysis\\captions.ass",
+          "exists": true,
+          "bytes": 3483,
+          "sha256": "860fa20a3f6a3967dae0e85c5ccc089dfa95c888c471915346ef544c9bd35e01"
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\edits\\sleep-paralysis\\timeline.json",
+          "exists": true,
+          "bytes": 767,
+          "sha256": "abcdc8e509605eed163816831c1c53cb096b9d38538e40d98ee461258670a62c"
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\episodes.json",
+          "exists": true,
+          "bytes": 4093,
+          "sha256": "d6a4deaa6e5690d91eab93ebce802b07f012478741398b5f275f6a1ee703ad14"
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\render_shorts.py",
+          "exists": true,
+          "bytes": 18370,
+          "sha256": "4ee705ad796c462ffded222564998106f8da13fa540a068118a7245e65a33bce"
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\semmelweis\\source\\underscore.wav",
+          "exists": true,
+          "bytes": 4224044,
+          "sha256": "39ff93ee745c5e5b097b889f76273a62b2486936fa35785d8099a38c87fe2e09"
+        }
+      ],
+      "metadata": {
+        "ffmpeg_version": "7.1-essentials_build-www.gyan.dev built with gcc 14.2.0 (Rev1, Built by MSYS2 project)",
+        "codec": "h264",
+        "pix_fmt": "yuv420p(progressive)",
+        "audio_codec": "aac",
+        "fps": 30.0,
+        "source_size": [
+          720,
+          1280
+        ],
+        "size": [
+          720,
+          1280
+        ],
+        "rotate": 0,
+        "duration": 32.33
+      },
+      "full_decode": {
+        "returncode": 0,
+        "decoded_frames": 970,
+        "audio_streams": [
+          "Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, mono, fltp, 193 kb/s (default)"
+        ],
+        "completed": true,
+        "stderr_tail": "lMedia\\public\\assets\\videos\\samples\\sleep-paralysis.mp4':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf61.7.100\n  Duration: 00:00:32.33, start: 0.000000, bitrate: 1391 kb/s\n  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 720x1280 [SAR 1:1 DAR 9:16], 1189 kb/s, 30 fps, 30 tbr, 15360 tbn (default)\n      Metadata:\n        handler_name    : VideoHandler\n        vendor_id       : [0][0][0][0]\n        encoder         : Lavc61.19.100 libx264\n  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, mono, fltp, 193 kb/s (default)\n      Metadata:\n        handler_name    : SoundHandler\n        vendor_id       : [0][0][0][0]\nStream mapping:\n  Stream #0:0 -> #0:0 (h264 (native) -> wrapped_avframe (native))\n  Stream #0:1 -> #0:1 (aac (native) -> pcm_s16le (native))\nOutput #0, null, to 'pipe:':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf61.7.100\n  Stream #0:0(und): Video: wrapped_avframe, yuv420p(progressive), 720x1280 [SAR 1:1 DAR 9:16], q=2-31, 200 kb/s, 30 fps, 30 tbn (default)\n      Metadata:\n        handler_name    : VideoHandler\n        vendor_id       : [0][0][0][0]\n        encoder         : Lavc61.19.100 wrapped_avframe\n  Stream #0:1(und): Audio: pcm_s16le, 48000 Hz, mono, s16, 768 kb/s (default)\n      Metadata:\n        handler_name    : SoundHandler\n        vendor_id       : [0][0][0][0]\n        encoder         : Lavc61.19.100 pcm_s16le\n[out#0/null @ 0000022c90f781c0] video:417KiB audio:3028KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown\nframe=  970 fps=0.0 q=-0.0 Lsize=N/A time=00:00:32.33 bitrate=N/A speed= 117x    \n"
+      },
+      "loudness": {
+        "integrated_lufs": -16.69,
+        "true_peak_dbtp": -1.49,
+        "measurement": {
+          "input_i": "-16.69",
+          "input_tp": "-1.49",
+          "input_lra": "2.60",
+          "input_thresh": "-27.11",
+          "output_i": "-16.19",
+          "output_tp": "-1.50",
+          "output_lra": "2.20",
+          "output_thresh": "-26.52",
+          "normalization_type": "dynamic",
+          "target_offset": "0.19"
+        }
+      },
+      "script_sha256": "5f05a2f5c0697f4356f895a9424967d1811ca6c112c9baf4702f82291b762636",
+      "qualifiers": [
+        {
+          "location": "script",
+          "phrase": "can be sleep paralysis",
+          "present": true
+        },
+        {
+          "location": "script",
+          "phrase": "Breathing continues",
+          "present": true
+        },
+        {
+          "location": "script",
+          "phrase": "It may help",
+          "present": true
+        },
+        {
+          "location": "script",
+          "phrase": "no guaranteed off switch",
+          "present": true
+        },
+        {
+          "location": "script",
+          "phrase": "talk to a clinician",
+          "present": true
+        },
+        {
+          "location": "ass",
+          "phrase": "Illustrative reenactment",
+          "present": true
+        },
+        {
+          "location": "ass",
+          "phrase": "NO GUARANTEED OFF SWITCH",
+          "present": true
+        }
+      ],
+      "review_frames": [
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\review\\sleep-paralysis\\01-opening.jpg",
+          "exists": true,
+          "bytes": 81217,
+          "sha256": "0e875b7d8e7a720ac481de02fe4d2305710884954af6b5d8ed3850d0b705bc1e",
+          "time_seconds": 0.65,
+          "command_passed": true
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\review\\sleep-paralysis\\02-quarter.jpg",
+          "exists": true,
+          "bytes": 96114,
+          "sha256": "f7ee35016b0f47c1dfec3b20c4ff582788184e215243591008e03f819a2c6f66",
+          "time_seconds": 8.0825,
+          "command_passed": true
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\review\\sleep-paralysis\\03-middle.jpg",
+          "exists": true,
+          "bytes": 70471,
+          "sha256": "3fcf4a0e4c4bf18759c0a40639dba61b98372e97ba4e343930f6e70100ed62b7",
+          "time_seconds": 16.165,
+          "command_passed": true
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\review\\sleep-paralysis\\04-three-quarter.jpg",
+          "exists": true,
+          "bytes": 77347,
+          "sha256": "351aa787d93c11396f34a76422d8b32c16a4d662739087ed2f32deb797480de3",
+          "time_seconds": 24.2475,
+          "command_passed": true
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\review\\sleep-paralysis\\05-late.jpg",
+          "exists": true,
+          "bytes": 97252,
+          "sha256": "a0f140fb5c0394b328af5d1df43af6d5359eafbc05f62ab1e7874d2f103b69e8",
+          "time_seconds": 29.097,
+          "command_passed": true
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\review\\sleep-paralysis\\06-brand.jpg",
+          "exists": true,
+          "bytes": 89581,
+          "sha256": "70d888703f423fd0ee732fd327b85e7b4237f81a3e2ab5e18f7558c8ad9aa852",
+          "time_seconds": 31.78,
+          "command_passed": true
+        }
+      ],
+      "automated_passed": true
+    },
+    {
+      "slug": "el-nino-2026",
+      "checks": [
+        {
+          "name": "Export Exists And Nonempty",
+          "passed": true,
+          "detail": {
+            "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\el-nino-2026.mp4",
+            "exists": true,
+            "bytes": 11923406,
+            "sha256": "3c263dd99407bf827212613d76bdfc371782193bb332cc599b544f2b495eb30d"
+          }
+        },
+        {
+          "name": "Source Files Available",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "Video Format",
+          "passed": true,
+          "detail": {
+            "expected": "720x1280, 30 fps, H.264",
+            "size": [
+              720,
+              1280
+            ],
+            "fps": 30.0,
+            "codec": "h264"
+          }
+        },
+        {
+          "name": "Timeline Duration",
+          "passed": true,
+          "detail": {
+            "actual": 31.37,
+            "expected": 31.366666666666667,
+            "difference": 0.003333,
+            "tolerance": 0.12
+          }
+        },
+        {
+          "name": "Full Audio And Video Decode",
+          "passed": true,
+          "detail": {
+            "returncode": 0,
+            "decoded_frames": 941,
+            "audio_streams": [
+              "Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, mono, fltp, 195 kb/s (default)"
+            ],
+            "completed": true,
+            "stderr_tail": "icalMedia\\public\\assets\\videos\\samples\\el-nino-2026.mp4':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf61.7.100\n  Duration: 00:00:31.37, start: 0.000000, bitrate: 3041 kb/s\n  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 720x1280 [SAR 1:1 DAR 9:16], 2836 kb/s, 30 fps, 30 tbr, 15360 tbn (default)\n      Metadata:\n        handler_name    : VideoHandler\n        vendor_id       : [0][0][0][0]\n        encoder         : Lavc61.19.100 libx264\n  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, mono, fltp, 195 kb/s (default)\n      Metadata:\n        handler_name    : SoundHandler\n        vendor_id       : [0][0][0][0]\nStream mapping:\n  Stream #0:0 -> #0:0 (h264 (native) -> wrapped_avframe (native))\n  Stream #0:1 -> #0:1 (aac (native) -> pcm_s16le (native))\nOutput #0, null, to 'pipe:':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf61.7.100\n  Stream #0:0(und): Video: wrapped_avframe, yuv420p(progressive), 720x1280 [SAR 1:1 DAR 9:16], q=2-31, 200 kb/s, 30 fps, 30 tbn (default)\n      Metadata:\n        handler_name    : VideoHandler\n        vendor_id       : [0][0][0][0]\n        encoder         : Lavc61.19.100 wrapped_avframe\n  Stream #0:1(und): Audio: pcm_s16le, 48000 Hz, mono, s16, 768 kb/s (default)\n      Metadata:\n        handler_name    : SoundHandler\n        vendor_id       : [0][0][0][0]\n        encoder         : Lavc61.19.100 pcm_s16le\n[out#0/null @ 000001f32b791140] video:404KiB audio:2940KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown\nframe=  941 fps=0.0 q=-0.0 Lsize=N/A time=00:00:31.36 bitrate=N/A speed=76.7x    \n"
+          }
+        },
+        {
+          "name": "Decoded Frame Count",
+          "passed": true,
+          "detail": {
+            "actual": 941,
+            "expected": 941
+          }
+        },
+        {
+          "name": "Integrated Loudness",
+          "passed": true,
+          "detail": {
+            "actual_lufs": -16.47,
+            "allowed_lufs": [
+              -18,
+              -14
+            ]
+          }
+        },
+        {
+          "name": "True Peak",
+          "passed": true,
+          "detail": {
+            "actual_dbtp": -1.46,
+            "maximum_dbtp": -0.8
+          }
+        },
+        {
+          "name": "Narration Script Hash",
+          "passed": true,
+          "detail": {
+            "script": "113cfa3bff849153b4f87cd56b39db9877bd86827f6582d5a4581a7f81998066",
+            "audio_manifest": "113cfa3bff849153b4f87cd56b39db9877bd86827f6582d5a4581a7f81998066"
+          }
+        },
+        {
+          "name": "Caption JSON Transcript Complete",
+          "passed": true,
+          "detail": {
+            "script_tokens": 86,
+            "caption_tokens": 86
+          }
+        },
+        {
+          "name": "ASS Caption Transcript Complete",
+          "passed": true,
+          "detail": {
+            "script_tokens": 86,
+            "ass_tokens": 86
+          }
+        },
+        {
+          "name": "Caption Timing",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "Branding Only In Final Second",
+          "passed": true,
+          "detail": {
+            "events": [
+              {
+                "layer": "2",
+                "start": 30.52,
+                "end": 31.29,
+                "style": "Brand",
+                "name": "",
+                "marginl": "0",
+                "marginr": "0",
+                "marginv": "0",
+                "effect": "",
+                "text": "GEO DATA"
+              }
+            ],
+            "early_or_late": [],
+            "outside_brand_style": [],
+            "reference_duration": 31.37
+          }
+        },
+        {
+          "name": "Topic Qualifiers In Script And Subtitle Sources",
+          "passed": true,
+          "detail": [
+            {
+              "location": "script",
+              "phrase": "could break a record",
+              "present": true
+            },
+            {
+              "location": "script",
+              "phrase": "seventy-five percent chance",
+              "present": true
+            },
+            {
+              "location": "script",
+              "phrase": "forecasts favor",
+              "present": true
+            },
+            {
+              "location": "script",
+              "phrase": "doesn't mean worse everywhere",
+              "present": true
+            },
+            {
+              "location": "ass",
+              "phrase": "FORECAST",
+              "present": true
+            },
+            {
+              "location": "ass",
+              "phrase": "SEPTEMBER 10, 2026",
+              "present": true
+            },
+            {
+              "location": "ass",
+              "phrase": "OCT–DEC 2026",
+              "present": true
+            },
+            {
+              "location": "ass",
+              "phrase": "THREE-MONTH RONI",
+              "present": true
+            },
+            {
+              "location": "ass",
+              "phrase": "FAVORED, NOT GUARANTEED",
+              "present": true
+            }
+          ]
+        },
+        {
+          "name": "Review Frames Extracted",
+          "passed": true,
+          "detail": 6
+        },
+        {
+          "name": "Export Unchanged During Verification",
+          "passed": true,
+          "detail": {
+            "before_bytes": 11923406,
+            "after_bytes": 11923406
+          }
+        }
+      ],
+      "review_required": true,
+      "export": {
+        "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\el-nino-2026.mp4",
+        "exists": true,
+        "bytes": 11923406,
+        "sha256": "3c263dd99407bf827212613d76bdfc371782193bb332cc599b544f2b495eb30d"
+      },
+      "timeline_duration": 31.366666666666667,
+      "sources": [
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\assets\\el-nino-heat.mp4",
+          "exists": true,
+          "bytes": 307265,
+          "sha256": "b3c31057f372126fe01cfe858324c7645ed995cca55210833723a8dc93e722e6"
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\assets\\el-nino-ocean.png",
+          "exists": true,
+          "bytes": 2666284,
+          "sha256": "3572c0806e81f2b6c49526350b5d65bf75e520cd46bfda4499cddce8917bb098"
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\assets\\el-nino-rain.png",
+          "exists": true,
+          "bytes": 2295774,
+          "sha256": "95a155301f94620703e2c4f07874bc992172d509bcde1d523b80408bb4175ad7"
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\audio\\el-nino-2026.captions.json",
+          "exists": true,
+          "bytes": 1975,
+          "sha256": "2e31f4f63a32c3174c6bc8bac5d63a6bce33f5f6dcee1cfac4a72b110c9f121e"
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\audio\\el-nino-2026.mp3",
+          "exists": true,
+          "bytes": 184752,
+          "sha256": "60f910c61c2bc34ccfb6039c8af8635c97e7eafde48810705b0f55f9e94ff189"
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\audio\\el-nino-2026.wav",
+          "exists": true,
+          "bytes": 2956110,
+          "sha256": "6bc8d1b079ada3e214b7866cf87a19dd516203bbe797e073ef23486672375aad"
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\audio\\el-nino-2026.words.json",
+          "exists": true,
+          "bytes": 6398,
+          "sha256": "4fe72a6df27c09040426bdaaddaf6a11c79bf75b67ad3ac10d01a6a74c8f58b7"
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\audio\\manifest.json",
+          "exists": true,
+          "bytes": 4928,
+          "sha256": "485f40f38edff1bfa3a352af8b28f79e594e9e0090b6be9f8ac35ff18796f944"
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\edits\\el-nino-2026\\captions.ass",
+          "exists": true,
+          "bytes": 3932,
+          "sha256": "bef48b8b85ca305f98b57d1dbb03fbd86c20aa59e76a210355c8dd22a422c3ca"
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\edits\\el-nino-2026\\timeline.json",
+          "exists": true,
+          "bytes": 1151,
+          "sha256": "fbd60138fada0bead0acae46c3521b78a22a3c69ff1f7095a6c0079bb98f3d08"
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\episodes.json",
+          "exists": true,
+          "bytes": 4093,
+          "sha256": "d6a4deaa6e5690d91eab93ebce802b07f012478741398b5f275f6a1ee703ad14"
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\render_shorts.py",
+          "exists": true,
+          "bytes": 18370,
+          "sha256": "4ee705ad796c462ffded222564998106f8da13fa540a068118a7245e65a33bce"
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\semmelweis\\source\\underscore.wav",
+          "exists": true,
+          "bytes": 4224044,
+          "sha256": "39ff93ee745c5e5b097b889f76273a62b2486936fa35785d8099a38c87fe2e09"
+        }
+      ],
+      "metadata": {
+        "ffmpeg_version": "7.1-essentials_build-www.gyan.dev built with gcc 14.2.0 (Rev1, Built by MSYS2 project)",
+        "codec": "h264",
+        "pix_fmt": "yuv420p(progressive)",
+        "audio_codec": "aac",
+        "fps": 30.0,
+        "source_size": [
+          720,
+          1280
+        ],
+        "size": [
+          720,
+          1280
+        ],
+        "rotate": 0,
+        "duration": 31.37
+      },
+      "full_decode": {
+        "returncode": 0,
+        "decoded_frames": 941,
+        "audio_streams": [
+          "Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, mono, fltp, 195 kb/s (default)"
+        ],
+        "completed": true,
+        "stderr_tail": "icalMedia\\public\\assets\\videos\\samples\\el-nino-2026.mp4':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf61.7.100\n  Duration: 00:00:31.37, start: 0.000000, bitrate: 3041 kb/s\n  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 720x1280 [SAR 1:1 DAR 9:16], 2836 kb/s, 30 fps, 30 tbr, 15360 tbn (default)\n      Metadata:\n        handler_name    : VideoHandler\n        vendor_id       : [0][0][0][0]\n        encoder         : Lavc61.19.100 libx264\n  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, mono, fltp, 195 kb/s (default)\n      Metadata:\n        handler_name    : SoundHandler\n        vendor_id       : [0][0][0][0]\nStream mapping:\n  Stream #0:0 -> #0:0 (h264 (native) -> wrapped_avframe (native))\n  Stream #0:1 -> #0:1 (aac (native) -> pcm_s16le (native))\nOutput #0, null, to 'pipe:':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf61.7.100\n  Stream #0:0(und): Video: wrapped_avframe, yuv420p(progressive), 720x1280 [SAR 1:1 DAR 9:16], q=2-31, 200 kb/s, 30 fps, 30 tbn (default)\n      Metadata:\n        handler_name    : VideoHandler\n        vendor_id       : [0][0][0][0]\n        encoder         : Lavc61.19.100 wrapped_avframe\n  Stream #0:1(und): Audio: pcm_s16le, 48000 Hz, mono, s16, 768 kb/s (default)\n      Metadata:\n        handler_name    : SoundHandler\n        vendor_id       : [0][0][0][0]\n        encoder         : Lavc61.19.100 pcm_s16le\n[out#0/null @ 000001f32b791140] video:404KiB audio:2940KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown\nframe=  941 fps=0.0 q=-0.0 Lsize=N/A time=00:00:31.36 bitrate=N/A speed=76.7x    \n"
+      },
+      "loudness": {
+        "integrated_lufs": -16.47,
+        "true_peak_dbtp": -1.46,
+        "measurement": {
+          "input_i": "-16.47",
+          "input_tp": "-1.46",
+          "input_lra": "3.00",
+          "input_thresh": "-26.78",
+          "output_i": "-16.05",
+          "output_tp": "-1.50",
+          "output_lra": "2.90",
+          "output_thresh": "-26.28",
+          "normalization_type": "dynamic",
+          "target_offset": "0.05"
+        }
+      },
+      "script_sha256": "113cfa3bff849153b4f87cd56b39db9877bd86827f6582d5a4581a7f81998066",
+      "qualifiers": [
+        {
+          "location": "script",
+          "phrase": "could break a record",
+          "present": true
+        },
+        {
+          "location": "script",
+          "phrase": "seventy-five percent chance",
+          "present": true
+        },
+        {
+          "location": "script",
+          "phrase": "forecasts favor",
+          "present": true
+        },
+        {
+          "location": "script",
+          "phrase": "doesn't mean worse everywhere",
+          "present": true
+        },
+        {
+          "location": "ass",
+          "phrase": "FORECAST",
+          "present": true
+        },
+        {
+          "location": "ass",
+          "phrase": "SEPTEMBER 10, 2026",
+          "present": true
+        },
+        {
+          "location": "ass",
+          "phrase": "OCT–DEC 2026",
+          "present": true
+        },
+        {
+          "location": "ass",
+          "phrase": "THREE-MONTH RONI",
+          "present": true
+        },
+        {
+          "location": "ass",
+          "phrase": "FAVORED, NOT GUARANTEED",
+          "present": true
+        }
+      ],
+      "review_frames": [
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\review\\el-nino-2026\\01-opening.jpg",
+          "exists": true,
+          "bytes": 289310,
+          "sha256": "d2317d65897f9e7791b0d62e92ce0d405276fec833fe6e881a286136c5ba0ec4",
+          "time_seconds": 0.65,
+          "command_passed": true
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\review\\el-nino-2026\\02-quarter.jpg",
+          "exists": true,
+          "bytes": 296204,
+          "sha256": "278b707b1fef71ba86d8b7e0f0c8c305fdc4f0910a03548d5dee5c971e820812",
+          "time_seconds": 7.8425,
+          "command_passed": true
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\review\\el-nino-2026\\03-middle.jpg",
+          "exists": true,
+          "bytes": 34471,
+          "sha256": "77d0fcbd8c55f0efb627f69aca20a0818f38d022b9fe5ac12727e64c8c535845",
+          "time_seconds": 15.685,
+          "command_passed": true
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\review\\el-nino-2026\\04-three-quarter.jpg",
+          "exists": true,
+          "bytes": 185011,
+          "sha256": "c22f4f9c167628756c661da954057f0f3b3cab768e7bd28a4e0c33b74651b8b7",
+          "time_seconds": 23.5275,
+          "command_passed": true
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\review\\el-nino-2026\\05-late.jpg",
+          "exists": true,
+          "bytes": 266111,
+          "sha256": "92e1fe75e036e74a42e89baf523b42970c44275cd89b7df877505688010f8f76",
+          "time_seconds": 28.233,
+          "command_passed": true
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\review\\el-nino-2026\\06-brand.jpg",
+          "exists": true,
+          "bytes": 260448,
+          "sha256": "80135dc8f3ce25602ec2a7478ea8e7a03164d03607a99c02448f0203c2506f81",
+          "time_seconds": 30.82,
+          "command_passed": true
+        }
+      ],
+      "automated_passed": true
+    },
+    {
+      "slug": "india-beneath-tibet",
+      "checks": [
+        {
+          "name": "Export Exists And Nonempty",
+          "passed": true,
+          "detail": {
+            "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\india-beneath-tibet.mp4",
+            "exists": true,
+            "bytes": 10821734,
+            "sha256": "cd28d4c16f1d2881ae8f89927c1ba58a1dc1cb90e1ec9f9b3bb1c50d310306a7"
+          }
+        },
+        {
+          "name": "Source Files Available",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "Video Format",
+          "passed": true,
+          "detail": {
+            "expected": "720x1280, 30 fps, H.264",
+            "size": [
+              720,
+              1280
+            ],
+            "fps": 30.0,
+            "codec": "h264"
+          }
+        },
+        {
+          "name": "Timeline Duration",
+          "passed": true,
+          "detail": {
+            "actual": 27.53,
+            "expected": 27.533333333333335,
+            "difference": -0.003333,
+            "tolerance": 0.12
+          }
+        },
+        {
+          "name": "Full Audio And Video Decode",
+          "passed": true,
+          "detail": {
+            "returncode": 0,
+            "decoded_frames": 826,
+            "audio_streams": [
+              "Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, mono, fltp, 196 kb/s (default)"
+            ],
+            "completed": true,
+            "stderr_tail": "ia\\public\\assets\\videos\\samples\\india-beneath-tibet.mp4':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf61.7.100\n  Duration: 00:00:27.53, start: 0.000000, bitrate: 3144 kb/s\n  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 720x1280 [SAR 1:1 DAR 9:16], 2938 kb/s, 30 fps, 30 tbr, 15360 tbn (default)\n      Metadata:\n        handler_name    : VideoHandler\n        vendor_id       : [0][0][0][0]\n        encoder         : Lavc61.19.100 libx264\n  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, mono, fltp, 196 kb/s (default)\n      Metadata:\n        handler_name    : SoundHandler\n        vendor_id       : [0][0][0][0]\nStream mapping:\n  Stream #0:0 -> #0:0 (h264 (native) -> wrapped_avframe (native))\n  Stream #0:1 -> #0:1 (aac (native) -> pcm_s16le (native))\nOutput #0, null, to 'pipe:':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf61.7.100\n  Stream #0:0(und): Video: wrapped_avframe, yuv420p(progressive), 720x1280 [SAR 1:1 DAR 9:16], q=2-31, 200 kb/s, 30 fps, 30 tbn (default)\n      Metadata:\n        handler_name    : VideoHandler\n        vendor_id       : [0][0][0][0]\n        encoder         : Lavc61.19.100 wrapped_avframe\n  Stream #0:1(und): Audio: pcm_s16le, 48000 Hz, mono, s16, 768 kb/s (default)\n      Metadata:\n        handler_name    : SoundHandler\n        vendor_id       : [0][0][0][0]\n        encoder         : Lavc61.19.100 pcm_s16le\n[out#0/null @ 0000029b17a24940] video:355KiB audio:2580KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown\nframe=  826 fps=0.0 q=-0.0 Lsize=N/A time=00:00:27.53 bitrate=N/A speed=75.9x    \n"
+          }
+        },
+        {
+          "name": "Decoded Frame Count",
+          "passed": true,
+          "detail": {
+            "actual": 826,
+            "expected": 826
+          }
+        },
+        {
+          "name": "Integrated Loudness",
+          "passed": true,
+          "detail": {
+            "actual_lufs": -16.12,
+            "allowed_lufs": [
+              -18,
+              -14
+            ]
+          }
+        },
+        {
+          "name": "True Peak",
+          "passed": true,
+          "detail": {
+            "actual_dbtp": -1.45,
+            "maximum_dbtp": -0.8
+          }
+        },
+        {
+          "name": "Narration Script Hash",
+          "passed": true,
+          "detail": {
+            "script": "93fa5e75ad71b7d3f5d9ee120fc0610e5800dda1b080db3567d3cdbcc8105b5d",
+            "audio_manifest": "93fa5e75ad71b7d3f5d9ee120fc0610e5800dda1b080db3567d3cdbcc8105b5d"
+          }
+        },
+        {
+          "name": "Caption JSON Transcript Complete",
+          "passed": true,
+          "detail": {
+            "script_tokens": 78,
+            "caption_tokens": 78
+          }
+        },
+        {
+          "name": "ASS Caption Transcript Complete",
+          "passed": true,
+          "detail": {
+            "script_tokens": 78,
+            "ass_tokens": 78
+          }
+        },
+        {
+          "name": "Caption Timing",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "Branding Only In Final Second",
+          "passed": true,
+          "detail": {
+            "events": [
+              {
+                "layer": "2",
+                "start": 26.68,
+                "end": 27.45,
+                "style": "Brand",
+                "name": "",
+                "marginl": "0",
+                "marginr": "0",
+                "marginv": "0",
+                "effect": "",
+                "text": "GEO LABS"
+              }
+            ],
+            "early_or_late": [],
+            "outside_brand_style": [],
+            "reference_duration": 27.53
+          }
+        },
+        {
+          "name": "Topic Qualifiers In Script And Subtitle Sources",
+          "passed": true,
+          "detail": [
+            {
+              "location": "script",
+              "phrase": "may be tearing",
+              "present": true
+            },
+            {
+              "location": "script",
+              "phrase": "inferred from seismic evidence",
+              "present": true
+            },
+            {
+              "location": "script",
+              "phrase": "country isn't disappearing",
+              "present": true
+            },
+            {
+              "location": "ass",
+              "phrase": "Geological time compressed",
+              "present": true
+            },
+            {
+              "location": "ass",
+              "phrase": "2025 SEISMIC STUDY",
+              "present": true
+            },
+            {
+              "location": "ass",
+              "phrase": "NOT A DISAPPEARING COUNTRY",
+              "present": true
+            }
+          ]
+        },
+        {
+          "name": "Review Frames Extracted",
+          "passed": true,
+          "detail": 6
+        },
+        {
+          "name": "Export Unchanged During Verification",
+          "passed": true,
+          "detail": {
+            "before_bytes": 10821734,
+            "after_bytes": 10821734
+          }
+        }
+      ],
+      "review_required": true,
+      "export": {
+        "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\india-beneath-tibet.mp4",
+        "exists": true,
+        "bytes": 10821734,
+        "sha256": "cd28d4c16f1d2881ae8f89927c1ba58a1dc1cb90e1ec9f9b3bb1c50d310306a7"
+      },
+      "timeline_duration": 27.533333333333335,
+      "sources": [
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\assets\\india-himalaya.png",
+          "exists": true,
+          "bytes": 2958693,
+          "sha256": "0b6cc143907ef559afa39c24546f6ef24ec21d8a6f25c7db6ad8b6afa1ec74a0"
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\assets\\india-underthrust.mp4",
+          "exists": true,
+          "bytes": 1404197,
+          "sha256": "31bc3892ad5c7d950283ca1adf11ee53a5fc164f1fee22de47049bc464879c5a"
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\audio\\india-beneath-tibet.captions.json",
+          "exists": true,
+          "bytes": 1711,
+          "sha256": "2ef437ee97e4ff6d153220e6dce17845b2391290bad1a3972ac48dd2b6bbe86c"
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\audio\\india-beneath-tibet.mp3",
+          "exists": true,
+          "bytes": 161856,
+          "sha256": "1bab6cf03fbf1fd04fcc5e535322ab63ba8e823b7d283cc7779ad0f24d5f1744"
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\audio\\india-beneath-tibet.wav",
+          "exists": true,
+          "bytes": 2589774,
+          "sha256": "cb8f460ce11668a2edfcd6e78e78e58200a71439056507c82491513de870e15f"
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\audio\\india-beneath-tibet.words.json",
+          "exists": true,
+          "bytes": 5787,
+          "sha256": "c996e2b7f36d5f8e2b482f39f18e01a7309a899c58df237672a7e8d2ae9ceb5a"
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\audio\\manifest.json",
+          "exists": true,
+          "bytes": 4928,
+          "sha256": "485f40f38edff1bfa3a352af8b28f79e594e9e0090b6be9f8ac35ff18796f944"
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\edits\\india-beneath-tibet\\captions.ass",
+          "exists": true,
+          "bytes": 3395,
+          "sha256": "7d6c770b9345877eb467c02d23e61e784a6945aa1a897c8cf2887680f6805447"
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\edits\\india-beneath-tibet\\timeline.json",
+          "exists": true,
+          "bytes": 992,
+          "sha256": "e4b7b77d3e8a49e657a5173ec60a6e6cc66f0083f83d683d359c8e625b4a8358"
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\episodes.json",
+          "exists": true,
+          "bytes": 4093,
+          "sha256": "d6a4deaa6e5690d91eab93ebce802b07f012478741398b5f275f6a1ee703ad14"
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\render_shorts.py",
+          "exists": true,
+          "bytes": 18370,
+          "sha256": "4ee705ad796c462ffded222564998106f8da13fa540a068118a7245e65a33bce"
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\semmelweis\\source\\underscore.wav",
+          "exists": true,
+          "bytes": 4224044,
+          "sha256": "39ff93ee745c5e5b097b889f76273a62b2486936fa35785d8099a38c87fe2e09"
+        }
+      ],
+      "metadata": {
+        "ffmpeg_version": "7.1-essentials_build-www.gyan.dev built with gcc 14.2.0 (Rev1, Built by MSYS2 project)",
+        "codec": "h264",
+        "pix_fmt": "yuv420p(progressive)",
+        "audio_codec": "aac",
+        "fps": 30.0,
+        "source_size": [
+          720,
+          1280
+        ],
+        "size": [
+          720,
+          1280
+        ],
+        "rotate": 0,
+        "duration": 27.53
+      },
+      "full_decode": {
+        "returncode": 0,
+        "decoded_frames": 826,
+        "audio_streams": [
+          "Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, mono, fltp, 196 kb/s (default)"
+        ],
+        "completed": true,
+        "stderr_tail": "ia\\public\\assets\\videos\\samples\\india-beneath-tibet.mp4':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf61.7.100\n  Duration: 00:00:27.53, start: 0.000000, bitrate: 3144 kb/s\n  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 720x1280 [SAR 1:1 DAR 9:16], 2938 kb/s, 30 fps, 30 tbr, 15360 tbn (default)\n      Metadata:\n        handler_name    : VideoHandler\n        vendor_id       : [0][0][0][0]\n        encoder         : Lavc61.19.100 libx264\n  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, mono, fltp, 196 kb/s (default)\n      Metadata:\n        handler_name    : SoundHandler\n        vendor_id       : [0][0][0][0]\nStream mapping:\n  Stream #0:0 -> #0:0 (h264 (native) -> wrapped_avframe (native))\n  Stream #0:1 -> #0:1 (aac (native) -> pcm_s16le (native))\nOutput #0, null, to 'pipe:':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf61.7.100\n  Stream #0:0(und): Video: wrapped_avframe, yuv420p(progressive), 720x1280 [SAR 1:1 DAR 9:16], q=2-31, 200 kb/s, 30 fps, 30 tbn (default)\n      Metadata:\n        handler_name    : VideoHandler\n        vendor_id       : [0][0][0][0]\n        encoder         : Lavc61.19.100 wrapped_avframe\n  Stream #0:1(und): Audio: pcm_s16le, 48000 Hz, mono, s16, 768 kb/s (default)\n      Metadata:\n        handler_name    : SoundHandler\n        vendor_id       : [0][0][0][0]\n        encoder         : Lavc61.19.100 pcm_s16le\n[out#0/null @ 0000029b17a24940] video:355KiB audio:2580KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown\nframe=  826 fps=0.0 q=-0.0 Lsize=N/A time=00:00:27.53 bitrate=N/A speed=75.9x    \n"
+      },
+      "loudness": {
+        "integrated_lufs": -16.12,
+        "true_peak_dbtp": -1.45,
+        "measurement": {
+          "input_i": "-16.12",
+          "input_tp": "-1.45",
+          "input_lra": "3.10",
+          "input_thresh": "-26.39",
+          "output_i": "-15.92",
+          "output_tp": "-1.50",
+          "output_lra": "2.10",
+          "output_thresh": "-26.06",
+          "normalization_type": "dynamic",
+          "target_offset": "-0.08"
+        }
+      },
+      "script_sha256": "93fa5e75ad71b7d3f5d9ee120fc0610e5800dda1b080db3567d3cdbcc8105b5d",
+      "qualifiers": [
+        {
+          "location": "script",
+          "phrase": "may be tearing",
+          "present": true
+        },
+        {
+          "location": "script",
+          "phrase": "inferred from seismic evidence",
+          "present": true
+        },
+        {
+          "location": "script",
+          "phrase": "country isn't disappearing",
+          "present": true
+        },
+        {
+          "location": "ass",
+          "phrase": "Geological time compressed",
+          "present": true
+        },
+        {
+          "location": "ass",
+          "phrase": "2025 SEISMIC STUDY",
+          "present": true
+        },
+        {
+          "location": "ass",
+          "phrase": "NOT A DISAPPEARING COUNTRY",
+          "present": true
+        }
+      ],
+      "review_frames": [
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\review\\india-beneath-tibet\\01-opening.jpg",
+          "exists": true,
+          "bytes": 298471,
+          "sha256": "884b50505d1094613cdc0447480e8cb90f76ad12e53f3c324d9a77e45c04a05a",
+          "time_seconds": 0.65,
+          "command_passed": true
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\review\\india-beneath-tibet\\02-quarter.jpg",
+          "exists": true,
+          "bytes": 94118,
+          "sha256": "b781e31c9ce7f6a27f79fc8a633d48b06ee3f818c7c4c105aa69a90818e80fc8",
+          "time_seconds": 6.8825,
+          "command_passed": true
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\review\\india-beneath-tibet\\03-middle.jpg",
+          "exists": true,
+          "bytes": 103559,
+          "sha256": "ed7763fa0cf6dbd09ff6f2cce145e078ccd9083ce78a1e44834dc130661ddbb3",
+          "time_seconds": 13.765,
+          "command_passed": true
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\review\\india-beneath-tibet\\04-three-quarter.jpg",
+          "exists": true,
+          "bytes": 105809,
+          "sha256": "2f7a8275a003f70b7401557d19442315a3023f58ffca987c515c502687dfff10",
+          "time_seconds": 20.6475,
+          "command_passed": true
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\review\\india-beneath-tibet\\05-late.jpg",
+          "exists": true,
+          "bytes": 290800,
+          "sha256": "646f61b7409ac67ecb97cf45300c91551409d9c1f76f0d1bf28cd2502c2a2972",
+          "time_seconds": 24.777,
+          "command_passed": true
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\review\\india-beneath-tibet\\06-brand.jpg",
+          "exists": true,
+          "bytes": 283539,
+          "sha256": "7fbf3b82b3a349ada76d5e738adfa008feb1bdc8b471e47410635746c99233dd",
+          "time_seconds": 26.98,
+          "command_passed": true
+        }
+      ],
+      "automated_passed": true
+    },
+    {
+      "slug": "light-sound-thought",
+      "checks": [
+        {
+          "name": "Export Exists And Nonempty",
+          "passed": true,
+          "detail": {
+            "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\light-sound-thought.mp4",
+            "exists": true,
+            "bytes": 10663966,
+            "sha256": "0f4bffe8016185e9545819d1acf8bf71cd186b42164a5715d35c9dab2ee6c7e0"
+          }
+        },
+        {
+          "name": "Source Files Available",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "Video Format",
+          "passed": true,
+          "detail": {
+            "expected": "720x1280, 30 fps, H.264",
+            "size": [
+              720,
+              1280
+            ],
+            "fps": 30.0,
+            "codec": "h264"
+          }
+        },
+        {
+          "name": "Timeline Duration",
+          "passed": true,
+          "detail": {
+            "actual": 31.2,
+            "expected": 31.2,
+            "difference": 0.0,
+            "tolerance": 0.12
+          }
+        },
+        {
+          "name": "Full Audio And Video Decode",
+          "passed": true,
+          "detail": {
+            "returncode": 0,
+            "decoded_frames": 936,
+            "audio_streams": [
+              "Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, mono, fltp, 193 kb/s (default)"
+            ],
+            "completed": true,
+            "stderr_tail": "ia\\public\\assets\\videos\\samples\\light-sound-thought.mp4':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf61.7.100\n  Duration: 00:00:31.20, start: 0.000000, bitrate: 2734 kb/s\n  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 720x1280 [SAR 1:1 DAR 9:16], 2531 kb/s, 30 fps, 30 tbr, 15360 tbn (default)\n      Metadata:\n        handler_name    : VideoHandler\n        vendor_id       : [0][0][0][0]\n        encoder         : Lavc61.19.100 libx264\n  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, mono, fltp, 193 kb/s (default)\n      Metadata:\n        handler_name    : SoundHandler\n        vendor_id       : [0][0][0][0]\nStream mapping:\n  Stream #0:0 -> #0:0 (h264 (native) -> wrapped_avframe (native))\n  Stream #0:1 -> #0:1 (aac (native) -> pcm_s16le (native))\nOutput #0, null, to 'pipe:':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf61.7.100\n  Stream #0:0(und): Video: wrapped_avframe, yuv420p(progressive), 720x1280 [SAR 1:1 DAR 9:16], q=2-31, 200 kb/s, 30 fps, 30 tbn (default)\n      Metadata:\n        handler_name    : VideoHandler\n        vendor_id       : [0][0][0][0]\n        encoder         : Lavc61.19.100 wrapped_avframe\n  Stream #0:1(und): Audio: pcm_s16le, 48000 Hz, mono, s16, 768 kb/s (default)\n      Metadata:\n        handler_name    : SoundHandler\n        vendor_id       : [0][0][0][0]\n        encoder         : Lavc61.19.100 pcm_s16le\n[out#0/null @ 000001718990f580] video:402KiB audio:2918KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown\nframe=  936 fps=0.0 q=-0.0 Lsize=N/A time=00:00:31.20 bitrate=N/A speed=82.9x    \n"
+          }
+        },
+        {
+          "name": "Decoded Frame Count",
+          "passed": true,
+          "detail": {
+            "actual": 936,
+            "expected": 936
+          }
+        },
+        {
+          "name": "Integrated Loudness",
+          "passed": true,
+          "detail": {
+            "actual_lufs": -16.22,
+            "allowed_lufs": [
+              -18,
+              -14
+            ]
+          }
+        },
+        {
+          "name": "True Peak",
+          "passed": true,
+          "detail": {
+            "actual_dbtp": -1.45,
+            "maximum_dbtp": -0.8
+          }
+        },
+        {
+          "name": "Narration Script Hash",
+          "passed": true,
+          "detail": {
+            "script": "c179f76d8f192339366758bb079fb3475d9384c234947c44df4cc07bb7aa2906",
+            "audio_manifest": "c179f76d8f192339366758bb079fb3475d9384c234947c44df4cc07bb7aa2906"
+          }
+        },
+        {
+          "name": "Caption JSON Transcript Complete",
+          "passed": true,
+          "detail": {
+            "script_tokens": 86,
+            "caption_tokens": 86
+          }
+        },
+        {
+          "name": "ASS Caption Transcript Complete",
+          "passed": true,
+          "detail": {
+            "script_tokens": 86,
+            "ass_tokens": 86
+          }
+        },
+        {
+          "name": "Caption Timing",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "Branding Only In Final Second",
+          "passed": true,
+          "detail": {
+            "events": [
+              {
+                "layer": "2",
+                "start": 30.35,
+                "end": 31.12,
+                "style": "Brand",
+                "name": "",
+                "marginl": "0",
+                "marginr": "0",
+                "marginv": "0",
+                "effect": "",
+                "text": "GEO DATA"
+              }
+            ],
+            "early_or_late": [],
+            "outside_brand_style": [],
+            "reference_duration": 31.2
+          }
+        },
+        {
+          "name": "Topic Qualifiers In Script And Subtitle Sources",
+          "passed": true,
+          "detail": [
+            {
+              "location": "script",
+              "phrase": "Light in a vacuum",
+              "present": true
+            },
+            {
+              "location": "script",
+              "phrase": "air at twenty degrees Celsius",
+              "present": true
+            },
+            {
+              "location": "script",
+              "phrase": "depending on the fiber",
+              "present": true
+            },
+            {
+              "location": "script",
+              "phrase": "a thought doesn't have one travel speed",
+              "present": true
+            },
+            {
+              "location": "ass",
+              "phrase": "Not a shared real-time scale",
+              "present": true
+            },
+            {
+              "location": "ass",
+              "phrase": "LIGHT IN VACUUM",
+              "present": true
+            },
+            {
+              "location": "ass",
+              "phrase": "SOUND IN AIR · 20°C",
+              "present": true
+            },
+            {
+              "location": "ass",
+              "phrase": "DEPENDS ON FIBER",
+              "present": true
+            }
+          ]
+        },
+        {
+          "name": "Review Frames Extracted",
+          "passed": true,
+          "detail": 6
+        },
+        {
+          "name": "Export Unchanged During Verification",
+          "passed": true,
+          "detail": {
+            "before_bytes": 10663966,
+            "after_bytes": 10663966
+          }
+        }
+      ],
+      "review_required": true,
+      "export": {
+        "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\light-sound-thought.mp4",
+        "exists": true,
+        "bytes": 10663966,
+        "sha256": "0f4bffe8016185e9545819d1acf8bf71cd186b42164a5715d35c9dab2ee6c7e0"
+      },
+      "timeline_duration": 31.2,
+      "sources": [
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\assets\\el-nino-ocean.png",
+          "exists": true,
+          "bytes": 2666284,
+          "sha256": "3572c0806e81f2b6c49526350b5d65bf75e520cd46bfda4499cddce8917bb098"
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\assets\\speed-lightning.png",
+          "exists": true,
+          "bytes": 1875587,
+          "sha256": "9cad2b7e0e62239f279a3d8dd15ba611749716c23f50e6681164a0038313a9e0"
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\assets\\speed-neuron.png",
+          "exists": true,
+          "bytes": 1947099,
+          "sha256": "c15f10a68dffb145be1f6fb4ba56cde9b5fe912ad99385feb3c0442ec1f9d4d4"
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\audio\\light-sound-thought.captions.json",
+          "exists": true,
+          "bytes": 2035,
+          "sha256": "c4b326127b9270cb9968af1cee0f6a754e7cd7ec9567e6744ff805fa43f160c5"
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\audio\\light-sound-thought.mp3",
+          "exists": true,
+          "bytes": 183744,
+          "sha256": "d851c9385d9b81829758b7f54c7f2336c3096107aea5308e22ade991b4e312e8"
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\audio\\light-sound-thought.wav",
+          "exists": true,
+          "bytes": 2939982,
+          "sha256": "1b8ee1c1e513ac466bc4e35fe24988acd9c9f0be2b1ca3777467076d1a259b18"
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\audio\\light-sound-thought.words.json",
+          "exists": true,
+          "bytes": 6331,
+          "sha256": "d1ebdb267502cc171d2d4b0c7652896af5c650a42b0fda69c36d5c1e7576e571"
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\audio\\manifest.json",
+          "exists": true,
+          "bytes": 4928,
+          "sha256": "485f40f38edff1bfa3a352af8b28f79e594e9e0090b6be9f8ac35ff18796f944"
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\edits\\light-sound-thought\\captions.ass",
+          "exists": true,
+          "bytes": 4836,
+          "sha256": "319ded9f849a83eec5bd83740460ea4d62ae4cf71fb972614d5299c27c823743"
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\edits\\light-sound-thought\\timeline.json",
+          "exists": true,
+          "bytes": 1306,
+          "sha256": "1c911c8fb548a9ed9010efd939c0d099214996f5f1ef5a013583ffac8d82f13c"
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\episodes.json",
+          "exists": true,
+          "bytes": 4093,
+          "sha256": "d6a4deaa6e5690d91eab93ebce802b07f012478741398b5f275f6a1ee703ad14"
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\render_shorts.py",
+          "exists": true,
+          "bytes": 18370,
+          "sha256": "4ee705ad796c462ffded222564998106f8da13fa540a068118a7245e65a33bce"
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\semmelweis\\source\\underscore.wav",
+          "exists": true,
+          "bytes": 4224044,
+          "sha256": "39ff93ee745c5e5b097b889f76273a62b2486936fa35785d8099a38c87fe2e09"
+        }
+      ],
+      "metadata": {
+        "ffmpeg_version": "7.1-essentials_build-www.gyan.dev built with gcc 14.2.0 (Rev1, Built by MSYS2 project)",
+        "codec": "h264",
+        "pix_fmt": "yuv420p(progressive)",
+        "audio_codec": "aac",
+        "fps": 30.0,
+        "source_size": [
+          720,
+          1280
+        ],
+        "size": [
+          720,
+          1280
+        ],
+        "rotate": 0,
+        "duration": 31.2
+      },
+      "full_decode": {
+        "returncode": 0,
+        "decoded_frames": 936,
+        "audio_streams": [
+          "Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, mono, fltp, 193 kb/s (default)"
+        ],
+        "completed": true,
+        "stderr_tail": "ia\\public\\assets\\videos\\samples\\light-sound-thought.mp4':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf61.7.100\n  Duration: 00:00:31.20, start: 0.000000, bitrate: 2734 kb/s\n  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 720x1280 [SAR 1:1 DAR 9:16], 2531 kb/s, 30 fps, 30 tbr, 15360 tbn (default)\n      Metadata:\n        handler_name    : VideoHandler\n        vendor_id       : [0][0][0][0]\n        encoder         : Lavc61.19.100 libx264\n  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, mono, fltp, 193 kb/s (default)\n      Metadata:\n        handler_name    : SoundHandler\n        vendor_id       : [0][0][0][0]\nStream mapping:\n  Stream #0:0 -> #0:0 (h264 (native) -> wrapped_avframe (native))\n  Stream #0:1 -> #0:1 (aac (native) -> pcm_s16le (native))\nOutput #0, null, to 'pipe:':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf61.7.100\n  Stream #0:0(und): Video: wrapped_avframe, yuv420p(progressive), 720x1280 [SAR 1:1 DAR 9:16], q=2-31, 200 kb/s, 30 fps, 30 tbn (default)\n      Metadata:\n        handler_name    : VideoHandler\n        vendor_id       : [0][0][0][0]\n        encoder         : Lavc61.19.100 wrapped_avframe\n  Stream #0:1(und): Audio: pcm_s16le, 48000 Hz, mono, s16, 768 kb/s (default)\n      Metadata:\n        handler_name    : SoundHandler\n        vendor_id       : [0][0][0][0]\n        encoder         : Lavc61.19.100 pcm_s16le\n[out#0/null @ 000001718990f580] video:402KiB audio:2918KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown\nframe=  936 fps=0.0 q=-0.0 Lsize=N/A time=00:00:31.20 bitrate=N/A speed=82.9x    \n"
+      },
+      "loudness": {
+        "integrated_lufs": -16.22,
+        "true_peak_dbtp": -1.45,
+        "measurement": {
+          "input_i": "-16.22",
+          "input_tp": "-1.45",
+          "input_lra": "2.80",
+          "input_thresh": "-26.61",
+          "output_i": "-15.97",
+          "output_tp": "-1.50",
+          "output_lra": "1.80",
+          "output_thresh": "-26.27",
+          "normalization_type": "dynamic",
+          "target_offset": "-0.03"
+        }
+      },
+      "script_sha256": "c179f76d8f192339366758bb079fb3475d9384c234947c44df4cc07bb7aa2906",
+      "qualifiers": [
+        {
+          "location": "script",
+          "phrase": "Light in a vacuum",
+          "present": true
+        },
+        {
+          "location": "script",
+          "phrase": "air at twenty degrees Celsius",
+          "present": true
+        },
+        {
+          "location": "script",
+          "phrase": "depending on the fiber",
+          "present": true
+        },
+        {
+          "location": "script",
+          "phrase": "a thought doesn't have one travel speed",
+          "present": true
+        },
+        {
+          "location": "ass",
+          "phrase": "Not a shared real-time scale",
+          "present": true
+        },
+        {
+          "location": "ass",
+          "phrase": "LIGHT IN VACUUM",
+          "present": true
+        },
+        {
+          "location": "ass",
+          "phrase": "SOUND IN AIR · 20°C",
+          "present": true
+        },
+        {
+          "location": "ass",
+          "phrase": "DEPENDS ON FIBER",
+          "present": true
+        }
+      ],
+      "review_frames": [
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\review\\light-sound-thought\\01-opening.jpg",
+          "exists": true,
+          "bytes": 122253,
+          "sha256": "a96d78ad76d4597ac86f008d9c0cdb4ef05d1e039a31ce65737a9ff17a25d67e",
+          "time_seconds": 0.65,
+          "command_passed": true
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\review\\light-sound-thought\\02-quarter.jpg",
+          "exists": true,
+          "bytes": 118806,
+          "sha256": "93ef099d849175e9f84d28d61cb0c4d422bd59cfee00afd4104f1a8fce1f1a1c",
+          "time_seconds": 7.8,
+          "command_passed": true
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\review\\light-sound-thought\\03-middle.jpg",
+          "exists": true,
+          "bytes": 151339,
+          "sha256": "06cef16966818dea6418c31366716d3ae5fda94301a78a51452a76a158446510",
+          "time_seconds": 15.6,
+          "command_passed": true
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\review\\light-sound-thought\\04-three-quarter.jpg",
+          "exists": true,
+          "bytes": 143109,
+          "sha256": "ce1f9cdd48430eeed2d1544023004626c14b257c1d763dc278b82f375af83662",
+          "time_seconds": 23.4,
+          "command_passed": true
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\review\\light-sound-thought\\05-late.jpg",
+          "exists": true,
+          "bytes": 161263,
+          "sha256": "6e83fa0056576901cc13c2ab72dfdd36e117d405c6a5598aedd47909def6ad0d",
+          "time_seconds": 28.08,
+          "command_passed": true
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\review\\light-sound-thought\\06-brand.jpg",
+          "exists": true,
+          "bytes": 137836,
+          "sha256": "3e7f8bbf8f5a784609b0408d34d61d7c7742efd8df24592bff9ecfe868a7d390",
+          "time_seconds": 30.65,
+          "command_passed": true
+        }
+      ],
+      "automated_passed": true
+    },
+    {
+      "slug": "handwashing-semmelweis",
+      "checks": [
+        {
+          "name": "Export Exists And Nonempty",
+          "passed": true,
+          "detail": {
+            "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\handwashing-semmelweis.mp4",
+            "exists": true,
+            "bytes": 6639480,
+            "sha256": "cabe355bdebd322d5adfe776814b5a686348fa1f3b9409d937cb43ea0e1a70c3"
+          }
+        },
+        {
+          "name": "Source Files Available",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "Video Format",
+          "passed": true,
+          "detail": {
+            "expected": "720x1280, 30 fps, H.264",
+            "size": [
+              720,
+              1280
+            ],
+            "fps": 30.0,
+            "codec": "h264"
+          }
+        },
+        {
+          "name": "Timeline Duration",
+          "passed": true,
+          "detail": {
+            "actual": 34.83,
+            "expected": 34.833333333333336,
+            "difference": -0.003333,
+            "tolerance": 0.12
+          }
+        },
+        {
+          "name": "Full Audio And Video Decode",
+          "passed": true,
+          "detail": {
+            "returncode": 0,
+            "decoded_frames": 1045,
+            "audio_streams": [
+              "Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, mono, fltp, 195 kb/s (default)"
+            ],
+            "completed": true,
+            "stderr_tail": "public\\assets\\videos\\samples\\handwashing-semmelweis.mp4':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf61.7.100\n  Duration: 00:00:34.83, start: 0.000000, bitrate: 1524 kb/s\n  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 720x1280 [SAR 1:1 DAR 9:16], 1320 kb/s, 30 fps, 30 tbr, 15360 tbn (default)\n      Metadata:\n        handler_name    : VideoHandler\n        vendor_id       : [0][0][0][0]\n        encoder         : Lavc61.19.100 libx264\n  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, mono, fltp, 195 kb/s (default)\n      Metadata:\n        handler_name    : SoundHandler\n        vendor_id       : [0][0][0][0]\nStream mapping:\n  Stream #0:0 -> #0:0 (h264 (native) -> wrapped_avframe (native))\n  Stream #0:1 -> #0:1 (aac (native) -> pcm_s16le (native))\nOutput #0, null, to 'pipe:':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf61.7.100\n  Stream #0:0(und): Video: wrapped_avframe, yuv420p(progressive), 720x1280 [SAR 1:1 DAR 9:16], q=2-31, 200 kb/s, 30 fps, 30 tbn (default)\n      Metadata:\n        handler_name    : VideoHandler\n        vendor_id       : [0][0][0][0]\n        encoder         : Lavc61.19.100 wrapped_avframe\n  Stream #0:1(und): Audio: pcm_s16le, 48000 Hz, mono, s16, 768 kb/s (default)\n      Metadata:\n        handler_name    : SoundHandler\n        vendor_id       : [0][0][0][0]\n        encoder         : Lavc61.19.100 pcm_s16le\n[out#0/null @ 000001527341f580] video:449KiB audio:3264KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown\nframe= 1045 fps=0.0 q=-0.0 Lsize=N/A time=00:00:34.83 bitrate=N/A speed= 112x    \n"
+          }
+        },
+        {
+          "name": "Decoded Frame Count",
+          "passed": true,
+          "detail": {
+            "actual": 1045,
+            "expected": 1045
+          }
+        },
+        {
+          "name": "Integrated Loudness",
+          "passed": true,
+          "detail": {
+            "actual_lufs": -16.23,
+            "allowed_lufs": [
+              -18,
+              -14
+            ]
+          }
+        },
+        {
+          "name": "True Peak",
+          "passed": true,
+          "detail": {
+            "actual_dbtp": -1.44,
+            "maximum_dbtp": -0.8
+          }
+        },
+        {
+          "name": "Narration Script Hash",
+          "passed": true,
+          "detail": {
+            "script": "14dd9b22c278dd52bc78c33d4411eb1ef094409dcad1d944742d1fed4aedab7a",
+            "audio_manifest": "14dd9b22c278dd52bc78c33d4411eb1ef094409dcad1d944742d1fed4aedab7a"
+          }
+        },
+        {
+          "name": "Caption JSON Transcript Complete",
+          "passed": true,
+          "detail": {
+            "script_tokens": 84,
+            "caption_tokens": 84
+          }
+        },
+        {
+          "name": "ASS Caption Transcript Complete",
+          "passed": true,
+          "detail": {
+            "script_tokens": 84,
+            "ass_tokens": 84
+          }
+        },
+        {
+          "name": "Caption Timing",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "Branding Only In Final Second",
+          "passed": true,
+          "detail": {
+            "events": [
+              {
+                "layer": "2",
+                "start": 33.98,
+                "end": 34.75,
+                "style": "Brand",
+                "name": "",
+                "marginl": "0",
+                "marginr": "0",
+                "marginv": "0",
+                "effect": "",
+                "text": "GEO LABS"
+              }
+            ],
+            "early_or_late": [],
+            "outside_brand_style": [],
+            "reference_duration": 34.83
+          }
+        },
+        {
+          "name": "Topic Qualifiers In Script And Subtitle Sources",
+          "passed": true,
+          "detail": [
+            {
+              "location": "script",
+              "phrase": "training lotion",
+              "present": true
+            },
+            {
+              "location": "script",
+              "phrase": "not germs",
+              "present": true
+            },
+            {
+              "location": "script",
+              "phrase": "chlorinated-lime",
+              "present": true
+            },
+            {
+              "location": "script",
+              "phrase": "Soap washing already existed",
+              "present": true
+            },
+            {
+              "location": "script",
+              "phrase": "twenty seconds",
+              "present": true
+            },
+            {
+              "location": "script",
+              "phrase": "simulated before-and-after",
+              "present": true
+            },
+            {
+              "location": "script",
+              "phrase": "doesn't mean sterile hands",
+              "present": true
+            },
+            {
+              "location": "ass",
+              "phrase": "UV TRACER SIMULATION",
+              "present": true
+            },
+            {
+              "location": "ass",
+              "phrase": "NOT ACTUAL GERMS",
+              "present": true
+            },
+            {
+              "location": "ass",
+              "phrase": "BEFORE",
+              "present": true
+            },
+            {
+              "location": "ass",
+              "phrase": "AFTER",
+              "present": true
+            },
+            {
+              "location": "ass",
+              "phrase": "LESS TRACER ≠ STERILE HANDS",
+              "present": true
+            }
+          ]
+        },
+        {
+          "name": "Review Frames Extracted",
+          "passed": true,
+          "detail": 6
+        },
+        {
+          "name": "Export Unchanged During Verification",
+          "passed": true,
+          "detail": {
+            "before_bytes": 6639480,
+            "after_bytes": 6639480
+          }
+        }
+      ],
+      "review_required": true,
+      "export": {
+        "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\handwashing-semmelweis.mp4",
+        "exists": true,
+        "bytes": 6639480,
+        "sha256": "cabe355bdebd322d5adfe776814b5a686348fa1f3b9409d937cb43ea0e1a70c3"
+      },
+      "timeline_duration": 34.833333333333336,
+      "sources": [
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\assets\\hand-normal.png",
+          "exists": true,
+          "bytes": 1738867,
+          "sha256": "bdcfc1543a40331e36064ecbc6fd07f0efacc5fdfe023c05554506f703293c21"
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\assets\\handwashing-historical.mp4",
+          "exists": true,
+          "bytes": 709117,
+          "sha256": "59062d0358f5dd37057202deba0257807e901dc4271053be814c6c1263ffc655"
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\assets\\modern-handwash.png",
+          "exists": true,
+          "bytes": 1865279,
+          "sha256": "159a4d888edb4f92a21bbecc8a27af347e716f608abb2aba7dcd551e9cc6ac11"
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\assets\\uv-after.png",
+          "exists": true,
+          "bytes": 1648638,
+          "sha256": "b48f1fc17c34c43ba4e639309b1420e36e4cecf7f56b403adb261c65233e8c20"
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\assets\\uv-before.png",
+          "exists": true,
+          "bytes": 1891467,
+          "sha256": "0dafe98db93dfadc8d02511bfce1b939901bdc5906f910ed3f1043e189ee2a30"
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\audio\\handwashing-semmelweis.captions.json",
+          "exists": true,
+          "bytes": 1944,
+          "sha256": "9e49d7e90ca9f7bd2b2fbf877a6a1b555c1521b73288fb581ad2d5c9673fc07b"
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\audio\\handwashing-semmelweis.mp3",
+          "exists": true,
+          "bytes": 205632,
+          "sha256": "752c7acc2447010ce33357ba85dfc63920eb6debc0c9a4bae49c4b65b9a99c54"
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\audio\\handwashing-semmelweis.wav",
+          "exists": true,
+          "bytes": 3290190,
+          "sha256": "438faf96f64b5f378c75bc455ae6c94c20528cbe6ff0a9fa80481f4d2cd0ed01"
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\audio\\handwashing-semmelweis.words.json",
+          "exists": true,
+          "bytes": 6230,
+          "sha256": "41b67ba72c5a064f6f143514bd240dd903b3c2a77b988fb6bd8b9a876f81870e"
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\audio\\manifest.json",
+          "exists": true,
+          "bytes": 4928,
+          "sha256": "485f40f38edff1bfa3a352af8b28f79e594e9e0090b6be9f8ac35ff18796f944"
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\edits\\handwashing-semmelweis\\captions.ass",
+          "exists": true,
+          "bytes": 4085,
+          "sha256": "873decd8322ca7bc7f9c72c8ddbca388451bba07e91186851c07b5c5b0fd89e6"
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\edits\\handwashing-semmelweis\\timeline.json",
+          "exists": true,
+          "bytes": 1628,
+          "sha256": "2eea00959beba3ac2f73b07dc464ccfbd78054f9062914fe0c394d7bae8b4a35"
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\episodes.json",
+          "exists": true,
+          "bytes": 4093,
+          "sha256": "d6a4deaa6e5690d91eab93ebce802b07f012478741398b5f275f6a1ee703ad14"
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\render_shorts.py",
+          "exists": true,
+          "bytes": 18370,
+          "sha256": "4ee705ad796c462ffded222564998106f8da13fa540a068118a7245e65a33bce"
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\semmelweis\\source\\physician.png",
+          "exists": true,
+          "bytes": 1906372,
+          "sha256": "ded406b791c93176fea969965ba5c83db300795aa757f62a03e493eaa4a1c553"
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\semmelweis\\source\\underscore.wav",
+          "exists": true,
+          "bytes": 4224044,
+          "sha256": "39ff93ee745c5e5b097b889f76273a62b2486936fa35785d8099a38c87fe2e09"
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\semmelweis\\source\\ward.png",
+          "exists": true,
+          "bytes": 1976071,
+          "sha256": "20011d84f5fbe7fa912ebd16d89c922d4456a448cc6c5f43568d0fad21afdde2"
+        }
+      ],
+      "metadata": {
+        "ffmpeg_version": "7.1-essentials_build-www.gyan.dev built with gcc 14.2.0 (Rev1, Built by MSYS2 project)",
+        "codec": "h264",
+        "pix_fmt": "yuv420p(progressive)",
+        "audio_codec": "aac",
+        "fps": 30.0,
+        "source_size": [
+          720,
+          1280
+        ],
+        "size": [
+          720,
+          1280
+        ],
+        "rotate": 0,
+        "duration": 34.83
+      },
+      "full_decode": {
+        "returncode": 0,
+        "decoded_frames": 1045,
+        "audio_streams": [
+          "Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, mono, fltp, 195 kb/s (default)"
+        ],
+        "completed": true,
+        "stderr_tail": "public\\assets\\videos\\samples\\handwashing-semmelweis.mp4':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf61.7.100\n  Duration: 00:00:34.83, start: 0.000000, bitrate: 1524 kb/s\n  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 720x1280 [SAR 1:1 DAR 9:16], 1320 kb/s, 30 fps, 30 tbr, 15360 tbn (default)\n      Metadata:\n        handler_name    : VideoHandler\n        vendor_id       : [0][0][0][0]\n        encoder         : Lavc61.19.100 libx264\n  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, mono, fltp, 195 kb/s (default)\n      Metadata:\n        handler_name    : SoundHandler\n        vendor_id       : [0][0][0][0]\nStream mapping:\n  Stream #0:0 -> #0:0 (h264 (native) -> wrapped_avframe (native))\n  Stream #0:1 -> #0:1 (aac (native) -> pcm_s16le (native))\nOutput #0, null, to 'pipe:':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf61.7.100\n  Stream #0:0(und): Video: wrapped_avframe, yuv420p(progressive), 720x1280 [SAR 1:1 DAR 9:16], q=2-31, 200 kb/s, 30 fps, 30 tbn (default)\n      Metadata:\n        handler_name    : VideoHandler\n        vendor_id       : [0][0][0][0]\n        encoder         : Lavc61.19.100 wrapped_avframe\n  Stream #0:1(und): Audio: pcm_s16le, 48000 Hz, mono, s16, 768 kb/s (default)\n      Metadata:\n        handler_name    : SoundHandler\n        vendor_id       : [0][0][0][0]\n        encoder         : Lavc61.19.100 pcm_s16le\n[out#0/null @ 000001527341f580] video:449KiB audio:3264KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown\nframe= 1045 fps=0.0 q=-0.0 Lsize=N/A time=00:00:34.83 bitrate=N/A speed= 112x    \n"
+      },
+      "loudness": {
+        "integrated_lufs": -16.23,
+        "true_peak_dbtp": -1.44,
+        "measurement": {
+          "input_i": "-16.23",
+          "input_tp": "-1.44",
+          "input_lra": "2.40",
+          "input_thresh": "-26.52",
+          "output_i": "-16.16",
+          "output_tp": "-1.50",
+          "output_lra": "2.00",
+          "output_thresh": "-26.38",
+          "normalization_type": "dynamic",
+          "target_offset": "0.16"
+        }
+      },
+      "script_sha256": "14dd9b22c278dd52bc78c33d4411eb1ef094409dcad1d944742d1fed4aedab7a",
+      "qualifiers": [
+        {
+          "location": "script",
+          "phrase": "training lotion",
+          "present": true
+        },
+        {
+          "location": "script",
+          "phrase": "not germs",
+          "present": true
+        },
+        {
+          "location": "script",
+          "phrase": "chlorinated-lime",
+          "present": true
+        },
+        {
+          "location": "script",
+          "phrase": "Soap washing already existed",
+          "present": true
+        },
+        {
+          "location": "script",
+          "phrase": "twenty seconds",
+          "present": true
+        },
+        {
+          "location": "script",
+          "phrase": "simulated before-and-after",
+          "present": true
+        },
+        {
+          "location": "script",
+          "phrase": "doesn't mean sterile hands",
+          "present": true
+        },
+        {
+          "location": "ass",
+          "phrase": "UV TRACER SIMULATION",
+          "present": true
+        },
+        {
+          "location": "ass",
+          "phrase": "NOT ACTUAL GERMS",
+          "present": true
+        },
+        {
+          "location": "ass",
+          "phrase": "BEFORE",
+          "present": true
+        },
+        {
+          "location": "ass",
+          "phrase": "AFTER",
+          "present": true
+        },
+        {
+          "location": "ass",
+          "phrase": "LESS TRACER ≠ STERILE HANDS",
+          "present": true
+        }
+      ],
+      "review_frames": [
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\review\\handwashing-semmelweis\\01-opening.jpg",
+          "exists": true,
+          "bytes": 107348,
+          "sha256": "2423fc6b027a37fab0af08e14380a74d000f51ddb853fb1ef62fb5c3a5ab13f9",
+          "time_seconds": 0.65,
+          "command_passed": true
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\review\\handwashing-semmelweis\\02-quarter.jpg",
+          "exists": true,
+          "bytes": 136751,
+          "sha256": "a747a368f9028dc8f18bed593a5f6f5d07fc4f4e21024c7b8da19120e5813739",
+          "time_seconds": 8.7075,
+          "command_passed": true
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\review\\handwashing-semmelweis\\03-middle.jpg",
+          "exists": true,
+          "bytes": 51535,
+          "sha256": "ea5706edd2bf0fc3b9334239ca6b93009acc2d4a6aa161e21be3937ba80bfa74",
+          "time_seconds": 17.415,
+          "command_passed": true
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\review\\handwashing-semmelweis\\04-three-quarter.jpg",
+          "exists": true,
+          "bytes": 122765,
+          "sha256": "d91a9cc5f03c0807fd87e93eec252c0877a5576a4a80c7e7e5b5b61bace3bd12",
+          "time_seconds": 26.1225,
+          "command_passed": true
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\review\\handwashing-semmelweis\\05-late.jpg",
+          "exists": true,
+          "bytes": 80790,
+          "sha256": "d62ee8f9ae4c16b1aa6db5f1bd5fd00edde0354a9e13ddb3dc3ebfec7986298b",
+          "time_seconds": 31.347,
+          "command_passed": true
+        },
+        {
+          "filename": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\review\\handwashing-semmelweis\\06-brand.jpg",
+          "exists": true,
+          "bytes": 61087,
+          "sha256": "e3636687b6d71166ed6167bb274a525c54a908c1381e7a8de9af80e3aa16a82e",
+          "time_seconds": 34.28,
+          "command_passed": true
+        }
+      ],
+      "automated_passed": true
+    }
+  ],
+  "automated_passed": true
+}

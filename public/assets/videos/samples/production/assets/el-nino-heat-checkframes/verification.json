@@ -1,0 +1,11 @@
+{
+  "file": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\assets\\el-nino-heat.mp4",
+  "decoded_frames": 240,
+  "width": 720,
+  "height": 1280,
+  "fps": 30.0,
+  "duration": 8.0,
+  "codec": "h264",
+  "audio": false,
+  "checkframes": "C:\\Users\\massa\\OneDrive\\Documents\\XAMPP Apache\\htdocs\\apps\\GeoPoliticalMedia\\public\\assets\\videos\\samples\\production\\assets\\el-nino-heat-checkframes"
+}

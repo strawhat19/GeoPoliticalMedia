@@ -1,0 +1,128 @@
+{
+  "voice": "en-US-AndrewMultilingualNeural",
+  "preferred_voice_available": true,
+  "method_source": "https://github.com/rany2/edge-tts",
+  "sample_rate": 48000,
+  "episodes": [
+    {
+      "slug": "sleep-paralysis",
+      "voice": "en-US-AndrewMultilingualNeural",
+      "rate": "+7%",
+      "pitch": "+0Hz",
+      "script_sha256": "5f05a2f5c0697f4356f895a9424967d1811ca6c112c9baf4702f82291b762636",
+      "method": "Microsoft Edge neural TTS through edge-tts 7.2.8; FFmpeg decoding to 48 kHz mono PCM",
+      "files": {
+        "mp3": "sleep-paralysis.mp3",
+        "wav": "sleep-paralysis.wav",
+        "words": "sleep-paralysis.words.json",
+        "captions": "sleep-paralysis.captions.json"
+      },
+      "word_boundaries": 80,
+      "captions": 19,
+      "last_spoken_word_end": 31.401874,
+      "validation": "Decoded WAV verified; ordered measured word timestamps; exact complete caption transcript; no caption overlaps",
+      "duration": 31.752,
+      "sample_rate": 48000,
+      "channels": 1,
+      "pcm_bits": 16,
+      "rms_dbfs": -21.389,
+      "peak_dbfs": -3.082
+    },
+    {
+      "slug": "el-nino-2026",
+      "voice": "en-US-AndrewMultilingualNeural",
+      "rate": "+7%",
+      "pitch": "+0Hz",
+      "script_sha256": "113cfa3bff849153b4f87cd56b39db9877bd86827f6582d5a4581a7f81998066",
+      "method": "Microsoft Edge neural TTS through edge-tts 7.2.8; FFmpeg decoding to 48 kHz mono PCM",
+      "files": {
+        "mp3": "el-nino-2026.mp3",
+        "wav": "el-nino-2026.wav",
+        "words": "el-nino-2026.words.json",
+        "captions": "el-nino-2026.captions.json"
+      },
+      "word_boundaries": 81,
+      "captions": 20,
+      "last_spoken_word_end": 30.443916,
+      "validation": "Decoded WAV verified; ordered measured word timestamps; exact complete caption transcript; no caption overlaps",
+      "duration": 30.792,
+      "sample_rate": 48000,
+      "channels": 1,
+      "pcm_bits": 16,
+      "rms_dbfs": -21.058,
+      "peak_dbfs": -3.903
+    },
+    {
+      "slug": "india-beneath-tibet",
+      "voice": "en-US-AndrewMultilingualNeural",
+      "rate": "+7%",
+      "pitch": "+0Hz",
+      "script_sha256": "93fa5e75ad71b7d3f5d9ee120fc0610e5800dda1b080db3567d3cdbcc8105b5d",
+      "method": "Microsoft Edge neural TTS through edge-tts 7.2.8; FFmpeg decoding to 48 kHz mono PCM",
+      "files": {
+        "mp3": "india-beneath-tibet.mp3",
+        "wav": "india-beneath-tibet.wav",
+        "words": "india-beneath-tibet.words.json",
+        "captions": "india-beneath-tibet.captions.json"
+      },
+      "word_boundaries": 73,
+      "captions": 17,
+      "last_spoken_word_end": 26.623832,
+      "validation": "Decoded WAV verified; ordered measured word timestamps; exact complete caption transcript; no caption overlaps",
+      "duration": 26.976,
+      "sample_rate": 48000,
+      "channels": 1,
+      "pcm_bits": 16,
+      "rms_dbfs": -21.714,
+      "peak_dbfs": -3.537
+    },
+    {
+      "slug": "light-sound-thought",
+      "voice": "en-US-AndrewMultilingualNeural",
+      "rate": "+7%",
+      "pitch": "+0Hz",
+      "script_sha256": "c179f76d8f192339366758bb079fb3475d9384c234947c44df4cc07bb7aa2906",
+      "method": "Microsoft Edge neural TTS through edge-tts 7.2.8; FFmpeg decoding to 48 kHz mono PCM",
+      "files": {
+        "mp3": "light-sound-thought.mp3",
+        "wav": "light-sound-thought.wav",
+        "words": "light-sound-thought.words.json",
+        "captions": "light-sound-thought.captions.json"
+      },
+      "word_boundaries": 80,
+      "captions": 21,
+      "last_spoken_word_end": 30.280374,
+      "validation": "Decoded WAV verified; ordered measured word timestamps; exact complete caption transcript; no caption overlaps",
+      "duration": 30.624,
+      "sample_rate": 48000,
+      "channels": 1,
+      "pcm_bits": 16,
+      "rms_dbfs": -21.502,
+      "peak_dbfs": -3.082
+    },
+    {
+      "slug": "handwashing-semmelweis",
+      "voice": "en-US-AndrewMultilingualNeural",
+      "rate": "+7%",
+      "pitch": "+0Hz",
+      "script_sha256": "14dd9b22c278dd52bc78c33d4411eb1ef094409dcad1d944742d1fed4aedab7a",
+      "method": "Microsoft Edge neural TTS through edge-tts 7.2.8; FFmpeg decoding to 48 kHz mono PCM",
+      "files": {
+        "mp3": "handwashing-semmelweis.mp3",
+        "wav": "handwashing-semmelweis.wav",
+        "words": "handwashing-semmelweis.words.json",
+        "captions": "handwashing-semmelweis.captions.json"
+      },
+      "word_boundaries": 78,
+      "captions": 19,
+      "last_spoken_word_end": 33.925249,
+      "validation": "Decoded WAV verified; ordered measured word timestamps; exact complete caption transcript; no caption overlaps",
+      "duration": 34.272,
+      "sample_rate": 48000,
+      "channels": 1,
+      "pcm_bits": 16,
+      "rms_dbfs": -20.888,
+      "peak_dbfs": -2.981
+    }
+  ]
+}

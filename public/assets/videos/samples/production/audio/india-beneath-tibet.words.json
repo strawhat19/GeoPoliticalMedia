@@ -1,0 +1,367 @@
+[
+  {
+    "text": "India's",
+    "start": 0.093458,
+    "end": 0.420541
+  },
+  {
+    "text": "tectonic",
+    "start": 0.420541,
+    "end": 0.911207
+  },
+  {
+    "text": "plate",
+    "start": 0.911208,
+    "end": 1.249999
+  },
+  {
+    "text": "is",
+    "start": 1.530375,
+    "end": 1.6355
+  },
+  {
+    "text": "pushing",
+    "start": 1.647208,
+    "end": 2.067749
+  },
+  {
+    "text": "under",
+    "start": 2.06775,
+    "end": 2.243
+  },
+  {
+    "text": "Tibet",
+    "start": 2.243,
+    "end": 2.686916
+  },
+  {
+    "text": "But",
+    "start": 3.084125,
+    "end": 3.177583
+  },
+  {
+    "text": "the",
+    "start": 3.18925,
+    "end": 3.271041
+  },
+  {
+    "text": "weird",
+    "start": 3.282708,
+    "end": 3.539708
+  },
+  {
+    "text": "part",
+    "start": 3.539708,
+    "end": 3.878499
+  },
+  {
+    "text": "is",
+    "start": 3.936916,
+    "end": 4.077082
+  },
+  {
+    "text": "what",
+    "start": 4.077083,
+    "end": 4.275666
+  },
+  {
+    "text": "may",
+    "start": 4.275708,
+    "end": 4.485999
+  },
+  {
+    "text": "be",
+    "start": 4.497666,
+    "end": 4.626166
+  },
+  {
+    "text": "happening",
+    "start": 4.626166,
+    "end": 5.035041
+  },
+  {
+    "text": "underneath",
+    "start": 5.035041,
+    "end": 5.560749
+  },
+  {
+    "text": "That",
+    "start": 5.934583,
+    "end": 6.039708
+  },
+  {
+    "text": "slow",
+    "start": 6.039708,
+    "end": 6.308416
+  },
+  {
+    "text": "collision",
+    "start": 6.308416,
+    "end": 6.799082
+  },
+  {
+    "text": "helps",
+    "start": 6.81075,
+    "end": 7.126166
+  },
+  {
+    "text": "build",
+    "start": 7.219625,
+    "end": 7.523375
+  },
+  {
+    "text": "the",
+    "start": 7.523375,
+    "end": 7.581791
+  },
+  {
+    "text": "Himalayas",
+    "start": 7.581791,
+    "end": 8.329457
+  },
+  {
+    "text": "Now",
+    "start": 8.70325,
+    "end": 9.112125
+  },
+  {
+    "text": "a",
+    "start": 9.392541,
+    "end": 9.439249
+  },
+  {
+    "text": "twenty",
+    "start": 9.450916,
+    "end": 9.684541
+  },
+  {
+    "text": "twenty-five",
+    "start": 9.684583,
+    "end": 10.163541
+  },
+  {
+    "text": "seismic",
+    "start": 10.163541,
+    "end": 10.549041
+  },
+  {
+    "text": "study",
+    "start": 10.549083,
+    "end": 10.852833
+  },
+  {
+    "text": "suggests",
+    "start": 10.8645,
+    "end": 11.483666
+  },
+  {
+    "text": "something",
+    "start": 11.495333,
+    "end": 11.962624
+  },
+  {
+    "text": "deeper",
+    "start": 12.021041,
+    "end": 12.406541
+  },
+  {
+    "text": "parts",
+    "start": 12.93225,
+    "end": 13.154208
+  },
+  {
+    "text": "of",
+    "start": 13.165875,
+    "end": 13.212583
+  },
+  {
+    "text": "the",
+    "start": 13.212625,
+    "end": 13.282708
+  },
+  {
+    "text": "plate's",
+    "start": 13.282708,
+    "end": 13.516333
+  },
+  {
+    "text": "mantle",
+    "start": 13.516375,
+    "end": 13.901875
+  },
+  {
+    "text": "layer",
+    "start": 13.901875,
+    "end": 14.205625
+  },
+  {
+    "text": "may",
+    "start": 14.357458,
+    "end": 14.532708
+  },
+  {
+    "text": "be",
+    "start": 14.544375,
+    "end": 14.69625
+  },
+  {
+    "text": "tearing",
+    "start": 14.707958,
+    "end": 15.338791
+  },
+  {
+    "text": "and",
+    "start": 15.619166,
+    "end": 15.724291
+  },
+  {
+    "text": "peeling",
+    "start": 15.724291,
+    "end": 16.109791
+  },
+  {
+    "text": "away",
+    "start": 16.109791,
+    "end": 16.425207
+  },
+  {
+    "text": "from",
+    "start": 16.436916,
+    "end": 16.577082
+  },
+  {
+    "text": "its",
+    "start": 16.577083,
+    "end": 16.658874
+  },
+  {
+    "text": "crust",
+    "start": 16.658875,
+    "end": 17.184583
+  },
+  {
+    "text": "That's",
+    "start": 17.558416,
+    "end": 17.686916
+  },
+  {
+    "text": "inferred",
+    "start": 17.686916,
+    "end": 18.154207
+  },
+  {
+    "text": "from",
+    "start": 18.154208,
+    "end": 18.294374
+  },
+  {
+    "text": "seismic",
+    "start": 18.294375,
+    "end": 18.796708
+  },
+  {
+    "text": "evidence",
+    "start": 18.796708,
+    "end": 19.310708
+  },
+  {
+    "text": "not",
+    "start": 19.56775,
+    "end": 19.719625
+  },
+  {
+    "text": "a",
+    "start": 19.731291,
+    "end": 19.766332
+  },
+  {
+    "text": "surface",
+    "start": 19.766375,
+    "end": 20.198583
+  },
+  {
+    "text": "split",
+    "start": 20.198583,
+    "end": 20.584083
+  },
+  {
+    "text": "The",
+    "start": 20.94625,
+    "end": 21.004666
+  },
+  {
+    "text": "country",
+    "start": 21.004666,
+    "end": 21.518666
+  },
+  {
+    "text": "isn't",
+    "start": 21.588791,
+    "end": 21.822416
+  },
+  {
+    "text": "disappearing",
+    "start": 21.822416,
+    "end": 22.441582
+  },
+  {
+    "text": "Those",
+    "start": 22.827083,
+    "end": 23.025666
+  },
+  {
+    "text": "enormous",
+    "start": 23.037375,
+    "end": 23.598125
+  },
+  {
+    "text": "mountains",
+    "start": 23.598125,
+    "end": 24.018666
+  },
+  {
+    "text": "are",
+    "start": 24.030375,
+    "end": 24.193916
+  },
+  {
+    "text": "just",
+    "start": 24.193916,
+    "end": 24.380832
+  },
+  {
+    "text": "the",
+    "start": 24.380833,
+    "end": 24.462624
+  },
+  {
+    "text": "surface",
+    "start": 24.474291,
+    "end": 25.058416
+  },
+  {
+    "text": "of",
+    "start": 25.070083,
+    "end": 25.175208
+  },
+  {
+    "text": "a",
+    "start": 25.17525,
+    "end": 25.221958
+  },
+  {
+    "text": "much",
+    "start": 25.233625,
+    "end": 25.724291
+  },
+  {
+    "text": "bigger",
+    "start": 25.81775,
+    "end": 26.133166
+  },
+  {
+    "text": "collision",
+    "start": 26.133166,
+    "end": 26.623832
+  }
+]

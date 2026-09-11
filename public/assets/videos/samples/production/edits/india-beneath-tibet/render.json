@@ -1,0 +1,16 @@
+{
+  "slug": "india-beneath-tibet",
+  "duration": 27.533333333333335,
+  "size": [
+    720,
+    1280
+  ],
+  "fps": 30,
+  "output": "india-beneath-tibet.mp4",
+  "poster": "india-beneath-tibet-poster.jpg",
+  "scene_count": 5,
+  "audio_source": "audio/india-beneath-tibet.wav",
+  "script_sha256": "93fa5e75ad71b7d3f5d9ee120fc0610e5800dda1b080db3567d3cdbcc8105b5d",
+  "synthetic_voice": true,
+  "visuals": "AI-generated scenes, cinematic camera moves, and explanatory animation"
+}

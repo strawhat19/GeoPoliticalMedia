@@ -1,0 +1,142 @@
+{
+  "format": {
+    "duration_seconds": 8,
+    "width": 720,
+    "height": 1280,
+    "fps": 30,
+    "video_codec": "h264",
+    "audio_codec": "aac",
+    "layout": "9:16"
+  },
+  "method": "Original locally rendered motion graphics with Windows speech synthesis and original synthesized audio.",
+  "news_source": "https://www.stlouisfed.org/publications/page-one-economics/2024/03/01/the-inflation-rate-is-falling-but-prices-are-not",
+  "news_example": {
+    "prices": [
+      100,
+      110,
+      115.5
+    ],
+    "annual_inflation_percent": [
+      10,
+      5
+    ],
+    "type": "Illustrative, not current reported figures"
+  },
+  "samples": [
+    {
+      "key": "geopoliticalmedia",
+      "module": "scene_news",
+      "brand": "GeoPoliticalMedia",
+      "title": "Inflation Down, Prices Up?",
+      "accent": "#FF435D",
+      "voice": [
+        "Inflation: ten percent, then five.",
+        "The example basket still gets pricier.",
+        "Slower inflation isn't falling prices."
+      ],
+      "captions": [
+        [
+          "Inflation: 10% → 5%"
+        ],
+        [
+          "Prices are still rising"
+        ],
+        [
+          "Slower rises. Not lower prices."
+        ]
+      ]
+    },
+    {
+      "key": "geo-studios",
+      "module": "scene_studios",
+      "brand": "Geo Studios",
+      "title": "One Screen, Better Design",
+      "accent": "#FF7CA8",
+      "voice": [
+        "Too much on one screen?",
+        "Fix the spacing. Pick one focal point.",
+        "Same content. Better design."
+      ],
+      "captions": [
+        [
+          "Too much on one screen?"
+        ],
+        [
+          "Fix spacing. Pick one focal point."
+        ],
+        [
+          "Same content. Better design."
+        ]
+      ]
+    },
+    {
+      "key": "geo-labs",
+      "module": "scene_labs",
+      "brand": "Geo Labs",
+      "title": "Same Numbers, Right Type",
+      "accent": "#AD8BFA",
+      "voice": [
+        "Text joins together.",
+        "Convert to numbers with int.",
+        "Now two plus three equals five."
+      ],
+      "captions": [
+        [
+          "Text joins together"
+        ],
+        [
+          "Convert to numbers with int()"
+        ],
+        [
+          "Now 2 + 3 = 5"
+        ]
+      ]
+    },
+    {
+      "key": "geo-data",
+      "module": "scene_data",
+      "brand": "Geo Data",
+      "title": "API To Answer",
+      "accent": "#47D7F4",
+      "voice": [
+        "Ask an API for data.",
+        "Get a structured response.",
+        "Turn those numbers into a chart."
+      ],
+      "captions": [
+        [
+          "Ask an API for data"
+        ],
+        [
+          "Get a structured response"
+        ],
+        [
+          "Turn numbers into a chart"
+        ]
+      ]
+    },
+    {
+      "key": "geo-gaming",
+      "module": "scene_gaming",
+      "brand": "Geo Gaming",
+      "title": "One Jump, Clean Run",
+      "accent": "#50E3B5",
+      "voice": [
+        "One jump. Three obstacles.",
+        "Wait for the gap.",
+        "Perfect timing. Clean run."
+      ],
+      "captions": [
+        [
+          "One jump. Three obstacles."
+        ],
+        [
+          "Wait for the gap"
+        ],
+        [
+          "Perfect timing. Clean run."
+        ]
+      ]
+    }
+  ]
+}

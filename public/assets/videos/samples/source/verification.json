@@ -1,0 +1,92 @@
+[
+  {
+    "file": "geopoliticalmedia.mp4",
+    "duration_seconds": 8.0,
+    "resolution": [
+      720,
+      1280
+    ],
+    "fps": 30.0,
+    "frames": 240,
+    "video_codec": "h264",
+    "audio_codec": "aac",
+    "audio_peak": 0.679,
+    "motion_changes": [
+      15.702,
+      2.614
+    ],
+    "bytes": 209231
+  },
+  {
+    "file": "geo-studios.mp4",
+    "duration_seconds": 8.0,
+    "resolution": [
+      720,
+      1280
+    ],
+    "fps": 30.0,
+    "frames": 240,
+    "video_codec": "h264",
+    "audio_codec": "aac",
+    "audio_peak": 0.6691,
+    "motion_changes": [
+      14.79,
+      9.097
+    ],
+    "bytes": 502785
+  },
+  {
+    "file": "geo-labs.mp4",
+    "duration_seconds": 8.0,
+    "resolution": [
+      720,
+      1280
+    ],
+    "fps": 30.0,
+    "frames": 240,
+    "video_codec": "h264",
+    "audio_codec": "aac",
+    "audio_peak": 0.6714,
+    "motion_changes": [
+      2.829,
+      0.766
+    ],
+    "bytes": 206536
+  },
+  {
+    "file": "geo-data.mp4",
+    "duration_seconds": 8.0,
+    "resolution": [
+      720,
+      1280
+    ],
+    "fps": 30.0,
+    "frames": 240,
+    "video_codec": "h264",
+    "audio_codec": "aac",
+    "audio_peak": 0.6737,
+    "motion_changes": [
+      7.753,
+      14.237
+    ],
+    "bytes": 273552
+  },
+  {
+    "file": "geo-gaming.mp4",
+    "duration_seconds": 8.0,
+    "resolution": [
+      720,
+      1280
+    ],
+    "fps": 30.0,
+    "frames": 240,
+    "video_codec": "h264",
+    "audio_codec": "aac",
+    "audio_peak": 0.6778,
+    "motion_changes": [
+      3.024,
+      5.179
+    ],
+    "bytes": 490559
+  }
+]

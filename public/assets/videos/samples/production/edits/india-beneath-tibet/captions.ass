@@ -1,0 +1,42 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 720
+PlayResY: 1280
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Caption,Arial,36,&H00F7F5EE,&H00F7F5EE,&H00140F0A,&H80000000,-1,0,0,0,100,100,0,0,1,1.6,1.1,2,52,52,155,1
+Style: Hook,Arial,58,&H00F7F5EE,&H00F7F5EE,&H00312011,&H80000000,-1,0,0,0,100,100,-1,0,1,1,1,8,38,38,112,1
+Style: Key,Arial,33,&H00F7F5EE,&H00F7F5EE,&H00140F0A,&H80000000,-1,0,0,0,100,100,0,0,1,1,1,5,46,46,0,1
+Style: Number,Arial,80,&H008FD3FF,&H008FD3FF,&H00140F0A,&H80000000,-1,0,0,0,100,100,-1,0,1,1,1,5,38,38,0,1
+Style: Note,Arial,17,&H00ECE5DA,&H00ECE5DA,&H00140F0A,&H80000000,0,0,0,0,100,100,.8,0,1,.8,.7,7,40,40,48,1
+Style: Brand,Arial,22,&H00F7F5EE,&H00F7F5EE,&H00140F0A,&H80000000,-1,0,0,0,100,100,3,0,1,1,0,2,40,40,110,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 5,0:00:00.09,0:00:01.37,Caption,,0,0,0,,{\fad(100,90)}India's tectonic plate
+Dialogue: 5,0:00:01.53,0:00:02.81,Caption,,0,0,0,,{\fad(100,90)}is pushing under Tibet.
+Dialogue: 5,0:00:03.08,0:00:03.94,Caption,,0,0,0,,{\fad(100,90)}But the weird part
+Dialogue: 5,0:00:03.94,0:00:05.68,Caption,,0,0,0,,{\fad(100,90)}is what may be\Nhappening underneath.
+Dialogue: 5,0:00:05.93,0:00:07.22,Caption,,0,0,0,,{\fad(100,90)}That slow collision helps
+Dialogue: 5,0:00:07.22,0:00:08.45,Caption,,0,0,0,,{\fad(100,90)}build the Himalayas.
+Dialogue: 5,0:00:08.70,0:00:10.86,Caption,,0,0,0,,{\fad(100,90)}Now, a twenty\Ntwenty-five seismic study
+Dialogue: 5,0:00:10.86,0:00:12.53,Caption,,0,0,0,,{\fad(100,90)}suggests something deeper:
+Dialogue: 5,0:00:12.93,0:00:14.33,Caption,,0,0,0,,{\fad(100,90)}parts of the\Nplate's mantle layer
+Dialogue: 5,0:00:14.36,0:00:16.44,Caption,,0,0,0,,{\fad(100,90)}may be tearing and peeling away
+Dialogue: 5,0:00:16.44,0:00:17.30,Caption,,0,0,0,,{\fad(100,90)}from its crust.
+Dialogue: 5,0:00:17.56,0:00:19.43,Caption,,0,0,0,,{\fad(100,90)}That's inferred from\Nseismic evidence,
+Dialogue: 5,0:00:19.57,0:00:20.70,Caption,,0,0,0,,{\fad(100,90)}not a surface split.
+Dialogue: 5,0:00:20.95,0:00:22.56,Caption,,0,0,0,,{\fad(100,90)}The country isn't disappearing.
+Dialogue: 5,0:00:22.83,0:00:24.03,Caption,,0,0,0,,{\fad(100,90)}Those enormous mountains
+Dialogue: 5,0:00:24.03,0:00:25.07,Caption,,0,0,0,,{\fad(100,90)}are just the surface
+Dialogue: 5,0:00:25.07,0:00:26.74,Caption,,0,0,0,,{\fad(100,90)}of a much bigger collision.
+Dialogue: 2,0:00:00.05,0:00:02.95,Hook,,0,0,0,,{\fad(100,90)}INDIA IS MOVING\NUNDER TIBET
+Dialogue: 2,0:00:08.70,0:00:12.93,Key,,0,0,0,,{\fad(100,90)\pos(360,190)}2025 SEISMIC STUDY
+Dialogue: 2,0:00:20.93,0:00:26.53,Key,,0,0,0,,{\fad(100,90)\pos(360,210)}A PLATE COLLISION\NNOT A DISAPPEARING COUNTRY
+Dialogue: 2,0:00:00.10,0:00:05.93,Note,,0,0,0,,{\fad(100,90)}Illustrative imagery · Geological time compressed
+Dialogue: 2,0:00:08.70,0:00:12.93,Note,,0,0,0,,{\fad(100,90)}Illustrative imagery · Geological time compressed
+Dialogue: 2,0:00:20.93,0:00:26.78,Note,,0,0,0,,{\fad(100,90)}Illustrative imagery · Geological time compressed
+Dialogue: 2,0:00:26.68,0:00:27.45,Brand,,0,0,0,,{\fad(100,90)}GEO LABS
