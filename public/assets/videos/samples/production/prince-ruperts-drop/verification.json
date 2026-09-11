@@ -1,0 +1,89 @@
+{
+  "status": "passed",
+  "visual_review": "Inspected ten captioned overview frames, three full-size caption cues, and twelve closely spaced transition samples. Captions are readable and avoid the mechanisms. Glass remains submerged across the cooling change. Fracture progresses from tail into the intact head, which is immediately replaced by fragments. No blocking issue found.",
+  "sha256": "839bb1b6201537929323d086ff8d7d9e600bf63880522a9c8e980f8ee85678f7",
+  "download_integrity": "Local MP4 SHA-256 matches the verified sandbox export.",
+  "dimensions": [
+    720,
+    1280
+  ],
+  "fps": "24/1",
+  "average_fps": "24/1",
+  "frame_count": 533,
+  "duration": 22.208333,
+  "audio_duration": 22.208,
+  "audio_codec": "aac",
+  "sample_rate": 48000,
+  "channels": 2,
+  "loudness": {
+    "input_i": "-15.77",
+    "input_tp": "-3.73",
+    "input_lra": "3.60",
+    "input_thresh": "-26.49",
+    "output_i": "-16.18",
+    "output_tp": "-4.08",
+    "output_lra": "2.20",
+    "output_thresh": "-26.84",
+    "normalization_type": "dynamic",
+    "target_offset": "0.18"
+  },
+  "authored_script": "This glass can survive a hammer blow. But snap its tiny tail, and the whole thing shatters. It's a Prince Rupert's drop. Molten glass hardens outside first in cold water. As the center cools and shrinks, it traps stress inside. The surface is squeezed tight. The core stays under tension. Break the tail, and cracks race into the head... tearing the entire drop apart.",
+  "final_mix_transcription": "This glass can survive a hammer blow, but snap its tiny tail and the whole thing shatters. It's a Prince Rupert's drop. Molten glass hardens outside, first in cold water. As the center cools and shrinks, it traps stress inside. The surface is squeezed tight. The core stays under tension. Break the tail and cracks race into the head, tearing the entire drop apart.",
+  "final_mix_transcript_similarity": 1.0,
+  "complete_caption_word_coverage": true,
+  "full_decode": "passed",
+  "review_frame_times": [
+    0.5,
+    2.8,
+    5.9,
+    8.8,
+    11.8,
+    14.7,
+    16.5,
+    18.8,
+    19.8,
+    21.0
+  ],
+  "review_contact_sheet": "review/contact-sheet.jpg",
+  "motion_contact_sheet": "review/motion-check.jpg",
+  "motion_review_frames": [
+    {
+      "sequence": "Quench: hot glass to cooled shell",
+      "frames": [
+        204,
+        207,
+        209,
+        210,
+        211,
+        216
+      ],
+      "times": [
+        8.5,
+        8.625,
+        8.708333333333334,
+        8.75,
+        8.791666666666666,
+        9.0
+      ]
+    },
+    {
+      "sequence": "Fracture: tail travel and head replacement",
+      "frames": [
+        461,
+        462,
+        464,
+        465,
+        466,
+        468
+      ],
+      "times": [
+        19.208333333333332,
+        19.25,
+        19.333333333333332,
+        19.375,
+        19.416666666666668,
+        19.5
+      ]
+    }
+  ]
+}

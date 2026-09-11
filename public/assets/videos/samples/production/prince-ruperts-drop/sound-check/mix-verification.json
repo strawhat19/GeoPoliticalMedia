@@ -1,0 +1,17 @@
+{
+  "transcript_similarity": 1.0,
+  "words": 64,
+  "caption_words": 64,
+  "levels": {
+    "input_i": "-15.79",
+    "input_tp": "-3.74",
+    "input_lra": "3.60",
+    "input_thresh": "-26.48",
+    "output_i": "-16.17",
+    "output_tp": "-4.10",
+    "output_lra": "2.20",
+    "output_thresh": "-26.84",
+    "normalization_type": "dynamic",
+    "target_offset": "0.17"
+  }
+}

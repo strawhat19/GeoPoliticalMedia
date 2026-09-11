@@ -1,0 +1,30 @@
+Guessed Channel Layout for Input Stream #0.0 : mono
+Input #0, wav, from 'narration.wav':
+  Metadata:
+    encoder         : Lavf59.27.100
+  Duration: 00:00:22.10, bitrate: 768 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 48000 Hz, mono, s16, 768 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (pcm_s16le (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+Output #0, null, to 'pipe:':
+  Metadata:
+    encoder         : Lavf59.27.100
+  Stream #0:0: Audio: pcm_s16le, 192000 Hz, mono, s16, 3072 kb/s
+    Metadata:
+      encoder         : Lavc59.37.100 pcm_s16le
+size=N/A time=00:00:00.00 bitrate=N/A speed=N/A    size=N/A time=00:00:22.10 bitrate=N/A speed=54.5x    
+video:0kB audio:8289kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown
+[Parsed_loudnorm_0 @ 0x558bf2b9cdc0] 
+{
+	"input_i" : "-21.32",
+	"input_tp" : "-3.18",
+	"input_lra" : "3.90",
+	"input_thresh" : "-32.01",
+	"output_i" : "-16.33",
+	"output_tp" : "-1.50",
+	"output_lra" : "2.50",
+	"output_thresh" : "-26.98",
+	"normalization_type" : "dynamic",
+	"target_offset" : "0.33"
+}

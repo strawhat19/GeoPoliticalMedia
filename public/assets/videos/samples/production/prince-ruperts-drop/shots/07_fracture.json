@@ -1,0 +1,19 @@
+{
+  "shot": "07_fracture",
+  "mode": "narration_timed",
+  "source_frame_start": 529,
+  "source_frame_end": 672,
+  "frames": 72,
+  "fps": 24,
+  "duration": 3.0,
+  "native_dimensions": [
+    720,
+    1280
+  ],
+  "engine": "CYCLES",
+  "samples": 8,
+  "denoising": true,
+  "max_bounces": 8,
+  "transmission_bounces": 6,
+  "elapsed": 326.59
+}

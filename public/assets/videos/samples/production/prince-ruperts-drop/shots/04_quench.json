@@ -1,0 +1,19 @@
+{
+  "shot": "04_quench",
+  "mode": "narration_timed",
+  "source_frame_start": 217,
+  "source_frame_end": 312,
+  "frames": 79,
+  "fps": 24,
+  "duration": 3.2916666666666665,
+  "native_dimensions": [
+    720,
+    1280
+  ],
+  "engine": "CYCLES",
+  "samples": 8,
+  "denoising": true,
+  "max_bounces": 8,
+  "transmission_bounces": 6,
+  "elapsed": 597.71
+}

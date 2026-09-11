@@ -1,0 +1,19 @@
+{
+  "shot": "06_snip",
+  "mode": "narration_timed",
+  "source_frame_start": 493,
+  "source_frame_end": 528,
+  "frames": 43,
+  "fps": 24,
+  "duration": 1.7916666666666667,
+  "native_dimensions": [
+    720,
+    1280
+  ],
+  "engine": "CYCLES",
+  "samples": 8,
+  "denoising": true,
+  "max_bounces": 8,
+  "transmission_bounces": 6,
+  "elapsed": 208.0
+}

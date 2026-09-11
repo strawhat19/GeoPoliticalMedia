@@ -1,0 +1,19 @@
+{
+  "shot": "03_hero",
+  "mode": "narration_timed",
+  "source_frame_start": 145,
+  "source_frame_end": 216,
+  "frames": 40,
+  "fps": 24,
+  "duration": 1.6666666666666667,
+  "native_dimensions": [
+    720,
+    1280
+  ],
+  "engine": "CYCLES",
+  "samples": 8,
+  "denoising": true,
+  "max_bounces": 8,
+  "transmission_bounces": 6,
+  "elapsed": 208.09
+}

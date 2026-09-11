@@ -1,0 +1,19 @@
+{
+  "shot": "02_tail",
+  "mode": "narration_timed",
+  "source_frame_start": 73,
+  "source_frame_end": 144,
+  "frames": 75,
+  "fps": 24,
+  "duration": 3.125,
+  "native_dimensions": [
+    720,
+    1280
+  ],
+  "engine": "CYCLES",
+  "samples": 8,
+  "denoising": true,
+  "max_bounces": 8,
+  "transmission_bounces": 6,
+  "elapsed": 358.7
+}

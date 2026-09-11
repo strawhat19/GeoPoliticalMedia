@@ -1,0 +1,175 @@
+{
+  "fps": 24,
+  "frames": 533,
+  "duration": 22.208333333333332,
+  "shots": [
+    {
+      "name": "01_hammer",
+      "source_duration": 2.333333,
+      "source_start": 0,
+      "frames": 56,
+      "duration": 2.3333333333333335,
+      "speed": 1.0,
+      "probe": {
+        "width": 720,
+        "height": 1280,
+        "r_frame_rate": "24/1",
+        "duration": "2.333333",
+        "nb_frames": "56"
+      },
+      "native_narration_timing": true
+    },
+    {
+      "name": "02_tail",
+      "source_duration": 3.125,
+      "source_start": 0,
+      "frames": 75,
+      "duration": 3.125,
+      "speed": 1.0,
+      "probe": {
+        "width": 720,
+        "height": 1280,
+        "r_frame_rate": "24/1",
+        "duration": "3.125000",
+        "nb_frames": "75"
+      },
+      "native_narration_timing": true
+    },
+    {
+      "name": "03_hero",
+      "source_duration": 1.666667,
+      "source_start": 0,
+      "frames": 40,
+      "duration": 1.6666666666666667,
+      "speed": 1.0,
+      "probe": {
+        "width": 720,
+        "height": 1280,
+        "r_frame_rate": "24/1",
+        "duration": "1.666667",
+        "nb_frames": "40"
+      },
+      "native_narration_timing": true
+    },
+    {
+      "name": "04_quench",
+      "source_duration": 3.291667,
+      "source_start": 0,
+      "frames": 79,
+      "duration": 3.2916666666666665,
+      "speed": 1.0,
+      "probe": {
+        "width": 720,
+        "height": 1280,
+        "r_frame_rate": "24/1",
+        "duration": "3.291667",
+        "nb_frames": "79"
+      },
+      "native_narration_timing": true
+    },
+    {
+      "name": "05_stress",
+      "source_duration": 7.0,
+      "source_start": 0,
+      "frames": 168,
+      "duration": 7.0,
+      "speed": 1.0,
+      "probe": {
+        "width": 720,
+        "height": 1280,
+        "r_frame_rate": "24/1",
+        "duration": "7.000000",
+        "nb_frames": "168"
+      },
+      "native_narration_timing": true
+    },
+    {
+      "name": "06_snip",
+      "source_duration": 1.791667,
+      "source_start": 0,
+      "frames": 43,
+      "duration": 1.7916666666666667,
+      "speed": 1.0,
+      "probe": {
+        "width": 720,
+        "height": 1280,
+        "r_frame_rate": "24/1",
+        "duration": "1.791667",
+        "nb_frames": "43"
+      },
+      "native_narration_timing": true
+    },
+    {
+      "name": "07_fracture",
+      "source_duration": 3.0,
+      "source_start": 0,
+      "frames": 72,
+      "duration": 3.0,
+      "speed": 1.0,
+      "probe": {
+        "width": 720,
+        "height": 1280,
+        "r_frame_rate": "24/1",
+        "duration": "3.000000",
+        "nb_frames": "72"
+      },
+      "native_narration_timing": true
+    }
+  ],
+  "cuts": [
+    {
+      "name": "01_hammer",
+      "source_frame": 0,
+      "frames": 56,
+      "at_frame": 0
+    },
+    {
+      "name": "02_tail",
+      "source_frame": 30,
+      "frames": 24,
+      "at_frame": 56
+    },
+    {
+      "name": "06_snip",
+      "source_frame": 31,
+      "frames": 9,
+      "at_frame": 80
+    },
+    {
+      "name": "07_fracture",
+      "source_frame": 0,
+      "frames": 42,
+      "at_frame": 89
+    },
+    {
+      "name": "03_hero",
+      "source_frame": 0,
+      "frames": 40,
+      "at_frame": 131
+    },
+    {
+      "name": "04_quench",
+      "source_frame": 0,
+      "frames": 79,
+      "at_frame": 171
+    },
+    {
+      "name": "05_stress",
+      "source_frame": 0,
+      "frames": 168,
+      "at_frame": 250
+    },
+    {
+      "name": "06_snip",
+      "source_frame": 0,
+      "frames": 43,
+      "at_frame": 418
+    },
+    {
+      "name": "07_fracture",
+      "source_frame": 0,
+      "frames": 72,
+      "at_frame": 461
+    }
+  ]
+}

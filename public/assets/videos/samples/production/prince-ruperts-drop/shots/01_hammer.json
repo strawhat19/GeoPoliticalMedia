@@ -1,0 +1,17 @@
+{
+  "shot": "01_hammer",
+  "mode": "narration_timed",
+  "source_frame_start": 1,
+  "source_frame_end": 72,
+  "frames": 56,
+  "fps": 24,
+  "duration": 2.3333333333333335,
+  "native_dimensions": [
+    720,
+    1280
+  ],
+  "engine": "CYCLES",
+  "samples": 8,
+  "denoising": true,
+  "elapsed": 276.3
+}

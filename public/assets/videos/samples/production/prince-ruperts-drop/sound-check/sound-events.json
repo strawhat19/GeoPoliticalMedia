@@ -1,0 +1,17 @@
+{
+  "events": {
+    "hammer": 0.48415492957746475,
+    "tail_tease": 2.45,
+    "teaser_snap": 3.46,
+    "teaser_fracture": 3.92,
+    "quench": 7.946052631578947,
+    "cutaway": 10.416666666666666,
+    "compression": 14,
+    "tension": 16,
+    "tail_snap": 18.816666666666666,
+    "fracture": 19.41520979020979
+  },
+  "duration": 22.2,
+  "sample_rate": 48000,
+  "effects_peak_dbfs": -15.191044351788497
+}

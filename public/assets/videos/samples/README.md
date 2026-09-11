@@ -1,5 +1,13 @@
 # Video Samples
 
+## Original 3D Science Short
+
+[The Glass With a Self-Destruct Switch](prince-ruperts-drop.mp4) — a 22.21-second Geo Labs short about Prince Rupert's drops. Original 3D animation shows the hammer test, tail snap, rapid cooling, internal stress, and slow-motion fragmentation. Includes clear synthetic narration, synchronized effects, and burned-in captions.
+
+720 × 1280 at 24 fps, H.264 video with stereo AAC audio. The final export passed full decoding, complete caption coverage, and independent speech recognition matching every narrated word; measured audio loudness is −15.77 LUFS.
+
+[Poster](prince-ruperts-drop-poster.jpg) · [Script, research, and editable production](production/prince-ruperts-drop/README.md) · [Export verification](production/prince-ruperts-drop/verification.json)
+
 ## Science Shorts
 
 Five vertical documentary shorts with conversational voiceover, full-frame imagery, animated explanations, and burned-in captions. Channel branding appears only in the final second. The visuals combine AI-generated scenes, camera moves, and original scientific animation; narration uses Microsoft's Andrew neural voice.
