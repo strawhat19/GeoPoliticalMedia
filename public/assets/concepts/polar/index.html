@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Polar orbit</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #050c16; color: #f5f8fd; font-family: system-ui, sans-serif; }
+    main { max-width: 1280px; padding: 48px 24px 64px; margin: auto; }
+    header { margin: 0 0 32px; }
+    h1 { font-size: 30px; font-weight: 550; letter-spacing: -.035em; margin: 0 0 10px; }
+    p { color: #92a4bc; line-height: 1.6; margin: 0; }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
+    figure { margin: 0; overflow: hidden; background: #091421; border: 1px solid #1a2a3d; border-radius: 16px; }
+    .image { display: block; background: #061321; }
+    img { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: contain; }
+    figcaption { display: flex; justify-content: space-between; gap: 16px; align-items: center; padding: 20px; }
+    strong { font-size: 16px; font-weight: 550; }
+    small { display: block; color: #90a2b9; font-size: 13px; margin-top: 5px; }
+    a { color: #d0e4ff; text-underline-offset: 4px; }
+    a:focus-visible { outline: 3px solid #ed354d; outline-offset: 3px; }
+    .download { font-size: 13px; white-space: nowrap; }
+    footer { margin-top: 28px; color: #7f91a8; font-size: 13px; }
+    @media (max-width: 640px) { main { padding: 28px 16px; } .grid { grid-template-columns: 1fr; gap: 20px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Polar orbit</h1>
+      <p>Five variations on 03R.2. Open any image at its original size.</p>
+    </header>
+    <div class="grid">
+      <figure>
+        <a class="image" href="03p-05-continuous-g.png"><img src="03p-05-continuous-g.png" alt="Continuous G logo variation"></a>
+        <figcaption><div><strong>03P.5 · Continuous G</strong><small>Connected G beneath the ring</small></div><a class="download" href="03p-05-continuous-g.png" download>Download PNG</a></figcaption>
+      </figure>
+      <figure>
+        <a class="image" href="03p-01-americas-classic.png"><img src="03p-01-americas-classic.png" alt="Americas Classic logo variation"></a>
+        <figcaption><div><strong>03P.1 · Americas Classic</strong><small>Original direction · 65° orbit</small></div><a class="download" href="03p-01-americas-classic.png" download>Download PNG</a></figcaption>
+      </figure>
+      <figure>
+        <a class="image" href="03p-02-open-polar.png"><img src="03p-02-open-polar.png" alt="Open Polar logo variation"></a>
+        <figcaption><div><strong>03P.2 · Open Polar</strong><small>Open silhouette · 58° orbit</small></div><a class="download" href="03p-02-open-polar.png" download>Download PNG</a></figcaption>
+      </figure>
+      <figure>
+        <a class="image" href="03p-03-compact-app.png"><img src="03p-03-compact-app.png" alt="Compact App icon variation"></a>
+        <figcaption><div><strong>03P.3 · Compact App</strong><small>App icon · 74° orbit</small></div><a class="download" href="03p-03-compact-app.png" download>Download PNG</a></figcaption>
+      </figure>
+      <figure>
+        <a class="image" href="03p-04-fine-meridian.png"><img src="03p-04-fine-meridian.png" alt="Fine Meridian logo variation"></a>
+        <figcaption><div><strong>03P.4 · Fine Meridian</strong><small>Slender ring · 80° orbit</small></div><a class="download" href="03p-04-fine-meridian.png" download>Download PNG</a></figcaption>
+      </figure>
+    </div>
+    <footer>Descriptions reflect the requested directions. Native generation outputs; no inspection or testing performed.</footer>
+  </main>
+</body>
+</html>

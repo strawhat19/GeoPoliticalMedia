@@ -1,0 +1,10 @@
+Use case: logo-brand
+Asset type: finished square company logo lockup for a space-themed website, light logo on dark background.
+Primary request: Create one entirely new, polished company logo for exact company name "geocorp.io". Concept: HORIZON G, a minimal planetary uppercase G with precise horizon and meridian cuts.
+Scene/backdrop: Opaque perfectly uniform deep midnight navy (#031423), no visible texture or scenery.
+Subject: An exquisitely balanced ivory-white geometric capital G which also suggests a planetary disk. Integrate two or three controlled curved meridian cuts / horizon bands inside its shape. A very small restrained red rising-horizon accent sits within or near the G opening. The broad horizontal bar and generous negative space must make the capital G immediately readable. The character is the symbol; no separate globe. Simple distinctive geometry with purposeful curves and strong silhouette, sophisticated corporate identity for global space-minded technology.
+Style/medium: Crisp vector-like two-dimensional graphic design, extremely subtle dimensional edging only if useful, highly scalable icon. Premium technical precision without tiny decorative lines.
+Composition/framing: One centered square canvas with generous padding. One large symbol occupying the upper two-thirds, exact lowercase wordmark "geocorp.io" below, well spaced and large enough to read. Elegant slightly extended geometric sans serif typography, ivory-white letters and restrained red dot or .io.
+Color palette: Ivory white symbol and wordmark, minimal vivid red accent, deep uniform navy background.
+Text (verbatim): "geocorp.io" — g e o c o r p period i o, all lowercase, exactly once, no other text.
+Constraints: Show a single complete brand logo lockup. No realistic Earth, continents, clouds, photoglobe, generic Saturn, encircling red swoosh, additional words, captions, labels, numbers, slogan, mockups, grid, borders, nebula, backdrop stars, watermark, or presentation card. Strong clear capital G silhouette is essential.

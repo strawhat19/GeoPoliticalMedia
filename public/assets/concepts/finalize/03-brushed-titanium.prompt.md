@@ -1,0 +1,8 @@
+Use case: precise-object-edit.
+Asset type: finalized logo variant for a dark space-themed website, BRUSHED TITANIUM.
+Input image: edit target, approved G + Earth + red orbital ring logo.
+Make a precise material-only edit to ONLY the surfaces of the existing white G and existing red orbital ring. The Earth is an IMMUTABLE protected bitmap: preserve the EXACT same geography, North America and South America and Greenland, clouds, ocean, terrain, lighting, Earth sphere position, size, crop, and every visible Earth pixel. Do not redraw, enhance, recolor, relight, move, or change the Earth in any way. All pixels outside the G and ring stay unchanged.
+Preserve the G's exact white circular silhouette, crossbar, opening, thickness, and position. Add extremely delicate silver-white radial satin machining grain and narrow clean polished edge highlights strictly inside the G. The G stays mostly luminous white for excellent dark-background contrast, with restrained detailed titanium finishing.
+Preserve the red ring's EXACT silhouette, angle, thickness, path, position and overlaps. Add a fine anodized crimson surface and a restrained bright red edge bevel within its existing silhouette.
+The G must remain visibly CONTINUOUS BEHIND the red ring as in the approved input, with no dark missing G sections at intersections. Preserve original Earth/G/ring occlusion geometry exactly. Original navy background and composition remain identical.
+Light precise material detail only. No scratches, bolts, labels, panels, industrial clutter, new halo, shadows on the Earth, extra objects, or text. No wordmark. Only the original G symbol. Square output, same framing and scale.
