@@ -9,8 +9,10 @@ import { ActivityIndicator, PanResponder, Platform, Pressable, StyleSheet, Text,
 type GlobeProps = {
   paused: boolean;
   compact: boolean;
+  suspended: boolean;
   reducedMotion: boolean;
   selected: Service | null;
+  onArrival: () => void;
   onInteract: () => void;
 };
 
@@ -121,7 +123,7 @@ const Destination = ({ service, active, animate }: { service: Service; active: b
 
 const Starfield = () => {
   const positions = useMemo(() => {
-    const points = new Float32Array(540 * 3);
+    const points = new Float32Array(2100 * 3);
     let seed = 19;
     const random = () => ((seed = (seed * 16807) % 2147483647) - 1) / 2147483646;
     for (let i = 0; i < points.length; i += 3) {
@@ -134,23 +136,25 @@ const Starfield = () => {
     }
     return points;
   }, []);
-  return <points><bufferGeometry><bufferAttribute attach="attributes-position" args={[positions, 3]} /></bufferGeometry><pointsMaterial transparent opacity={0.4} size={0.012} color="#A0BACB" sizeAttenuation depthWrite={false} /></points>;
+  return <points><bufferGeometry><bufferAttribute attach="attributes-position" args={[positions, 3]} /></bufferGeometry><pointsMaterial transparent opacity={0.8} size={0.032} color="#BDD4E8" sizeAttenuation depthWrite={false} /></points>;
 };
 
 type SceneProps = GlobeProps & { drag: React.RefObject<{ x: number; y: number }>; onReady: () => void };
 
-const EarthScene = ({ selected, paused, compact, reducedMotion, drag, onReady }: SceneProps) => {
+const EarthScene = ({ selected, paused, compact, reducedMotion, drag, onReady, onArrival }: SceneProps) => {
   const textures = useLoader(THREE.TextureLoader, [dayAsset, nightAsset, detailAsset].map(source => Platform.OS === `web` ? Asset.fromModule(source).uri : source));
   const clouds = useRef<THREE.Mesh>(null);
   const sunDirection = useMemo(() => new THREE.Vector3(), []);
   const targetDirection = useMemo(() => new THREE.Vector3(), []);
   const currentDirection = useRef(latLngToVector(20, -100));
-  const currentDistance = useRef(compact ? 3.7 : 3.55);
+  const currentDistance = useRef(compact ? 3.15 : 2.55);
+  const currentHorizon = useRef(compact ? 0.66 : 0.68);
+  const arrivalSent = useRef(false);
   const lastDrag = useRef({ x: 0, y: 0 });
   const rotation = useRef(0);
   const up = useMemo(() => new THREE.Vector3(0, 1, 0), []);
   const right = useMemo(() => new THREE.Vector3(), []);
-  const transition = useRef({ progress: 1, from: currentDirection.current.clone(), distance: currentDistance.current });
+  const transition = useRef({ progress: 1, from: currentDirection.current.clone(), distance: currentDistance.current, horizon: currentHorizon.current });
   const surfaceUniforms = useMemo(() => ({ dayMap: { value: textures[0] }, nightMap: { value: textures[1] }, detailMap: { value: textures[2] }, sunDirection: { value: sunDirection } }), [textures, sunDirection]);
   const shellUniforms = useMemo(() => ({ detailMap: { value: textures[2] }, sunDirection: { value: sunDirection } }), [textures, sunDirection]);
   const atmosphereUniforms = useMemo(() => ({ sunDirection: { value: sunDirection } }), [sunDirection]);
@@ -165,24 +169,31 @@ const EarthScene = ({ selected, paused, compact, reducedMotion, drag, onReady }:
   }, [textures, onReady]);
 
   useEffect(() => {
-    transition.current = { progress: 0, from: currentDirection.current.clone(), distance: currentDistance.current };
+    transition.current = { progress: 0, from: currentDirection.current.clone(), distance: currentDistance.current, horizon: currentHorizon.current };
+    arrivalSent.current = false;
     lastDrag.current = { ...drag.current };
     rotation.current = 0;
   }, [selected, compact, drag]);
 
-  useFrame(({ camera }, frameDelta) => {
+  useFrame(({ camera, size }, frameDelta) => {
     const delta = Math.min(frameDelta, 0.05);
     const flight = transition.current;
-    flight.progress = Math.min(1, flight.progress + delta / (reducedMotion ? 0.05 : 2.1));
+    flight.progress = Math.min(1, flight.progress + delta / (reducedMotion ? 0.01 : selected ? 4.1 : 2.8));
     const eased = flight.progress < 0.5 ? 4 * flight.progress ** 3 : 1 - (-2 * flight.progress + 2) ** 3 / 2;
-    const restingDistance = selected ? (compact ? 2.9 : 2.8) : (compact ? 3.7 : 3.55);
+    const restingDistance = selected ? 1.14 : (compact ? 3.15 : 2.55);
     if (!selected && !paused && !reducedMotion && flight.progress === 1) rotation.current += delta * 0.027;
     targetDirection.copy(latLngToVector(selected?.latitude ?? 20, selected?.longitude ?? -100));
     targetDirection.applyAxisAngle(up, rotation.current);
     if (flight.progress < 1) {
       const quaternion = new THREE.Quaternion().setFromUnitVectors(flight.from, targetDirection);
-      currentDirection.current.copy(flight.from).applyQuaternion(new THREE.Quaternion().slerp(quaternion, eased));
-      currentDistance.current = THREE.MathUtils.lerp(flight.distance, restingDistance, eased);
+      const turn = selected ? Math.min(1, flight.progress / 0.58) : eased;
+      const turnEase = selected ? turn * turn * (3 - 2 * turn) : turn;
+      currentDirection.current.copy(flight.from).applyQuaternion(new THREE.Quaternion().slerp(quaternion, turnEase));
+      const descent = Math.max(0, (flight.progress - 0.32) / 0.68);
+      const descentEase = descent * descent * (3 - 2 * descent);
+      const liftedDistance = THREE.MathUtils.lerp(flight.distance, Math.max(flight.distance, 3.2), Math.min(1, flight.progress / 0.3));
+      currentDistance.current = selected ? THREE.MathUtils.lerp(liftedDistance, restingDistance, descentEase) : THREE.MathUtils.lerp(flight.distance, restingDistance, eased);
+      currentHorizon.current = THREE.MathUtils.lerp(flight.horizon, selected ? 0 : compact ? 0.66 : 0.68, eased);
     } else {
       const dx = drag.current.x - lastDrag.current.x;
       const dy = drag.current.y - lastDrag.current.y;
@@ -196,9 +207,11 @@ const EarthScene = ({ selected, paused, compact, reducedMotion, drag, onReady }:
     lastDrag.current = { ...drag.current };
     camera.position.copy(currentDirection.current).multiplyScalar(currentDistance.current);
     camera.lookAt(0, 0, 0);
+    if (camera instanceof THREE.PerspectiveCamera && size.width && size.height) camera.setViewOffset(size.width, size.height, 0, -size.height * currentHorizon.current, size.width, size.height);
     right.crossVectors(up, currentDirection.current).normalize();
     sunDirection.copy(currentDirection.current).multiplyScalar(0.55).addScaledVector(right, -0.75).addScaledVector(up, 0.65).normalize();
     if (clouds.current && !paused && !reducedMotion) clouds.current.rotation.y += delta * 0.008;
+    if (selected && flight.progress === 1 && !arrivalSent.current) { arrivalSent.current = true; onArrival(); }
   });
 
   return (
@@ -245,12 +258,12 @@ export const Globe = (props: GlobeProps) => {
   return (
     <View style={styles.container} {...responder.panHandlers} accessibilityLabel={props.selected ? `Earth focused on ${props.selected.city}` : `Interactive rotating Earth. Drag horizontally to rotate`}>
       <GlobeBoundary key={attempt} onRetry={() => { setReady(false); setAttempt(value => value + 1); }}>
-        <View pointerEvents="none" style={styles.canvas}>
-          <Canvas camera={{ fov: 38, near: 0.1, far: 80, position: [0, 0, 3.55] }} dpr={[1, props.compact ? 1.5 : 2]} gl={{ alpha: true, antialias: true, powerPreference: `high-performance` }} style={styles.canvas}>
+        <View style={[styles.canvas, { pointerEvents: `none` }]}>
+          <Canvas frameloop={props.suspended ? `never` : `always`} camera={{ fov: 38, near: 0.01, far: 80, position: [0, 0, 2.55] }} dpr={[1, props.compact ? 1.5 : 2]} gl={{ alpha: true, antialias: true, powerPreference: `high-performance` }} style={styles.canvas}>
             <Suspense fallback={null}><EarthScene {...props} drag={drag} onReady={onReady} /></Suspense>
           </Canvas>
         </View>
-        {!ready && <View pointerEvents="none" style={styles.loading}><ActivityIndicator color="#84DDEA" /><Text style={styles.loadingText}>BRINGING THE WORLD INTO VIEW</Text></View>}
+        {!ready && <View style={[styles.loading, { pointerEvents: `none` }]}><ActivityIndicator color="#84DDEA" /><Text style={styles.loadingText}>BRINGING THE WORLD INTO VIEW</Text></View>}
       </GlobeBoundary>
     </View>
   );

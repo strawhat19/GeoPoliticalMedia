@@ -1,6 +1,6 @@
 # GeoCorp
 
-An Expo app for iOS, Android, and the web. Explore Geo Studios in Los Angeles, Geo Data in Georgia (provisionally Atlanta, USA), and Geo Political Media in New York through a rotating 3D Earth. Select a division to fly to its location; drag to rotate, pause the orbit, or return to the world view. The app uses the approved `01-core-earth.png` logo.
+An Expo app for iOS, Android, and the web. The space hero places Geo Studios, Geo Data, and Geo Political Media in one column above an oversized rotating Earth, with stars and a transparent header. Select a division to descend from orbit into a real 3D map of Los Angeles, Atlanta in Georgia, or New York. Drag, pinch, or scroll to explore streets and buildings, then return to orbit. The app uses the approved `01-core-earth.png` logo.
 
 ## Run The App
 
@@ -11,7 +11,7 @@ npm install
 npm run web
 ```
 
-For a phone, run `npm start` and scan the QR code with an Expo Go version compatible with SDK 57 on the same network. `npm run android` and `npm run ios` launch configured emulators; iOS Simulator requires macOS. No API keys or backend are required. Native store signing and store publication are separate from this source project.
+For a phone, run `npm start` and scan the QR code with an Expo Go version compatible with SDK 57 on the same network. `npm run android` and `npm run ios` launch configured emulators; iOS Simulator requires macOS. No API keys or backend are required. The city maps require internet access. Native store signing and store publication are separate from this source project.
 
 ```sh
 npm run typecheck
@@ -21,6 +21,8 @@ npm run export:web
 Web exports go to `dist/`. The app uses `web/` for web-specific public files, keeping the existing concept and video archive in `public/` out of the application download. Service coordinates and copy live in `src/data/services.ts`. The shared globe uses React Three Fiber with Expo GL on native and WebGL on web, 4K local textures, cloud and atmosphere layers, and eased spherical camera interpolation. System reduced-motion settings are respected.
 
 Earth textures are by Solar System Scope / INOVE, CC BY 4.0, resized and merged by Three.js contributors. [Texture sources and license](assets/earth/SOURCES.md).
+
+City maps use [MapLibre GL JS](https://maplibre.org/) with [OpenFreeMap](https://openfreemap.org/) and OpenStreetMap data. The city map document is shared between web iframe and native WebView. Buildings use actual mapped footprints and available height data; they are not photogrammetry. Keep the built-in attribution visible. The globe pauses rendering once the map is visible, and map load failures expose a retry action.
 
 ## GeoPoliticalMedia Archive
 
