@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Animated, Pressable, StyleSheet, Text, View, useWindowDimensions } from 'react-native';
-import { services, type Service } from '../data/services';
+import { services, formatServiceLocation, type Service } from '../data/services';
 
 type PerspectiveSectionProps = {
   compact: boolean;
@@ -35,7 +35,7 @@ const PerspectiveLink = ({ service, onSelect, compact, enabled }: {
     <Pressable
       accessibilityRole="button"
       disabled={!enabled}
-      accessibilityLabel={`${service.name}. ${perspectives[service.id]} Explore ${service.id === `data` ? `Atlanta, Georgia` : service.city}.`}
+      accessibilityLabel={`${service.name}. ${perspectives[service.id]} Explore ${formatServiceLocation(service)}.`}
       onPress={() => onSelect(service)}
       onFocus={() => setHighlighted(true)}
       onBlur={() => setHighlighted(false)}

@@ -1,6 +1,7 @@
 import { WebView } from 'react-native-webview';
 import { useEffect, useMemo, useRef } from 'react';
 import { cityDocument, type CityViewProps } from './cityDocument';
+import { formatServiceLocation } from '../data/services';
 
 export const CityView = ({ service, reveal, reducedMotion, onReady, onError }: CityViewProps) => {
   const view = useRef<WebView>(null);
@@ -8,6 +9,7 @@ export const CityView = ({ service, reveal, reducedMotion, onReady, onError }: C
   useEffect(() => { if (reveal) view.current?.injectJavaScript(`window.revealCity?.();true;`); }, [reveal]);
   return <WebView
     ref={view}
+    accessibilityLabel={`Explore ${formatServiceLocation(service)} in 3D`}
     source={{ html }}
     javaScriptEnabled
     domStorageEnabled

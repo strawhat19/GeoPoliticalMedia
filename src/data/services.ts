@@ -34,8 +34,8 @@ export const services: Service[] = [
     id: `data`,
     number: `02`,
     name: `Geo Data`,
-    city: `Georgia`,
-    region: `Atlanta, USA`,
+    city: `Atlanta`,
+    region: `Georgia, USA`,
     color: `#A3C5FF`,
     latitude: 33.749,
     longitude: -84.388,
@@ -59,6 +59,8 @@ export const services: Service[] = [
     description: `Beyond the headline. Closer to the story. We connect the forces, people, and ideas shaping our world, from our base in New York.`,
   },
 ];
+
+export const formatServiceLocation = (service: Service) => `${service.city}, ${service.region}`;
 
 export const formatCoordinates = (latitude: number, longitude: number) =>
   `${Math.abs(latitude).toFixed(2)}° ${latitude >= 0 ? `N` : `S`}  /  ${Math.abs(longitude).toFixed(2)}° ${longitude >= 0 ? `E` : `W`}`;

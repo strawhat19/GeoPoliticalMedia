@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef } from 'react';
 import { cityDocument, type CityViewProps } from './cityDocument';
+import { formatServiceLocation } from '../data/services';
 
 export const CityView = ({ service, reveal, reducedMotion, onReady, onError }: CityViewProps) => {
   const frame = useRef<HTMLIFrameElement>(null);
@@ -17,5 +18,5 @@ export const CityView = ({ service, reveal, reducedMotion, onReady, onError }: C
     return () => window.removeEventListener(`message`, receive);
   }, [onReady, onError, reveal]);
   useEffect(() => { if (reveal) frame.current?.contentWindow?.postMessage({ type: `reveal` }, `*`); }, [reveal]);
-  return <iframe ref={frame} srcDoc={html} tabIndex={reveal ? 0 : -1} aria-hidden={!reveal} title={`Explore ${service.city} in 3D`} sandbox="allow-scripts allow-same-origin allow-popups" style={{ width: `100%`, height: `100%`, border: 0, background: `#06101b` }} />;
+  return <iframe ref={frame} srcDoc={html} tabIndex={reveal ? 0 : -1} aria-hidden={!reveal} title={`Explore ${formatServiceLocation(service)} in 3D`} sandbox="allow-scripts allow-same-origin allow-popups" style={{ width: `100%`, height: `100%`, border: 0, background: `#06101b` }} />;
 };

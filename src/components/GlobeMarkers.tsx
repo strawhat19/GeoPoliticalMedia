@@ -1,6 +1,9 @@
-import { forwardRef, useEffect, useImperativeHandle, useRef, useState } from 'react';
-import { Animated, Easing, Platform, Pressable, StyleSheet, Text, View, type GestureResponderEvent } from 'react-native';
-import { services, type Service } from '../data/services';
+import { forwardRef, useCallback, useEffect, useImperativeHandle, useRef, useState } from 'react';
+import { Animated, Easing, Image, Platform, Pressable, ScrollView, StyleSheet, Text, View, useWindowDimensions, type GestureResponderEvent, type ImageSourcePropType } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { GlobeTooltipPortal } from './GlobeTooltipPortal';
+import { GLOBE_PULSE_COLOR, serviceMarkerContent } from '../config/globeMarkers';
+import { services, formatServiceLocation, type Service } from '../data/services';
 
 export type MarkerProjection = {
   id: Service[`id`];
@@ -12,10 +15,12 @@ export type MarkerProjection = {
 export type GlobeMarkersHandle = {
   update: (points: MarkerProjection[]) => void;
   hide: () => void;
+  dismissPreview: () => void;
 };
 
 type GlobeMarkersProps = {
   onSelect: (service: Service) => void;
+  onPreviewChange?: (open: boolean) => void;
   reducedMotion: boolean;
   paused: boolean;
   enabled: boolean;
@@ -27,55 +32,57 @@ type MarkerHandle = {
   hide: () => void;
 };
 
+type PointerOffset = { x: number; y: number } | null;
+type PreviewSource = `hover` | `focus`;
+type Viewport = { left: number; top: number; right: number; bottom: number };
 const nativeDriver = Platform.OS !== `web`;
 const targetSize = 44;
 const pulseDuration = 2200;
+const previewGap = 16;
+const previewMaxWidth = 336;
 
-type MarkerProps = Omit<GlobeMarkersProps, `onSelect`> & {
+/** RN Web provides client coordinates; native touches provide local coordinates. */
+const pointerOffset = (event: unknown, hover = false): PointerOffset => {
+  const { nativeEvent: pointer, currentTarget } = event as {
+    nativeEvent: { detail?: number; clientX?: number; clientY?: number; locationX?: number; locationY?: number };
+    currentTarget: { getBoundingClientRect?: () => { left: number; top: number } };
+  };
+  if (Platform.OS === `web`) {
+    if ((!hover && pointer.detail === 0) || typeof pointer.clientX !== `number` || typeof pointer.clientY !== `number`) return null;
+    const bounds = currentTarget.getBoundingClientRect?.();
+    return bounds ? { x: pointer.clientX - bounds.left - targetSize / 2, y: pointer.clientY - bounds.top - targetSize / 2 } : null;
+  }
+  return typeof pointer.locationX === `number` && typeof pointer.locationY === `number`
+    ? { x: pointer.locationX - targetSize / 2, y: pointer.locationY - targetSize / 2 }
+    : null;
+};
+
+const isPointerActivation = (event: GestureResponderEvent) => Platform.OS !== `web`
+  || (event.nativeEvent as unknown as { detail?: number }).detail !== 0;
+
+type MarkerProps = Pick<GlobeMarkersProps, `reducedMotion` | `paused` | `enabled`> & {
   service: Service;
   index: number;
-  onActivate: (service: Service, offset: { x: number; y: number } | null) => void;
+  highlighted: boolean;
+  onActivate: (service: Service, offset: PointerOffset, pointer: boolean) => void;
+  onPreview: (service: Service, offset: PointerOffset, source: PreviewSource) => void;
+  onPreviewLeave: (service: Service, source: PreviewSource) => void;
 };
 
 const LocationMarker = forwardRef<MarkerHandle, MarkerProps>(
-  ({ service, index, onActivate, reducedMotion, paused, enabled }, ref) => {
+  ({ service, index, onActivate, onPreview, onPreviewLeave, reducedMotion, paused, enabled, highlighted }, ref) => {
     const position = useRef(new Animated.ValueXY({ x: -targetSize, y: -targetSize })).current;
     const firstPulse = useRef(new Animated.Value(0)).current;
     const secondPulse = useRef(new Animated.Value(0)).current;
     const projectedVisible = useRef(false);
     const visibleRef = useRef(false);
     const [visible, setVisible] = useState(false);
-    const [hovered, setHovered] = useState(false);
-    const [focused, setFocused] = useState(false);
-    const city = service.id === `data` ? `Atlanta, Georgia` : service.city;
-    const highlighted = hovered || focused;
-
-    const activate = (event: GestureResponderEvent) => {
-      // Nearby cities can share part of their 44px touch targets. Resolve a
-      // pointer to the closest dot, while keyboard activation keeps its focus.
-      let offset: { x: number; y: number } | null = null;
-      if (Platform.OS === `web`) {
-        const pointer = event.nativeEvent as unknown as { detail?: number; clientX?: number; clientY?: number };
-        const target = event.currentTarget as unknown as { getBoundingClientRect?: () => { left: number; top: number } };
-        if (pointer.detail !== 0 && typeof pointer.clientX === `number` && typeof pointer.clientY === `number`) {
-          const bounds = target.getBoundingClientRect?.();
-          if (bounds) offset = { x: pointer.clientX - bounds.left - targetSize / 2, y: pointer.clientY - bounds.top - targetSize / 2 };
-        }
-      } else {
-        const { locationX, locationY } = event.nativeEvent;
-        if (Number.isFinite(locationX) && Number.isFinite(locationY)) offset = { x: locationX - targetSize / 2, y: locationY - targetSize / 2 };
-      }
-      onActivate(service, offset);
-    };
+    const pulseColor = serviceMarkerContent[service.id].pulseColor ?? GLOBE_PULSE_COLOR;
 
     const updateVisibility = (nextVisible: boolean) => {
       if (visibleRef.current === nextVisible) return;
       visibleRef.current = nextVisible;
       setVisible(nextVisible);
-      if (!nextVisible) {
-        setHovered(false);
-        setFocused(false);
-      }
     };
 
     useImperativeHandle(ref, () => ({
@@ -132,69 +139,134 @@ const LocationMarker = forwardRef<MarkerHandle, MarkerProps>(
         <Pressable
           testID={`globe-marker-${service.id}`}
           accessibilityRole="button"
-          accessibilityLabel={`Explore ${service.name} in ${city}`}
-          accessibilityHint="Zooms from the globe into the city view"
+          accessibilityLabel={`Explore ${service.name} in ${formatServiceLocation(service)}`}
+          accessibilityHint="Preview service details on focus, or activate to open the city view"
+          accessibilityState={{ expanded: highlighted }}
+          {...(Platform.OS === `web` && highlighted ? { 'aria-describedby': `globe-preview-description-${service.id}` } : {})}
           disabled={!visible || !enabled}
-          onPress={activate}
-          onHoverIn={() => setHovered(true)}
-          onHoverOut={() => setHovered(false)}
-          onFocus={() => setFocused(true)}
-          onBlur={() => setFocused(false)}
+          onPress={event => onActivate(service, pointerOffset(event), isPointerActivation(event))}
+          onHoverIn={event => {
+            if (!event.nativeEvent.buttons) onPreview(service, pointerOffset(event, true), `hover`);
+          }}
+          onHoverOut={() => onPreviewLeave(service, `hover`)}
+          onPointerMove={event => {
+            if (event.nativeEvent.pointerType === `mouse` && !event.nativeEvent.buttons) {
+              onPreview(service, pointerOffset(event, true), `hover`);
+            }
+          }}
+          onFocus={() => onPreview(service, null, `focus`)}
+          onBlur={() => onPreviewLeave(service, `focus`)}
           style={({ pressed }) => [styles.target, (highlighted || pressed) && styles.targetHighlighted]}
         >
           <View pointerEvents="none" style={styles.center}>
-            <View style={[styles.staticRing, { borderColor: service.color }]} />
+            <View style={[styles.staticRing, { borderColor: pulseColor }]} />
             {[firstPulse, secondPulse].map((value, pulseIndex) => (
               <Animated.View key={pulseIndex} style={[
                 styles.pulse,
                 {
-                  borderColor: service.color,
+                  borderColor: pulseColor,
                   opacity: value.interpolate({ inputRange: [0, 0.12, 1], outputRange: [0, 0.55, 0] }),
                   transform: [{ scale: value.interpolate({ inputRange: [0, 1], outputRange: [0.65, 2.1] }) }],
                 },
               ]} />
             ))}
-            <View style={[styles.glow, { backgroundColor: service.color }]} />
+            <View style={[styles.glow, { backgroundColor: pulseColor }]} />
             <View style={[styles.core, { backgroundColor: service.color }]} />
           </View>
         </Pressable>
-        {highlighted && visible && enabled && (
-          <View pointerEvents="none" style={styles.label}>
-            <Text style={styles.labelText}>{city}</Text>
-          </View>
-        )}
       </Animated.View>
     );
   },
 );
 LocationMarker.displayName = `LocationMarker`;
 
-/** Camera projections update positions directly; React only handles visibility changes. */
+const PreviewImage = ({ source, alt }: { source: ImageSourcePropType; alt: string }) => {
+  const [failed, setFailed] = useState(false);
+  useEffect(() => setFailed(false), [source]);
+  if (failed) return null;
+  return <Image source={source} accessibilityLabel={alt} resizeMode="cover" onError={() => setFailed(true)} style={styles.previewImage} />;
+};
+
+/** Camera projections update positions directly; React only handles visibility and preview ownership. */
 export const GlobeMarkers = forwardRef<GlobeMarkersHandle, GlobeMarkersProps>((props, ref) => {
   const markers = useRef<Partial<Record<Service[`id`], MarkerHandle | null>>>({});
   const projections = useRef<Partial<Record<Service[`id`], MarkerProjection>>>({});
+  const propsRef = useRef(props);
+  propsRef.current = props;
+  const { width, height } = useWindowDimensions();
+  const insets = useSafeAreaInsets();
+  const overlay = useRef<View>(null);
+  const viewport = useRef<Viewport>({ left: 12, top: 12, right: width - 12, bottom: height - insets.top - insets.bottom - 12 });
+  const [cardSize, setCardSize] = useState({ width: Math.min(previewMaxWidth, width - 24), maxHeight: height - insets.top - insets.bottom - 24 });
+  const cardHeight = useRef(330);
+  const overlayOrigin = useRef({ x: 0, y: insets.top });
+  const [actionHovered, setActionHovered] = useState(false);
+  const [actionFocused, setActionFocused] = useState(false);
+  const actionPointerOrigin = useRef({ x: 0, y: 0 });
+  const actionMoved = useRef(false);
+  const cardWidth = useRef(cardSize.width);
+  cardWidth.current = cardSize.width;
+  const cardPosition = useRef(new Animated.ValueXY()).current;
+  const reveal = useRef(new Animated.Value(0)).current;
+  const [preview, setPreview] = useState<Service | null>(null);
+  const active = useRef<Service | null>(null);
+  const previewOpen = useRef(false);
+  const hoveredMarker = useRef<Service[`id`] | null>(null);
+  const focusedMarker = useRef<Service[`id`] | null>(null);
+  const cardHovered = useRef(false);
+  const actionHoverOwner = useRef(false);
+  const cardFocused = useRef(false);
+  const exitTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const animationGeneration = useRef(0);
 
-  useImperativeHandle(ref, () => ({
-    update(points) {
-      for (const point of points) {
-        projections.current[point.id] = point;
-        markers.current[point.id]?.update(point);
-      }
-      for (const service of services) {
-        if (!points.some(point => point.id === service.id)) {
-          delete projections.current[service.id];
-          markers.current[service.id]?.hide();
-        }
-      }
-    },
-    hide() {
-      projections.current = {};
-      for (const service of services) markers.current[service.id]?.hide();
-    },
-  }), []);
+  const clearExit = useCallback(() => {
+    if (exitTimer.current) clearTimeout(exitTimer.current);
+    exitTimer.current = null;
+  }, []);
 
-  const activate = (service: Service, offset: { x: number; y: number } | null) => {
-    if (offset && props.canSelectPointer && !props.canSelectPointer()) return;
+  const placeCard = useCallback(() => {
+    const point = active.current ? projections.current[active.current.id] : null;
+    if (!point) return;
+    const bounds = viewport.current;
+    const panelHeight = Math.min(cardHeight.current, bounds.bottom - bounds.top);
+    const panelWidth = Math.min(cardWidth.current, bounds.right - bounds.left);
+    const above = point.y - targetSize / 2 - previewGap - panelHeight;
+    const below = point.y + targetSize / 2 + previewGap;
+    // Prefer the space above the location; use below when it has more room.
+    const roomAbove = point.y - bounds.top;
+    const roomBelow = bounds.bottom - point.y;
+    const preferredY = above >= bounds.top || roomAbove >= roomBelow ? above : below;
+    cardPosition.setValue({
+      x: overlayOrigin.current.x + Math.max(bounds.left, Math.min(point.x - panelWidth / 2, bounds.right - panelWidth)),
+      y: overlayOrigin.current.y + Math.max(bounds.top, Math.min(preferredY, bounds.bottom - panelHeight)),
+    });
+  }, [cardPosition]);
+
+  const dismissPreview = useCallback(() => {
+    clearExit();
+    hoveredMarker.current = null;
+    focusedMarker.current = null;
+    cardHovered.current = false;
+    actionHoverOwner.current = false;
+    cardFocused.current = false;
+    if (!previewOpen.current && !active.current) return;
+    active.current = null;
+    previewOpen.current = false;
+    propsRef.current.onPreviewChange?.(false);
+    const generation = ++animationGeneration.current;
+    reveal.stopAnimation();
+    Animated.timing(reveal, {
+      toValue: 0,
+      duration: propsRef.current.reducedMotion ? 0 : 160,
+      easing: Easing.in(Easing.quad),
+      useNativeDriver: nativeDriver,
+      isInteraction: false,
+    }).start(({ finished }) => {
+      if (finished && generation === animationGeneration.current) setPreview(null);
+    });
+  }, [clearExit, reveal]);
+
+  const nearestService = useCallback((service: Service, offset: PointerOffset) => {
     const origin = projections.current[service.id];
     let destination = service;
     if (offset && origin) {
@@ -211,21 +283,214 @@ export const GlobeMarkers = forwardRef<GlobeMarkersHandle, GlobeMarkersProps>((p
         }
       }
     }
-    props.onSelect(destination);
-  };
+    return destination;
+  }, []);
 
+  const showPreview = useCallback((service: Service, offset: PointerOffset, source: PreviewSource) => {
+    if (!propsRef.current.enabled) return;
+    const destination = source === `hover` ? nearestService(service, offset) : service;
+    if (!projections.current[destination.id]?.visible) return;
+    if (source === `hover`) hoveredMarker.current = destination.id;
+    else focusedMarker.current = service.id;
+    clearExit();
+    if (active.current?.id === destination.id && previewOpen.current) return;
+    active.current = destination;
+    if (!previewOpen.current) propsRef.current.onPreviewChange?.(true);
+    previewOpen.current = true;
+    ++animationGeneration.current;
+    setPreview(destination);
+    placeCard();
+    reveal.stopAnimation();
+    reveal.setValue(propsRef.current.reducedMotion ? 1 : 0);
+    Animated.timing(reveal, {
+      toValue: 1,
+      duration: propsRef.current.reducedMotion ? 0 : 200,
+      easing: Easing.out(Easing.cubic),
+      useNativeDriver: nativeDriver,
+      isInteraction: false,
+    }).start();
+  }, [clearExit, nearestService, placeCard, reveal]);
+
+  const scheduleExit = useCallback(() => {
+    clearExit();
+    if (hoveredMarker.current || cardHovered.current || actionHoverOwner.current || cardFocused.current) return;
+    exitTimer.current = setTimeout(() => {
+      // Retain the hovered service while crossing into its card. Once the
+      // pointer has left both, restore the service that still owns focus.
+      if (hoveredMarker.current || cardHovered.current || actionHoverOwner.current || cardFocused.current) return;
+      const focusedService = services.find(service => service.id === focusedMarker.current);
+      if (focusedService) showPreview(focusedService, null, `focus`);
+      else dismissPreview();
+    }, 150);
+  }, [clearExit, dismissPreview, showPreview]);
+
+  const leavePreview = useCallback((service: Service, source: PreviewSource) => {
+    if (source === `hover`) hoveredMarker.current = null;
+    else if (focusedMarker.current === service.id) focusedMarker.current = null;
+    scheduleExit();
+  }, [scheduleExit]);
+
+  const measureViewport = useCallback(() => {
+    overlay.current?.measureInWindow((x, y, measuredWidth, measuredHeight) => {
+      if (!measuredWidth || !measuredHeight) return;
+      overlayOrigin.current = { x, y };
+      const next = {
+        left: Math.max(12, insets.left - x + 12),
+        top: Math.max(12, insets.top - y + 12),
+        right: Math.min(measuredWidth - 12, width - insets.right - x - 12),
+        bottom: Math.min(measuredHeight - 12, height - insets.bottom - y - 12),
+      };
+      viewport.current = next;
+      const nextWidth = Math.max(1, Math.min(previewMaxWidth, next.right - next.left));
+      const nextHeight = Math.max(1, next.bottom - next.top);
+      cardWidth.current = nextWidth;
+      setCardSize(previous => previous.width === nextWidth && previous.maxHeight === nextHeight ? previous : { width: nextWidth, maxHeight: nextHeight });
+      placeCard();
+    });
+  }, [height, insets.bottom, insets.left, insets.right, insets.top, placeCard, width]);
+
+  useEffect(measureViewport, [measureViewport]);
+  useEffect(() => { if (!props.enabled) dismissPreview(); }, [dismissPreview, props.enabled]);
+  useEffect(() => {
+    if (props.reducedMotion && previewOpen.current) {
+      reveal.stopAnimation();
+      reveal.setValue(1);
+    }
+  }, [props.reducedMotion, reveal]);
+  useEffect(() => {
+    if (Platform.OS !== `web`) return;
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === `Escape` && previewOpen.current) {
+        event.preventDefault();
+        event.stopPropagation();
+        dismissPreview();
+      }
+    };
+    document.addEventListener(`keydown`, onKeyDown, true);
+    return () => document.removeEventListener(`keydown`, onKeyDown, true);
+  }, [dismissPreview]);
+  useEffect(() => () => {
+    clearExit();
+    ++animationGeneration.current;
+    reveal.stopAnimation();
+    if (previewOpen.current) propsRef.current.onPreviewChange?.(false);
+  }, [clearExit, reveal]);
+
+  useImperativeHandle(ref, () => ({
+    update(points) {
+      for (const point of points) {
+        projections.current[point.id] = point;
+        markers.current[point.id]?.update(point);
+      }
+      for (const service of services) {
+        if (!points.some(point => point.id === service.id)) {
+          delete projections.current[service.id];
+          markers.current[service.id]?.hide();
+        }
+      }
+      if (active.current) {
+        if (!projections.current[active.current.id]?.visible) dismissPreview();
+        else placeCard();
+      }
+    },
+    hide() {
+      projections.current = {};
+      for (const service of services) markers.current[service.id]?.hide();
+      dismissPreview();
+    },
+    dismissPreview,
+  }), [dismissPreview, placeCard]);
+
+  const activate = useCallback((service: Service, offset: PointerOffset, pointer: boolean) => {
+    if (!propsRef.current.enabled || (pointer && propsRef.current.canSelectPointer && !propsRef.current.canSelectPointer())) return;
+    const destination = nearestService(service, offset);
+    dismissPreview();
+    propsRef.current.onSelect(destination);
+  }, [dismissPreview, nearestService]);
+
+  const content = preview ? serviceMarkerContent[preview.id] : null;
   return (
-    <View pointerEvents="box-none" style={styles.overlay}>
+    <View ref={overlay} pointerEvents="box-none" onLayout={measureViewport} style={styles.overlay}>
       {services.map((service, index) => (
         <LocationMarker
           key={service.id}
           ref={handle => { markers.current[service.id] = handle; }}
-          {...props}
+          reducedMotion={props.reducedMotion}
+          paused={props.paused}
+          enabled={props.enabled}
           service={service}
           index={index}
+          highlighted={preview?.id === service.id}
           onActivate={activate}
+          onPreview={showPreview}
+          onPreviewLeave={leavePreview}
         />
       ))}
+      {preview && (
+        <GlobeTooltipPortal>
+        <Animated.View
+          pointerEvents={props.enabled ? `box-none` : `none`}
+          style={[styles.previewPosition, { width: cardSize.width, transform: cardPosition.getTranslateTransform() }]}
+        >
+          <Animated.View style={{ opacity: reveal, transform: [{ translateY: reveal.interpolate({ inputRange: [0, 1], outputRange: [8, 0] }) }] }}>
+            <Pressable
+              testID="globe-service-preview"
+              accessible={false}
+              focusable={false}
+              onHoverIn={() => { cardHovered.current = true; clearExit(); }}
+              onHoverOut={() => { cardHovered.current = false; scheduleExit(); }}
+              onFocus={() => { cardFocused.current = true; clearExit(); }}
+              onBlur={() => { cardFocused.current = false; scheduleExit(); }}
+              onLayout={event => { cardHeight.current = event.nativeEvent.layout.height; placeCard(); }}
+              style={[styles.preview, { maxHeight: cardSize.maxHeight }]}
+            >
+              <ScrollView bounces={false} showsVerticalScrollIndicator={false} style={{ maxHeight: cardSize.maxHeight }}>
+                {content?.image && <PreviewImage key={preview.id} source={content.image} alt={content.imageAlt ?? `${preview.name} in ${formatServiceLocation(preview)}`} />}
+                <View style={styles.previewBody}>
+                  <View style={styles.previewEyebrow}>
+                    <View style={[styles.serviceSwatch, { backgroundColor: preview.color }]} />
+                    <Text style={styles.previewKicker}>SERVICE {preview.number}</Text>
+                  </View>
+                  <Text style={styles.previewTitle}>{preview.name}</Text>
+                  <Text style={styles.previewLocation}>{preview.city} <Text style={styles.locationSeparator}>/</Text> {preview.region}</Text>
+                  <Text nativeID={`globe-preview-description-${preview.id}`} style={styles.previewDescription}>{content?.description ?? preview.description}</Text>
+                  <View style={styles.disciplines}>
+                    {preview.disciplines.map(discipline => <Text key={discipline} style={styles.discipline}>{discipline}</Text>)}
+                  </View>
+                  <Pressable
+                    testID="globe-preview-city-cta"
+                    accessibilityRole="button"
+                    accessibilityLabel={`Explore ${preview.name} in ${formatServiceLocation(preview)}`}
+                    onHoverIn={() => { setActionHovered(true); actionHoverOwner.current = true; clearExit(); }}
+                    onHoverOut={() => { setActionHovered(false); actionHoverOwner.current = false; scheduleExit(); }}
+                    onFocus={() => { setActionFocused(true); cardFocused.current = true; clearExit(); }}
+                    onBlur={() => { setActionFocused(false); cardFocused.current = false; scheduleExit(); }}
+                    onPressIn={event => {
+                      actionMoved.current = false;
+                      actionPointerOrigin.current = { x: event.nativeEvent.pageX, y: event.nativeEvent.pageY };
+                    }}
+                    onTouchMove={event => {
+                      if (Math.hypot(event.nativeEvent.pageX - actionPointerOrigin.current.x, event.nativeEvent.pageY - actionPointerOrigin.current.y) > 6) actionMoved.current = true;
+                    }}
+                    onPointerMove={event => {
+                      if (event.nativeEvent.buttons && Math.hypot(event.nativeEvent.pageX - actionPointerOrigin.current.x, event.nativeEvent.pageY - actionPointerOrigin.current.y) > 6) actionMoved.current = true;
+                    }}
+                    onPress={event => {
+                      const pointer = isPointerActivation(event);
+                      if (!pointer || !actionMoved.current) activate(preview, null, pointer);
+                    }}
+                    style={({ pressed }) => [styles.previewAction, (actionHovered || actionFocused) && styles.previewActionHighlighted, pressed && styles.previewActionPressed]}
+                  >
+                    <Text style={styles.previewActionText}>Explore {preview.city}</Text>
+                    <Text accessible={false} style={styles.previewActionArrow}>↗</Text>
+                  </Pressable>
+                </View>
+              </ScrollView>
+            </Pressable>
+          </Animated.View>
+        </Animated.View>
+        </GlobeTooltipPortal>
+      )}
     </View>
   );
 });
@@ -241,6 +506,22 @@ const styles = StyleSheet.create({
   pulse: { position: `absolute`, width: 20, height: 20, borderRadius: 10, borderWidth: 1 },
   glow: { position: `absolute`, width: 16, height: 16, borderRadius: 8, opacity: 0.18 },
   core: { width: 8, height: 8, borderRadius: 4, borderWidth: 1.5, borderColor: `#F4FBFF` },
-  label: { position: `absolute`, bottom: 46, left: -64, width: 172, alignItems: `center` },
-  labelText: { paddingHorizontal: 10, paddingVertical: 6, borderRadius: 12, overflow: `hidden`, backgroundColor: `rgba(3,12,21,0.9)`, borderWidth: 1, borderColor: `rgba(170,208,231,0.2)`, color: `#E4F0F6`, fontFamily: `Manrope_600SemiBold`, fontSize: 11, lineHeight: 16, textAlign: `center` },
+  previewPosition: { position: `absolute`, top: 0, left: 0, zIndex: 10 },
+  preview: { cursor: `auto`, borderRadius: 20, overflow: `hidden`, borderWidth: 1, borderColor: `rgba(186,221,239,0.24)`, backgroundColor: `rgba(8,21,33,0.98)`, boxShadow: `0 20px 60px rgba(0,0,0,0.35)` },
+  previewImage: { width: `100%`, height: 138, backgroundColor: `#142D40` },
+  previewBody: { padding: 20 },
+  previewEyebrow: { flexDirection: `row`, alignItems: `center`, gap: 7, marginBottom: 9 },
+  serviceSwatch: { width: 5, height: 5, borderRadius: 3 },
+  previewKicker: { color: `#94ADBC`, fontFamily: `Manrope_600SemiBold`, fontSize: 9, lineHeight: 14, letterSpacing: 1.9 },
+  previewTitle: { color: `#F1F7FA`, fontFamily: `Manrope_600SemiBold`, fontSize: 21, lineHeight: 28, letterSpacing: -0.5 },
+  previewLocation: { color: `#B5CBD7`, fontFamily: `Manrope_500Medium`, fontSize: 11, lineHeight: 18, marginTop: 4 },
+  locationSeparator: { color: `#597B90` },
+  previewDescription: { color: `#B8C9D4`, fontFamily: `Manrope_400Regular`, fontSize: 12, lineHeight: 19, marginTop: 15 },
+  disciplines: { flexDirection: `row`, flexWrap: `wrap`, gap: 6, marginTop: 14 },
+  discipline: { color: `#C0D4DF`, fontFamily: `Manrope_500Medium`, fontSize: 9, lineHeight: 14, borderWidth: 1, borderColor: `rgba(158,197,218,0.17)`, borderRadius: 7, paddingHorizontal: 8, paddingVertical: 4 },
+  previewAction: { minHeight: 43, flexDirection: `row`, justifyContent: `space-between`, alignItems: `center`, borderRadius: 10, borderWidth: 1, borderColor: `rgba(157,218,242,0.25)`, backgroundColor: `rgba(131,204,234,0.08)`, paddingHorizontal: 12, marginTop: 18 },
+  previewActionHighlighted: { backgroundColor: `rgba(131,204,234,0.18)`, borderColor: `rgba(157,218,242,0.65)` },
+  previewActionPressed: { opacity: 0.72 },
+  previewActionText: { color: `#D6EEF8`, fontFamily: `Manrope_600SemiBold`, fontSize: 11, lineHeight: 18 },
+  previewActionArrow: { color: `#B2DDED`, fontSize: 19, lineHeight: 23 },
 });

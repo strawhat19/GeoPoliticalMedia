@@ -2,8 +2,9 @@ import * as THREE from 'three';
 import { Asset } from 'expo-asset';
 import { useFrame } from '@react-three/fiber';
 import { Canvas, useLoader } from './GlobeCanvas';
+import { SpaceBackdrop } from './SpaceBackdrop';
 import { GlobeMarkers, type GlobeMarkersHandle, type MarkerProjection } from './GlobeMarkers';
-import { services, type Service } from '../data/services';
+import { services, formatServiceLocation, type Service } from '../data/services';
 import { Component, Suspense, useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import { PanResponder, Platform, Pressable, StyleSheet, Text, View } from 'react-native';
 
@@ -104,24 +105,6 @@ export const latLngToVector = (latitude: number, longitude: number, radius = 1) 
   const phi = THREE.MathUtils.degToRad(latitude);
   const theta = THREE.MathUtils.degToRad(longitude);
   return new THREE.Vector3(Math.cos(phi) * Math.cos(theta), Math.sin(phi), -Math.cos(phi) * Math.sin(theta)).multiplyScalar(radius);
-};
-
-const Starfield = () => {
-  const positions = useMemo(() => {
-    const points = new Float32Array(2100 * 3);
-    let seed = 19;
-    const random = () => ((seed = (seed * 16807) % 2147483647) - 1) / 2147483646;
-    for (let i = 0; i < points.length; i += 3) {
-      const theta = random() * Math.PI * 2;
-      const phi = Math.acos(2 * random() - 1);
-      const radius = 12 + random() * 12;
-      points[i] = radius * Math.sin(phi) * Math.cos(theta);
-      points[i + 1] = radius * Math.cos(phi);
-      points[i + 2] = radius * Math.sin(phi) * Math.sin(theta);
-    }
-    return points;
-  }, []);
-  return <points><bufferGeometry><bufferAttribute attach="attributes-position" args={[positions, 3]} /></bufferGeometry><pointsMaterial transparent opacity={0.8} size={0.032} color="#BDD4E8" sizeAttenuation depthWrite={false} /></points>;
 };
 
 type SceneProps = GlobeProps & {
@@ -298,7 +281,7 @@ const EarthScene = ({ selected, paused, compact, reducedMotion, scrollMotion, dr
 
   return (
     <>
-      <Starfield />
+      <SpaceBackdrop compact={compact} />
       <mesh name="earth-surface" onAfterRender={() => { if (texturesConfigured.current) earthRendered.current = true; }}>
         <sphereGeometry args={[1, compact ? 64 : 128, compact ? 48 : 96]} />
         <shaderMaterial vertexShader={globeVertex} fragmentShader={surfaceFragment} uniforms={surfaceUniforms} />
@@ -331,6 +314,11 @@ export const Globe = (props: GlobeProps) => {
   const markerPressCancelled = useRef(false);
   const origin = useRef({ x: 0, y: 0 });
   const markers = useRef<GlobeMarkersHandle>(null);
+  const [markerPreviewOpen, setMarkerPreviewOpen] = useState(false);
+  const handleMarkerPreviewChange = useCallback((open: boolean) => {
+    if (open) markerPressCancelled.current = false;
+    setMarkerPreviewOpen(open);
+  }, []);
   const projectMarkers = useCallback((points: MarkerProjection[]) => markers.current?.update(points), []);
   const canSelectMarker = useCallback(() => !markerPressCancelled.current && !dragging.current, []);
   const [attempt, setAttempt] = useState(0);
@@ -340,22 +328,22 @@ export const Globe = (props: GlobeProps) => {
       if (Math.hypot(gesture.dx, gesture.dy) > 6) markerPressCancelled.current = true;
       return Math.abs(gesture.dx) > 5 && Math.abs(gesture.dx) > Math.abs(gesture.dy);
     },
-    onPanResponderGrant: () => { markerPressCancelled.current = true; origin.current = { ...drag.current }; dragging.current = true; props.onInteract(); },
+    onPanResponderGrant: () => { markerPressCancelled.current = true; markers.current?.dismissPreview?.(); origin.current = { ...drag.current }; dragging.current = true; props.onInteract(); },
     onPanResponderMove: (_, gesture) => { drag.current = { x: origin.current.x + gesture.dx, y: origin.current.y + gesture.dy }; },
     onPanResponderRelease: () => { dragging.current = false; props.onInteractEnd(); },
     onPanResponderTerminate: () => { dragging.current = false; props.onInteractEnd(); },
   }), [props.onInteract, props.onInteractEnd]);
 
   return (
-    <View style={styles.container} {...responder.panHandlers} accessibilityLabel={props.selected ? `Earth focused on ${props.selected.city}` : `Interactive rotating Earth. Drag horizontally to rotate, or choose a city marker`}>
+    <View style={styles.container} {...responder.panHandlers} accessibilityLabel={props.selected ? `Earth focused on ${formatServiceLocation(props.selected)}` : `Interactive rotating Earth. Drag horizontally to rotate, or choose a city marker`}>
       <GlobeBoundary key={attempt} onError={() => { markers.current?.hide(); props.onError(); }} onRetry={() => { useLoader.clear(THREE.TextureLoader, textureSources); setAttempt(value => value + 1); }}>
         <View style={[styles.canvas, { pointerEvents: `none` }]}>
           <Canvas frameloop={props.suspended ? `never` : `always`} camera={{ fov: 38, near: 0.01, far: 80, position: [0, 0, 2.55] }} dpr={[1, props.compact ? 1.5 : 2]} gl={{ alpha: true, antialias: true, powerPreference: `high-performance` }} style={styles.canvas}>
-            <Suspense fallback={null}><EarthScene {...props} drag={drag} dragging={dragging} onProjectMarkers={projectMarkers} /></Suspense>
+            <Suspense fallback={null}><EarthScene {...props} paused={props.paused || markerPreviewOpen} drag={drag} dragging={dragging} onProjectMarkers={projectMarkers} /></Suspense>
           </Canvas>
         </View>
       </GlobeBoundary>
-      <GlobeMarkers ref={markers} onSelect={props.onSelect} canSelectPointer={canSelectMarker} reducedMotion={props.reducedMotion} paused={props.paused} enabled={!props.selected && !props.suspended} />
+      <GlobeMarkers ref={markers} onSelect={props.onSelect} onPreviewChange={handleMarkerPreviewChange} canSelectPointer={canSelectMarker} reducedMotion={props.reducedMotion} paused={props.paused} enabled={!props.selected && !props.suspended} />
     </View>
   );
 };

@@ -1,12 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
 import { Globe } from './src/components/Globe';
 import { GlobeStage } from './src/components/GlobeStage';
+import { GlobeTooltipProvider } from './src/components/GlobeTooltipPortal';
 import { CityView } from './src/components/CityView';
 import { WorldLoader } from './src/components/WorldLoader';
 import { PerspectiveSection } from './src/components/PerspectiveSection';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { services, formatCoordinates, type Service } from './src/data/services';
+import { services, formatCoordinates, formatServiceLocation, type Service } from './src/data/services';
 import { SafeAreaProvider, useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useFonts, Manrope_400Regular, Manrope_500Medium, Manrope_600SemiBold, Manrope_700Bold, Manrope_800ExtraBold } from '@expo-google-fonts/manrope';
 import { AccessibilityInfo, Animated, AppState, Image, Linking, Platform, Pressable, ScrollView, StyleSheet, Text, View, useWindowDimensions, type NativeScrollEvent, type NativeSyntheticEvent } from 'react-native';
@@ -47,7 +48,7 @@ const ServiceRow = ({ service, active, compact, onSelect }: { service: Service; 
       onFocus={() => setHovered(true)}
       onHoverIn={() => setHovered(true)}
       onHoverOut={() => setHovered(false)}
-      accessibilityLabel={`${service.name}, ${service.city}. Explore the city`}
+      accessibilityLabel={`${service.name}, ${formatServiceLocation(service)}. Explore the city`}
       style={[styles.serviceRow, compact && styles.serviceRowCompact, highlighted && styles.serviceRowActive]}
     >
       <View style={styles.serviceHeading}>
@@ -56,7 +57,7 @@ const ServiceRow = ({ service, active, compact, onSelect }: { service: Service; 
       </View>
       <View style={styles.serviceCopy}>
         <Text style={[styles.serviceName, compact && styles.serviceNameCompact, highlighted && { color: palette.cyan }]}>{service.name}</Text>
-        <Text style={[styles.locationText, compact && styles.locationTextCompact]}>{service.city}</Text>
+        <Text testID={`service-location-${service.id}`} style={[styles.locationText, compact && styles.locationTextCompact]}>{compact ? `${service.city}\n${service.region}` : formatServiceLocation(service)}</Text>
       </View>
     </Pressable>
   );
@@ -88,7 +89,6 @@ const GeoCorp = () => {
   const reducedMotion = useReducedMotion();
   const [selected, setSelected] = useState<Service | null>(null);
   const [mapService, setMapService] = useState<Service | null>(null);
-  const [paused, setPaused] = useState(false);
   const [dragPaused, setDragPaused] = useState(false);
   const dragResumeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const [active, setActive] = useState(true);
@@ -121,7 +121,7 @@ const GeoCorp = () => {
   const reset = useCallback(() => {
     clearDragPause();
     setReturningToTop(false);
-    setSelected(null); setPaused(false); setArrived(false); setMapError(false);
+    setSelected(null); setArrived(false); setMapError(false);
     scroll.current?.scrollTo({ y: 0, animated: !reducedMotion });
   }, [clearDragPause, reducedMotion]);
   const explorePerspectives = useCallback(() => {
@@ -191,7 +191,6 @@ const GeoCorp = () => {
     const destination = { ...service };
     setSelected(destination);
     setMapService(destination);
-    setPaused(false);
     scroll.current?.scrollTo({ y: 0, animated: !reducedMotion });
   }, [mapOpacity, reducedMotion, globeError, clearDragPause]);
   const pauseOnDrag = useCallback(() => {
@@ -203,10 +202,6 @@ const GeoCorp = () => {
     if (dragResumeTimer.current) clearTimeout(dragResumeTimer.current);
     dragResumeTimer.current = setTimeout(() => { dragResumeTimer.current = null; setDragPaused(false); }, 600);
   }, []);
-  const toggleOrbit = useCallback(() => {
-    if (paused || dragPaused) { clearDragPause(); setPaused(false); }
-    else setPaused(true);
-  }, [paused, dragPaused, clearDragPause]);
   const onArrival = useCallback(() => { if (attempt === mapGeneration.current) setArrived(true); }, [attempt]);
   const onMapReady = useCallback(() => { if (attempt === mapGeneration.current) setMapReady(true); }, [attempt]);
   const onMapError = useCallback(() => { if (attempt === mapGeneration.current) setMapError(true); }, [attempt]);
@@ -220,7 +215,7 @@ const GeoCorp = () => {
       <Animated.ScrollView ref={scroll} pointerEvents={entered ? `auto` : `none`} accessibilityElementsHidden={!entered} importantForAccessibility={entered ? `auto` : `no-hide-descendants`} aria-hidden={!entered} showsVerticalScrollIndicator={false} scrollEventThrottle={16} onScroll={Animated.event([{ nativeEvent: { contentOffset: { y: scrollY } } }], { useNativeDriver: Platform.OS !== `web`, listener: handleScroll })} contentContainerStyle={{ paddingTop: insets.top, paddingBottom: insets.bottom }}>
         <View style={[styles.scene, { minHeight: pageHeight }]}>
           <GlobeStage height={pageHeight} scrollY={scrollY}>
-            <Globe selected={selected} paused={paused || dragPaused || !active} compact={compact} reducedMotion={reducedMotion} scrollMotion={scrollMotion} onSelect={selectService} onInteract={pauseOnDrag} onInteractEnd={resumeAfterDrag} onArrival={onArrival} onReady={onGlobeReady} onError={onGlobeError} suspended={!active || cityVisible} />
+            <Globe selected={selected} paused={dragPaused || !active} compact={compact} reducedMotion={reducedMotion} scrollMotion={scrollMotion} onSelect={selectService} onInteract={pauseOnDrag} onInteractEnd={resumeAfterDrag} onArrival={onArrival} onReady={onGlobeReady} onError={onGlobeError} suspended={!active || cityVisible} />
           </GlobeStage>
           <View pointerEvents="box-none" style={{ minHeight: pageHeight }}>
             {mapService && <Animated.View style={[styles.background, { opacity: mapOpacity, pointerEvents: cityVisible ? `auto` : `none` }]}>
@@ -241,7 +236,7 @@ const GeoCorp = () => {
             <View style={[styles.hero, { paddingTop: 30, paddingHorizontal: compact ? 24 : 40 }]}>
               <Animated.View style={[styles.introduction, { opacity }]}>
                 <Text style={styles.eyebrow}>{selected ? `${cityVisible ? `ON THE GROUND` : `DESTINATION`} / ${selected.region.toUpperCase()}` : `ONE PLANET. THREE PERSPECTIVES.`}</Text>
-                <Text accessibilityRole="header" style={[styles.headline, compact && styles.headlineCompact]}>{selected ? (selected.id === `data` ? `Atlanta, Georgia` : selected.city) : `A world of possibility`}<Text style={styles.wordmarkPeriod}>.</Text></Text>
+                <Text accessibilityRole="header" style={[styles.headline, compact && styles.headlineCompact]}>{selected ? selected.city : `A world of possibility`}<Text style={styles.wordmarkPeriod}>.</Text></Text>
                 <Text style={[styles.description, compact && styles.descriptionCompact]}>{selected ? selected.disciplines.join(`  ·  `) : `Creativity, intelligence, and perspective. Connected by one world.`}</Text>
               </Animated.View>
               {!selected && <PerspectiveButton onPress={explorePerspectives} />}
@@ -258,9 +253,9 @@ const GeoCorp = () => {
                 <Text style={styles.locationTitle}>{selected ? `⌖  ${formatCoordinates(selected.latitude, selected.longitude)}` : `EARTH / OUR COMMON GROUND`}</Text>
                 <LocalTime service={selected} />
               </View>
-              <Pressable accessibilityRole="button" accessibilityLabel={selected ? `Return to orbit` : paused || dragPaused ? `Resume orbit` : `Pause orbit`} disabled={!selected && reducedMotion} onPress={selected ? reset : toggleOrbit} style={styles.orbitButton}>
-                <Text style={styles.orbitIcon}>{selected ? `↶` : paused || dragPaused || reducedMotion ? `▷` : `Ⅱ`}</Text><Text style={styles.orbitText}>{selected ? `RETURN TO ORBIT` : reducedMotion ? `STILL ORBIT` : paused ? `RESUME ORBIT` : dragPaused ? `RESUMING SOON` : `PAUSE ORBIT`}</Text>
-              </Pressable>
+              {selected && <Pressable accessibilityRole="button" accessibilityLabel="Return to orbit" onPress={reset} style={styles.returnButton}>
+                <Text style={styles.returnIcon}>↶</Text><Text style={styles.returnText}>RETURN TO ORBIT</Text>
+              </Pressable>}
             </View>
           </View>
           {(!selected || returningToTop) && <PerspectiveSection compact={compact} pageHeight={pageHeight} progress={scrollY} reducedMotion={reducedMotion} revealed={!selected && (storyRevealed || reducedMotion)} onSelect={selectService} />}
@@ -273,7 +268,7 @@ const GeoCorp = () => {
 };
 
 export default function App() {
-  return <SafeAreaProvider><GeoCorp /></SafeAreaProvider>;
+  return <SafeAreaProvider><GlobeTooltipProvider><GeoCorp /></GlobeTooltipProvider></SafeAreaProvider>;
 }
 
 const styles = StyleSheet.create({
@@ -311,8 +306,8 @@ const styles = StyleSheet.create({
   serviceCopy: { flex: 1, gap: 6 },
   serviceName: { flex: 1, fontSize: 24, lineHeight: 31, letterSpacing: -0.65, color: palette.text, fontFamily: `Manrope_500Medium` },
   serviceNameCompact: { minHeight: 57, fontSize: 14, lineHeight: 19, letterSpacing: -0.3 },
-  locationText: { fontSize: 13, color: `#9BB0C1`, fontFamily: `Manrope_400Regular` },
-  locationTextCompact: { fontSize: 11, lineHeight: 16 },
+  locationText: { fontSize: 13, lineHeight: 20, color: `#9BB0C1`, fontFamily: `Manrope_400Regular` },
+  locationTextCompact: { minHeight: 48, fontSize: 11, lineHeight: 16 },
   serviceArrow: { fontSize: 22, lineHeight: 25, color: `#BCD1E0` },
   serviceArrowCompact: { fontSize: 18, lineHeight: 20 },
   journeyStatus: { marginTop: 20, minHeight: 22, alignItems: `center` },
@@ -321,8 +316,8 @@ const styles = StyleSheet.create({
   telemetry: { gap: 8, flex: 1, pointerEvents: `none` },
   locationTitle: { ...globeTextShadow, fontSize: 12, lineHeight: 18, letterSpacing: 0.6, color: `#BED0DD`, fontFamily: `Manrope_500Medium` },
   clock: { ...globeTextShadow, fontSize: 12, letterSpacing: 0.7, color: `#A5BDCC`, fontFamily: `Manrope_500Medium` },
-  orbitButton: { gap: 10, minHeight: 44, flexDirection: `row`, alignItems: `center` },
-  orbitIcon: { ...globeTextShadow, fontSize: 21, color: palette.cyan },
-  orbitText: { ...globeTextShadow, fontSize: 12, letterSpacing: 0.6, color: `#D0E0EB`, fontFamily: `Manrope_500Medium` },
+  returnButton: { gap: 10, minHeight: 44, flexDirection: `row`, alignItems: `center` },
+  returnIcon: { ...globeTextShadow, fontSize: 21, color: palette.cyan },
+  returnText: { ...globeTextShadow, fontSize: 12, letterSpacing: 0.6, color: `#D0E0EB`, fontFamily: `Manrope_500Medium` },
   attribution: { position: `absolute`, zIndex: 5, alignSelf: `center`, maxWidth: `96%`, paddingHorizontal: 8, paddingVertical: 3, borderRadius: 4, backgroundColor: `rgba(3,8,18,0.88)`, fontSize: 12, textAlign: `center`, color: `#9CB1C2`, fontFamily: `Manrope_400Regular` },
 });
