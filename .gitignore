@@ -80,7 +80,7 @@ out
 
 # Nuxt.js build / generate output
 .nuxt
-dist
+# dist/ is the authored static site and must be tracked.
 .output
 
 # Gatsby files

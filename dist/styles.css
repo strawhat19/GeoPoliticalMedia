@@ -1,0 +1,42 @@
+:root{color-scheme:dark;--ink:#061321;--paper:#f3f4f4;--muted:#adbac6;--red:#ff274b;--line:#293949;font-family:Arial,Helvetica,sans-serif;background:var(--ink);color:var(--paper);font-synthesis:none}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:2rem}
+body{margin:0}
+a{color:inherit;text-decoration:none}
+a:focus-visible{outline:2px solid var(--red);outline-offset:7px}
+a:hover{color:#fff;text-decoration:underline;text-underline-offset:.35em}
+.page{max-width:1440px;margin:auto;padding:0 clamp(1.5rem,5vw,5rem)}
+header{min-height:110px;display:flex;align-items:center;justify-content:space-between;gap:2rem;border-bottom:1px solid var(--line)}
+.wordmark{font-size:clamp(1.1rem,2vw,1.55rem);font-weight:750;letter-spacing:-.055em;white-space:nowrap}
+.wordmark span{color:var(--red)}
+.parent{font-size:.875rem;color:var(--muted)}
+.parent span{margin-left:1rem;color:var(--red)}
+.hero{display:grid;grid-template-columns:1.08fr 1fr;align-items:center;gap:1rem;padding:5.75rem 0 4.5rem}
+.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-size:.75rem;line-height:1.6;font-weight:700;color:var(--muted);margin:0 0 2rem}
+h1{font-size:clamp(3rem,5.9vw,5.3rem);letter-spacing:-.065em;line-height:1.03;margin:0 0 2rem;font-weight:650}
+h1 em{font-family:Georgia,'Times New Roman',serif;font-weight:400;letter-spacing:-.075em}
+.lead{font-size:1.35rem;letter-spacing:-.025em;margin:0 0 1rem;line-height:1.4}
+.description{font-size:1rem;line-height:1.8;max-width:29rem;color:var(--muted);margin:0}
+.coverage-link{display:inline-flex;align-items:center;gap:3.5rem;font-size:.875rem;margin-top:2rem;padding:.9rem 0;border-bottom:2px solid var(--red)}
+.coverage-link span{color:var(--red)}
+figure{margin:0}
+figure img{width:100%;height:auto;display:block;mix-blend-mode:lighten}
+figcaption{text-transform:uppercase;font-size:.75rem;letter-spacing:.16em;color:var(--muted);text-align:center;margin-top:.5rem}
+.coverage{border-top:1px solid var(--line);padding:3rem 0 4rem}
+.section-heading{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;margin-bottom:2.75rem}
+.section-heading .eyebrow{margin:0}
+h2{font-size:1.6rem;line-height:1.25;letter-spacing:-.04em;font-weight:500;margin:0}
+.topics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:3rem}
+.number{display:block;font-size:.75rem;color:var(--red);font-variant-numeric:tabular-nums;margin-bottom:1.25rem}
+h3{font-size:1.125rem;line-height:1.4;margin:0 0 .65rem;font-weight:500;letter-spacing:-.015em}
+.topics p{color:var(--muted);font-size:1rem;line-height:1.7;max-width:22rem;margin:0}
+.launch{padding:2rem 0;border-top:1px solid var(--line);display:flex;align-items:baseline;gap:2rem;justify-content:space-between}
+.launch p{margin:0;font-size:1.125rem;line-height:1.6}
+.launch span{font-size:.875rem;line-height:1.7;color:var(--muted);max-width:30rem}
+footer{border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:1.5rem;padding:2rem 0;font-size:.875rem;color:var(--muted)}
+footer a span{color:var(--red);margin-left:.6rem}
+.skip{position:absolute;top:-100px;left:1rem;padding:1rem;background:var(--paper);color:var(--ink);z-index:10}
+.skip:focus{top:1rem}
+@media(max-width:800px){header{min-height:90px;gap:1rem}.parent{max-width:8rem;line-height:1.5;text-align:right}.parent span{margin-left:.25rem}.hero{padding:3.5rem 0 2.5rem;grid-template-columns:1fr;gap:2rem}.hero figure{max-width:420px;justify-self:center}.eyebrow{margin-bottom:1.5rem}h1{font-size:clamp(3rem,10vw,4.5rem)}.topics{gap:1.75rem;grid-template-columns:1fr}.topics article{padding-top:1.5rem;border-top:1px solid var(--line)}.topics p{max-width:none}.number{margin-bottom:.7rem}.coverage{padding:2rem 0}.section-heading{margin-bottom:1.5rem}.launch{display:block}.launch span{display:block;margin-top:.6rem}}
+@media(max-width:380px){header{align-items:flex-start;flex-direction:column;gap:.7rem;padding:1.25rem 0}.parent{max-width:none;text-align:left}footer{flex-direction:column}.section-heading{align-items:flex-start;flex-direction:column}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
