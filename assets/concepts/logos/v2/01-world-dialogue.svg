@@ -1,0 +1,23 @@
+<svg
+  id="01-world-dialogue"
+  class="geopoliticalmedia-logo"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 1100 240"
+  role="img"
+  aria-labelledby="geo-title geo-description"
+>
+  <title id="geo-title">GeoPoliticalMedia — World Dialogue wordmark</title>
+  <desc id="geo-description">A red globe becomes a speech bubble, pairing worldwide reporting with commentary, interviews and conversation. White meridians remain open and simple. Paired with the exact GeoPoliticalMedia name.</desc>
+<g id="geo-lockup-mark" class="geo-lockup-mark" transform="translate(12 14) scale(1.06)">
+  <defs>
+    <clipPath id="geo-dialogue-grid-clip"><circle cx="100" cy="92" r="48"/></clipPath>
+  </defs>
+  <path id="geo-world-speech" class="geo-world-speech" d="M100 20A72 72 0 1 1 82 161L53 180L60 146A72 72 0 0 1 100 20Z" fill="#E52539"/>
+  <circle id="geo-world-edge" class="geo-world-edge" cx="100" cy="92" r="48" fill="none" stroke="#FFFFFF" stroke-width="4"/>
+  <g id="geo-world-meridians" class="geo-world-meridians" clip-path="url(#geo-dialogue-grid-clip)" fill="none" stroke="#FFFFFF" stroke-width="3.2">
+    <ellipse cx="100" cy="92" rx="19" ry="48"/>
+    <path d="M52 92H148M57 68Q100 80 143 68M57 116Q100 104 143 116"/>
+  </g>
+</g>
+<text id="geo-wordmark" class="geo-wordmark" x="254" y="140" font-family="Arial, Helvetica, sans-serif" font-size="66" font-weight="700" letter-spacing="-2.5" fill="#0B1A2B"><tspan>GeoPolitical</tspan><tspan fill="#E52539">Media</tspan></text>
+</svg>

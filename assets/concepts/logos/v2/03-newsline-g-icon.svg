@@ -1,0 +1,17 @@
+<svg
+  id="03-newsline-g-icon"
+  class="geopoliticalmedia-logo"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 200 200"
+  role="img"
+  aria-labelledby="geo-title geo-description"
+>
+  <title id="geo-title">GeoPoliticalMedia — Newsline G icon</title>
+  <desc id="geo-description">A squared red G wraps two dark editorial rules. The symbol suggests a compact news column, paired with a contrasting serif masthead for a publication-led identity.</desc>
+
+  <path id="geo-newsline-g" class="geo-newsline-g" d="M163 41H64Q32 41 32 73V127Q32 159 64 159H163V106H116" fill="none" stroke="#E52539" stroke-width="22" stroke-linejoin="miter"/>
+  <g id="geo-editorial-lines" class="geo-editorial-lines" fill="none" stroke="#0B1A2B" stroke-width="8">
+    <path d="M66 77H132"/>
+    <path d="M66 99H97"/>
+  </g>
+</svg>

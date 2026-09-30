@@ -1,0 +1,22 @@
+<svg
+  id="01-orbital-g-icon"
+  class="geopoliticalmedia-logo"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 200 200"
+  role="img"
+  aria-labelledby="geo-title geo-description"
+>
+  <title id="geo-title">GeoPoliticalMedia — Orbital G icon</title>
+  <desc id="geo-description">A geometric G embraces a gridded globe while a red inclined orbit extends beyond the letter. An editable continuation of the existing G, Earth and red-orbit identity.</desc>
+
+  <defs>
+    <clipPath id="geo-globe-clip"><circle cx="100" cy="100" r="43"/></clipPath>
+  </defs>
+  <path id="geo-g-letter" class="geo-g-letter" d="M155.9 53.1A73 73 0 1 0 172.4 109.5H141" fill="none" stroke="#0B1A2B" stroke-width="18" stroke-linejoin="round"/>
+  <circle id="geo-earth" class="geo-earth" cx="100" cy="100" r="43" fill="#0B1A2B"/>
+  <g id="geo-globe-grid" class="geo-globe-grid" clip-path="url(#geo-globe-clip)" fill="none" stroke="#FFFFFF" stroke-width="2.3" opacity=".85">
+    <ellipse cx="100" cy="100" rx="18" ry="43"/>
+    <path d="M58 100H142M62 80Q100 92 138 80M62 120Q100 108 138 120"/>
+  </g>
+  <ellipse id="geo-red-orbit" class="geo-red-orbit" cx="100" cy="100" rx="26" ry="94" transform="rotate(34 100 100)" fill="none" stroke="#E52539" stroke-width="7.5"/>
+</svg>

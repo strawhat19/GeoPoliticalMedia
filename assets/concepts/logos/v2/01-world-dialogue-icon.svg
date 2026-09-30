@@ -1,0 +1,21 @@
+<svg
+  id="01-world-dialogue-icon"
+  class="geopoliticalmedia-logo"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 200 200"
+  role="img"
+  aria-labelledby="geo-title geo-description"
+>
+  <title id="geo-title">GeoPoliticalMedia — World Dialogue icon</title>
+  <desc id="geo-description">A red globe becomes a speech bubble, pairing worldwide reporting with commentary, interviews and conversation. White meridians remain open and simple.</desc>
+
+  <defs>
+    <clipPath id="geo-dialogue-grid-clip"><circle cx="100" cy="92" r="48"/></clipPath>
+  </defs>
+  <path id="geo-world-speech" class="geo-world-speech" d="M100 20A72 72 0 1 1 82 161L53 180L60 146A72 72 0 0 1 100 20Z" fill="#E52539"/>
+  <circle id="geo-world-edge" class="geo-world-edge" cx="100" cy="92" r="48" fill="none" stroke="#FFFFFF" stroke-width="4"/>
+  <g id="geo-world-meridians" class="geo-world-meridians" clip-path="url(#geo-dialogue-grid-clip)" fill="none" stroke="#FFFFFF" stroke-width="3.2">
+    <ellipse cx="100" cy="92" rx="19" ry="48"/>
+    <path d="M52 92H148M57 68Q100 80 143 68M57 116Q100 104 143 116"/>
+  </g>
+</svg>

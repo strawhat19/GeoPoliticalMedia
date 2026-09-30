@@ -1,0 +1,21 @@
+<svg
+  id="02-shutter-signal-icon"
+  class="geopoliticalmedia-logo"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 200 200"
+  role="img"
+  aria-labelledby="geo-title geo-description"
+>
+  <title id="geo-title">GeoPoliticalMedia — Shutter Signal icon</title>
+  <desc id="geo-description">Six interlocking camera-aperture blades create a dynamic circular shutter. A navy blade and two navy broadcast arcs connect video production to a wider audience.</desc>
+  <path id="geo-aperture-blade-1" class="geo-aperture-blade" d="M101.19 32.01A68 68 0 0 1 158.29 64.98L127.00 99.53L113.91 76.86Z" fill="#E52539"/>
+  <path id="geo-aperture-blade-2" class="geo-aperture-blade" d="M159.47 67.03A68 68 0 0 1 159.47 132.97L113.91 123.14L127.00 100.47Z" fill="#0B1A2B"/>
+  <path id="geo-aperture-blade-3" class="geo-aperture-blade" d="M158.29 135.02A68 68 0 0 1 101.19 167.99L86.91 123.61L113.09 123.61Z" fill="#E52539"/>
+  <path id="geo-aperture-blade-4" class="geo-aperture-blade" d="M98.81 167.99A68 68 0 0 1 41.71 135.02L73.00 100.47L86.09 123.14Z" fill="#E52539"/>
+  <path id="geo-aperture-blade-5" class="geo-aperture-blade" d="M40.53 132.97A68 68 0 0 1 40.53 67.03L86.09 76.86L73.00 99.53Z" fill="#E52539"/>
+  <path id="geo-aperture-blade-6" class="geo-aperture-blade" d="M41.71 64.98A68 68 0 0 1 98.81 32.01L113.09 76.39L86.91 76.39Z" fill="#E52539"/>
+  <g id="geo-broadcast-arcs" class="geo-broadcast-arcs" fill="none" stroke="#0B1A2B" stroke-width="5" stroke-linecap="round">
+    <path d="M121.48 19.83A83 83 0 0 1 180.17 78.52"/>
+    <path d="M124.33 9.20A94 94 0 0 1 190.80 75.67"/>
+  </g>
+</svg>

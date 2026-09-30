@@ -1,0 +1,23 @@
+<svg
+  id="03-editorial-gpm"
+  class="geopoliticalmedia-logo"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 1040 240"
+  role="img"
+  aria-labelledby="geo-title geo-description"
+>
+  <title id="geo-title">GeoPoliticalMedia — Editorial GPM wordmark</title>
+  <desc id="geo-description">A custom GPM monogram sits inside a red editorial masthead tile. The split baseline and the folded upper-right corner suggest a news page and a studio title slate. Paired with the exact GeoPoliticalMedia wordmark.</desc>
+<g id="geo-lockup-mark" class="geo-lockup-mark" transform="translate(12 14) scale(1.06)">
+  <path id="geo-editorial-tile" class="geo-editorial-tile" d="M23 30H143L177 64V158A12 12 0 0 1 165 170H23A12 12 0 0 1 11 158V42A12 12 0 0 1 23 30Z" fill="#E52539"/>
+  <path id="geo-editorial-fold" class="geo-editorial-fold" d="M143 30V54A10 10 0 0 0 153 64H177Z" fill="#0B1A2B"/>
+  <g id="geo-gpm-letters" class="geo-gpm-letters" fill="none" stroke="#FFFFFF" stroke-width="8" stroke-linecap="square" stroke-linejoin="miter">
+    <path id="geo-monogram-g" d="M55 86H44Q31 86 31 100V116Q31 130 44 130H57V110H47"/>
+    <path id="geo-monogram-p" d="M73 130V86H86Q100 86 100 98Q100 110 86 110H73"/>
+    <path id="geo-monogram-m" d="M117 130V86L135 109L153 86V130"/>
+  </g>
+  <path id="geo-masthead-rule" class="geo-masthead-rule" d="M31 149H100M117 149H153" stroke="#FFFFFF" stroke-width="3.5"/>
+</g>
+
+  <text id="geo-wordmark" class="geo-wordmark" x="254" y="140" font-family="Arial, Helvetica, sans-serif" font-size="66" font-weight="700" letter-spacing="-2.5" fill="#0B1A2B"><tspan>GeoPolitical</tspan><tspan fill="#E52539">Media</tspan></text>
+</svg>

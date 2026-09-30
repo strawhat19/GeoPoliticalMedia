@@ -1,0 +1,219 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1080" role="img" aria-labelledby="comparison-title comparison-description">
+<title id="comparison-title">GeoPoliticalMedia — logo concepts v2</title>
+<desc id="comparison-description">Three additional directions in red, navy and white: a globe speech mark, a broadcasting aperture, and an editorial G with a serif masthead. Each includes a transparent editable source and a dark presentation.</desc>
+<rect width="1800" height="1080" fill="#F1F3F5"/>
+<text x="60" y="72" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="700" fill="#0B1A2B">GeoPoliticalMedia</text>
+<text x="60" y="108" font-family="Arial, Helvetica, sans-serif" font-size="17" letter-spacing="2" fill="#637081">LOGO CONCEPTS / V2</text>
+<text x="1740" y="86" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="16" letter-spacing="2" fill="#637081">NEWS · VIDEO · STUDIO</text>
+
+<rect x="60" y="154" width="540" height="650" rx="18" fill="#FFFFFF"/>
+<text x="90" y="204" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#0B1A2B">01 — World Dialogue</text>
+<text x="90" y="235" font-family="Arial, Helvetica, sans-serif" font-size="12" letter-spacing="1.8" fill="#687585">GLOBAL REPORTING / CONVERSATION</text>
+<svg x="180" y="280" width="300" height="300"
+  id="light-0-01-world-dialogue-icon"
+  class="geopoliticalmedia-logo"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 200 200"
+  role="img"
+  aria-labelledby="light-0-geo-title light-0-geo-description"
+>
+  <title id="light-0-geo-title">GeoPoliticalMedia — World Dialogue icon</title>
+  <desc id="light-0-geo-description">A red globe becomes a speech bubble, pairing worldwide reporting with commentary, interviews and conversation. White meridians remain open and simple.</desc>
+
+  <defs>
+    <clipPath id="light-0-geo-dialogue-grid-clip"><circle cx="100" cy="92" r="48"/></clipPath>
+  </defs>
+  <path id="light-0-geo-world-speech" class="geo-world-speech" d="M100 20A72 72 0 1 1 82 161L53 180L60 146A72 72 0 0 1 100 20Z" fill="#E52539"/>
+  <circle id="light-0-geo-world-edge" class="geo-world-edge" cx="100" cy="92" r="48" fill="none" stroke="#FFFFFF" stroke-width="4"/>
+  <g id="light-0-geo-world-meridians" class="geo-world-meridians" clip-path="url(#light-0-geo-dialogue-grid-clip)" fill="none" stroke="#FFFFFF" stroke-width="3.2">
+    <ellipse cx="100" cy="92" rx="19" ry="48"/>
+    <path d="M52 92H148M57 68Q100 80 143 68M57 116Q100 104 143 116"/>
+  </g>
+</svg>
+
+<svg x="82" y="626" width="496" height="114"
+  id="lockup-0-01-world-dialogue"
+  class="geopoliticalmedia-logo"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 1100 240"
+  role="img"
+  aria-labelledby="lockup-0-geo-title lockup-0-geo-description"
+>
+  <title id="lockup-0-geo-title">GeoPoliticalMedia — World Dialogue wordmark</title>
+  <desc id="lockup-0-geo-description">A red globe becomes a speech bubble, pairing worldwide reporting with commentary, interviews and conversation. White meridians remain open and simple. Paired with the exact GeoPoliticalMedia name.</desc>
+<g id="lockup-0-geo-lockup-mark" class="geo-lockup-mark" transform="translate(12 14) scale(1.06)">
+  <defs>
+    <clipPath id="lockup-0-geo-dialogue-grid-clip"><circle cx="100" cy="92" r="48"/></clipPath>
+  </defs>
+  <path id="lockup-0-geo-world-speech" class="geo-world-speech" d="M100 20A72 72 0 1 1 82 161L53 180L60 146A72 72 0 0 1 100 20Z" fill="#E52539"/>
+  <circle id="lockup-0-geo-world-edge" class="geo-world-edge" cx="100" cy="92" r="48" fill="none" stroke="#FFFFFF" stroke-width="4"/>
+  <g id="lockup-0-geo-world-meridians" class="geo-world-meridians" clip-path="url(#lockup-0-geo-dialogue-grid-clip)" fill="none" stroke="#FFFFFF" stroke-width="3.2">
+    <ellipse cx="100" cy="92" rx="19" ry="48"/>
+    <path d="M52 92H148M57 68Q100 80 143 68M57 116Q100 104 143 116"/>
+  </g>
+</g>
+<text id="lockup-0-geo-wordmark" class="geo-wordmark" x="254" y="140" font-family="Arial, Helvetica, sans-serif" font-size="66" font-weight="700" letter-spacing="-2.5" fill="#0B1A2B"><tspan>GeoPolitical</tspan><tspan fill="#E52539">Media</tspan></text>
+</svg>
+
+<rect x="60" y="830" width="540" height="190" rx="18" fill="#0B1A2B"/>
+<svg x="90" y="860" width="130" height="130"
+  id="dark-0-01-world-dialogue-icon"
+  class="geopoliticalmedia-logo"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 200 200"
+  role="img"
+  aria-labelledby="dark-0-geo-title dark-0-geo-description"
+>
+  <title id="dark-0-geo-title">GeoPoliticalMedia — World Dialogue icon</title>
+  <desc id="dark-0-geo-description">A red globe becomes a speech bubble, pairing worldwide reporting with commentary, interviews and conversation. White meridians remain open and simple.</desc>
+
+  <defs>
+    <clipPath id="dark-0-geo-dialogue-grid-clip"><circle cx="100" cy="92" r="48"/></clipPath>
+  </defs>
+  <path id="dark-0-geo-world-speech" class="geo-world-speech" d="M100 20A72 72 0 1 1 82 161L53 180L60 146A72 72 0 0 1 100 20Z" fill="#E52539"/>
+  <circle id="dark-0-geo-world-edge" class="geo-world-edge" cx="100" cy="92" r="48" fill="none" stroke="#FFFFFF" stroke-width="4"/>
+  <g id="dark-0-geo-world-meridians" class="geo-world-meridians" clip-path="url(#dark-0-geo-dialogue-grid-clip)" fill="none" stroke="#FFFFFF" stroke-width="3.2">
+    <ellipse cx="100" cy="92" rx="19" ry="48"/>
+    <path d="M52 92H148M57 68Q100 80 143 68M57 116Q100 104 143 116"/>
+  </g>
+</svg>
+
+<text x="255" y="924" font-family="Arial, Helvetica, sans-serif" font-size="16" letter-spacing="1" fill="#FFFFFF">DARK PRESENTATION</text>
+<text x="255" y="952" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#B6C0CC">Red retained, light details</text>
+<rect x="630" y="154" width="540" height="650" rx="18" fill="#FFFFFF"/>
+<text x="660" y="204" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#0B1A2B">02 — Shutter Signal</text>
+<text x="660" y="235" font-family="Arial, Helvetica, sans-serif" font-size="12" letter-spacing="1.8" fill="#687585">PRODUCTION / BROADCAST</text>
+<svg x="750" y="280" width="300" height="300"
+  id="light-1-02-shutter-signal-icon"
+  class="geopoliticalmedia-logo"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 200 200"
+  role="img"
+  aria-labelledby="light-1-geo-title light-1-geo-description"
+>
+  <title id="light-1-geo-title">GeoPoliticalMedia — Shutter Signal icon</title>
+  <desc id="light-1-geo-description">Six interlocking camera-aperture blades create a dynamic circular shutter. A navy blade and two navy broadcast arcs connect video production to a wider audience.</desc>
+  <path id="light-1-geo-aperture-blade-1" class="geo-aperture-blade" d="M101.19 32.01A68 68 0 0 1 158.29 64.98L127.00 99.53L113.91 76.86Z" fill="#E52539"/>
+  <path id="light-1-geo-aperture-blade-2" class="geo-aperture-blade" d="M159.47 67.03A68 68 0 0 1 159.47 132.97L113.91 123.14L127.00 100.47Z" fill="#0B1A2B"/>
+  <path id="light-1-geo-aperture-blade-3" class="geo-aperture-blade" d="M158.29 135.02A68 68 0 0 1 101.19 167.99L86.91 123.61L113.09 123.61Z" fill="#E52539"/>
+  <path id="light-1-geo-aperture-blade-4" class="geo-aperture-blade" d="M98.81 167.99A68 68 0 0 1 41.71 135.02L73.00 100.47L86.09 123.14Z" fill="#E52539"/>
+  <path id="light-1-geo-aperture-blade-5" class="geo-aperture-blade" d="M40.53 132.97A68 68 0 0 1 40.53 67.03L86.09 76.86L73.00 99.53Z" fill="#E52539"/>
+  <path id="light-1-geo-aperture-blade-6" class="geo-aperture-blade" d="M41.71 64.98A68 68 0 0 1 98.81 32.01L113.09 76.39L86.91 76.39Z" fill="#E52539"/>
+  <g id="light-1-geo-broadcast-arcs" class="geo-broadcast-arcs" fill="none" stroke="#0B1A2B" stroke-width="5" stroke-linecap="round">
+    <path d="M121.48 19.83A83 83 0 0 1 180.17 78.52"/>
+    <path d="M124.33 9.20A94 94 0 0 1 190.80 75.67"/>
+  </g>
+</svg>
+
+<svg x="652" y="626" width="496" height="114"
+  id="lockup-1-02-shutter-signal"
+  class="geopoliticalmedia-logo"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 1100 240"
+  role="img"
+  aria-labelledby="lockup-1-geo-title lockup-1-geo-description"
+>
+  <title id="lockup-1-geo-title">GeoPoliticalMedia — Shutter Signal wordmark</title>
+  <desc id="lockup-1-geo-description">Six interlocking camera-aperture blades create a dynamic circular shutter. A navy blade and two navy broadcast arcs connect video production to a wider audience. Paired with the exact GeoPoliticalMedia name.</desc>
+<g id="lockup-1-geo-lockup-mark" class="geo-lockup-mark" transform="translate(12 14) scale(1.06)">  <path id="lockup-1-geo-aperture-blade-1" class="geo-aperture-blade" d="M101.19 32.01A68 68 0 0 1 158.29 64.98L127.00 99.53L113.91 76.86Z" fill="#E52539"/>
+  <path id="lockup-1-geo-aperture-blade-2" class="geo-aperture-blade" d="M159.47 67.03A68 68 0 0 1 159.47 132.97L113.91 123.14L127.00 100.47Z" fill="#0B1A2B"/>
+  <path id="lockup-1-geo-aperture-blade-3" class="geo-aperture-blade" d="M158.29 135.02A68 68 0 0 1 101.19 167.99L86.91 123.61L113.09 123.61Z" fill="#E52539"/>
+  <path id="lockup-1-geo-aperture-blade-4" class="geo-aperture-blade" d="M98.81 167.99A68 68 0 0 1 41.71 135.02L73.00 100.47L86.09 123.14Z" fill="#E52539"/>
+  <path id="lockup-1-geo-aperture-blade-5" class="geo-aperture-blade" d="M40.53 132.97A68 68 0 0 1 40.53 67.03L86.09 76.86L73.00 99.53Z" fill="#E52539"/>
+  <path id="lockup-1-geo-aperture-blade-6" class="geo-aperture-blade" d="M41.71 64.98A68 68 0 0 1 98.81 32.01L113.09 76.39L86.91 76.39Z" fill="#E52539"/>
+  <g id="lockup-1-geo-broadcast-arcs" class="geo-broadcast-arcs" fill="none" stroke="#0B1A2B" stroke-width="5" stroke-linecap="round">
+    <path d="M121.48 19.83A83 83 0 0 1 180.17 78.52"/>
+    <path d="M124.33 9.20A94 94 0 0 1 190.80 75.67"/>
+  </g>
+</g>
+<text id="lockup-1-geo-wordmark" class="geo-wordmark" x="254" y="140" font-family="Arial, Helvetica, sans-serif" font-size="66" font-weight="700" letter-spacing="-2.5" fill="#0B1A2B"><tspan>GeoPolitical</tspan><tspan fill="#E52539">Media</tspan></text>
+</svg>
+
+<rect x="630" y="830" width="540" height="190" rx="18" fill="#0B1A2B"/>
+<svg x="660" y="860" width="130" height="130"
+  id="dark-1-02-shutter-signal-icon"
+  class="geopoliticalmedia-logo"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 200 200"
+  role="img"
+  aria-labelledby="dark-1-geo-title dark-1-geo-description"
+>
+  <title id="dark-1-geo-title">GeoPoliticalMedia — Shutter Signal icon</title>
+  <desc id="dark-1-geo-description">Six interlocking camera-aperture blades create a dynamic circular shutter. A navy blade and two navy broadcast arcs connect video production to a wider audience.</desc>
+  <path id="dark-1-geo-aperture-blade-1" class="geo-aperture-blade" d="M101.19 32.01A68 68 0 0 1 158.29 64.98L127.00 99.53L113.91 76.86Z" fill="#E52539"/>
+  <path id="dark-1-geo-aperture-blade-2" class="geo-aperture-blade" d="M159.47 67.03A68 68 0 0 1 159.47 132.97L113.91 123.14L127.00 100.47Z" fill="#FFFFFF"/>
+  <path id="dark-1-geo-aperture-blade-3" class="geo-aperture-blade" d="M158.29 135.02A68 68 0 0 1 101.19 167.99L86.91 123.61L113.09 123.61Z" fill="#E52539"/>
+  <path id="dark-1-geo-aperture-blade-4" class="geo-aperture-blade" d="M98.81 167.99A68 68 0 0 1 41.71 135.02L73.00 100.47L86.09 123.14Z" fill="#E52539"/>
+  <path id="dark-1-geo-aperture-blade-5" class="geo-aperture-blade" d="M40.53 132.97A68 68 0 0 1 40.53 67.03L86.09 76.86L73.00 99.53Z" fill="#E52539"/>
+  <path id="dark-1-geo-aperture-blade-6" class="geo-aperture-blade" d="M41.71 64.98A68 68 0 0 1 98.81 32.01L113.09 76.39L86.91 76.39Z" fill="#E52539"/>
+  <g id="dark-1-geo-broadcast-arcs" class="geo-broadcast-arcs" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round">
+    <path d="M121.48 19.83A83 83 0 0 1 180.17 78.52"/>
+    <path d="M124.33 9.20A94 94 0 0 1 190.80 75.67"/>
+  </g>
+</svg>
+
+<text x="825" y="924" font-family="Arial, Helvetica, sans-serif" font-size="16" letter-spacing="1" fill="#FFFFFF">DARK PRESENTATION</text>
+<text x="825" y="952" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#B6C0CC">Red retained, light details</text>
+<rect x="1200" y="154" width="540" height="650" rx="18" fill="#FFFFFF"/>
+<text x="1230" y="204" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#0B1A2B">03 — Newsline G</text>
+<text x="1230" y="235" font-family="Arial, Helvetica, sans-serif" font-size="12" letter-spacing="1.8" fill="#687585">EDITORIAL / MASTHEAD</text>
+<svg x="1320" y="280" width="300" height="300"
+  id="light-2-03-newsline-g-icon"
+  class="geopoliticalmedia-logo"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 200 200"
+  role="img"
+  aria-labelledby="light-2-geo-title light-2-geo-description"
+>
+  <title id="light-2-geo-title">GeoPoliticalMedia — Newsline G icon</title>
+  <desc id="light-2-geo-description">A squared red G wraps two dark editorial rules. The symbol suggests a compact news column, paired with a contrasting serif masthead for a publication-led identity.</desc>
+
+  <path id="light-2-geo-newsline-g" class="geo-newsline-g" d="M163 41H64Q32 41 32 73V127Q32 159 64 159H163V106H116" fill="none" stroke="#E52539" stroke-width="22" stroke-linejoin="miter"/>
+  <g id="light-2-geo-editorial-lines" class="geo-editorial-lines" fill="none" stroke="#0B1A2B" stroke-width="8">
+    <path d="M66 77H132"/>
+    <path d="M66 99H97"/>
+  </g>
+</svg>
+
+<svg x="1222" y="626" width="496" height="114"
+  id="lockup-2-03-newsline-g"
+  class="geopoliticalmedia-logo"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 1100 240"
+  role="img"
+  aria-labelledby="lockup-2-geo-title lockup-2-geo-description"
+>
+  <title id="lockup-2-geo-title">GeoPoliticalMedia — Newsline G wordmark</title>
+  <desc id="lockup-2-geo-description">A squared red G wraps two dark editorial rules. The symbol suggests a compact news column, paired with a contrasting serif masthead for a publication-led identity. Paired with the exact GeoPoliticalMedia name.</desc>
+<g id="lockup-2-geo-lockup-mark" class="geo-lockup-mark" transform="translate(12 14) scale(1.06)">
+  <path id="lockup-2-geo-newsline-g" class="geo-newsline-g" d="M163 41H64Q32 41 32 73V127Q32 159 64 159H163V106H116" fill="none" stroke="#E52539" stroke-width="22" stroke-linejoin="miter"/>
+  <g id="lockup-2-geo-editorial-lines" class="geo-editorial-lines" fill="none" stroke="#0B1A2B" stroke-width="8">
+    <path d="M66 77H132"/>
+    <path d="M66 99H97"/>
+  </g>
+</g>
+<text id="lockup-2-geo-wordmark" class="geo-wordmark" x="254" y="140" font-family="Georgia, Times New Roman, serif" font-size="65" font-weight="700" letter-spacing="-2" fill="#0B1A2B"><tspan>GeoPolitical</tspan><tspan fill="#E52539" font-style="italic">Media</tspan></text>
+</svg>
+
+<rect x="1200" y="830" width="540" height="190" rx="18" fill="#0B1A2B"/>
+<svg x="1230" y="860" width="130" height="130"
+  id="dark-2-03-newsline-g-icon"
+  class="geopoliticalmedia-logo"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 200 200"
+  role="img"
+  aria-labelledby="dark-2-geo-title dark-2-geo-description"
+>
+  <title id="dark-2-geo-title">GeoPoliticalMedia — Newsline G icon</title>
+  <desc id="dark-2-geo-description">A squared red G wraps two dark editorial rules. The symbol suggests a compact news column, paired with a contrasting serif masthead for a publication-led identity.</desc>
+
+  <path id="dark-2-geo-newsline-g" class="geo-newsline-g" d="M163 41H64Q32 41 32 73V127Q32 159 64 159H163V106H116" fill="none" stroke="#E52539" stroke-width="22" stroke-linejoin="miter"/>
+  <g id="dark-2-geo-editorial-lines" class="geo-editorial-lines" fill="none" stroke="#FFFFFF" stroke-width="8">
+    <path d="M66 77H132"/>
+    <path d="M66 99H97"/>
+  </g>
+</svg>
+
+<text x="1395" y="924" font-family="Arial, Helvetica, sans-serif" font-size="16" letter-spacing="1" fill="#FFFFFF">DARK PRESENTATION</text>
+<text x="1395" y="952" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#B6C0CC">Red retained, light details</text>
+</svg>

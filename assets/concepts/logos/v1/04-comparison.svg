@@ -1,0 +1,225 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1080" role="img" aria-labelledby="comparison-title comparison-description">
+<title id="comparison-title">GeoPoliticalMedia — first logo concepts</title>
+<desc id="comparison-description">Three original editable directions in red, navy and white, shown with light and dark presentations: Orbital G, Studio Frame and Editorial GPM.</desc>
+<rect width="1800" height="1080" fill="#F1F3F5"/>
+<text x="60" y="72" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="700" fill="#0B1A2B">GeoPoliticalMedia</text>
+<text x="60" y="108" font-family="Arial, Helvetica, sans-serif" font-size="17" letter-spacing="2" fill="#637081">LOGO CONCEPTS / V1</text>
+<text x="1740" y="86" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="16" letter-spacing="2" fill="#637081">NEWS · VIDEO · STUDIO</text>
+
+<rect x="60" y="154" width="540" height="650" rx="18" fill="#FFFFFF"/>
+<text x="90" y="204" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#0B1A2B">01 — Orbital G</text>
+<text x="90" y="235" font-family="Arial, Helvetica, sans-serif" font-size="12" letter-spacing="1.8" fill="#687585">G / GLOBE / ORBIT</text>
+<svg x="180" y="280" width="300" height="300"
+  id="light-0-01-orbital-g-icon"
+  class="geopoliticalmedia-logo"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 200 200"
+  role="img"
+  aria-labelledby="light-0-geo-title light-0-geo-description"
+>
+  <title id="light-0-geo-title">GeoPoliticalMedia — Orbital G icon</title>
+  <desc id="light-0-geo-description">A geometric G embraces a gridded globe while a red inclined orbit extends beyond the letter. An editable continuation of the existing G, Earth and red-orbit identity.</desc>
+
+  <defs>
+    <clipPath id="light-0-geo-globe-clip"><circle cx="100" cy="100" r="43"/></clipPath>
+  </defs>
+  <path id="light-0-geo-g-letter" class="geo-g-letter" d="M155.9 53.1A73 73 0 1 0 172.4 109.5H141" fill="none" stroke="#0B1A2B" stroke-width="18" stroke-linejoin="round"/>
+  <circle id="light-0-geo-earth" class="geo-earth" cx="100" cy="100" r="43" fill="#0B1A2B"/>
+  <g id="light-0-geo-globe-grid" class="geo-globe-grid" clip-path="url(#light-0-geo-globe-clip)" fill="none" stroke="#FFFFFF" stroke-width="2.3" opacity=".85">
+    <ellipse cx="100" cy="100" rx="18" ry="43"/>
+    <path d="M58 100H142M62 80Q100 92 138 80M62 120Q100 108 138 120"/>
+  </g>
+  <ellipse id="light-0-geo-red-orbit" class="geo-red-orbit" cx="100" cy="100" rx="26" ry="94" transform="rotate(34 100 100)" fill="none" stroke="#E52539" stroke-width="7.5"/>
+</svg>
+<svg x="82" y="626" width="496" height="114"
+  id="lockup-0-01-orbital-g"
+  class="geopoliticalmedia-logo"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 1040 240"
+  role="img"
+  aria-labelledby="lockup-0-geo-title lockup-0-geo-description"
+>
+  <title id="lockup-0-geo-title">GeoPoliticalMedia — Orbital G wordmark</title>
+  <desc id="lockup-0-geo-description">A geometric G embraces a gridded globe while a red inclined orbit extends beyond the letter. An editable continuation of the existing G, Earth and red-orbit identity. Paired with the exact GeoPoliticalMedia wordmark.</desc>
+<g id="lockup-0-geo-lockup-mark" class="geo-lockup-mark" transform="translate(12 14) scale(1.06)">
+  <defs>
+    <clipPath id="lockup-0-geo-globe-clip"><circle cx="100" cy="100" r="43"/></clipPath>
+  </defs>
+  <path id="lockup-0-geo-g-letter" class="geo-g-letter" d="M155.9 53.1A73 73 0 1 0 172.4 109.5H141" fill="none" stroke="#0B1A2B" stroke-width="18" stroke-linejoin="round"/>
+  <circle id="lockup-0-geo-earth" class="geo-earth" cx="100" cy="100" r="43" fill="#0B1A2B"/>
+  <g id="lockup-0-geo-globe-grid" class="geo-globe-grid" clip-path="url(#lockup-0-geo-globe-clip)" fill="none" stroke="#FFFFFF" stroke-width="2.3" opacity=".85">
+    <ellipse cx="100" cy="100" rx="18" ry="43"/>
+    <path d="M58 100H142M62 80Q100 92 138 80M62 120Q100 108 138 120"/>
+  </g>
+  <ellipse id="lockup-0-geo-red-orbit" class="geo-red-orbit" cx="100" cy="100" rx="26" ry="94" transform="rotate(34 100 100)" fill="none" stroke="#E52539" stroke-width="7.5"/>
+</g>
+
+  <text id="lockup-0-geo-wordmark" class="geo-wordmark" x="254" y="140" font-family="Arial, Helvetica, sans-serif" font-size="66" font-weight="700" letter-spacing="-2.5" fill="#0B1A2B"><tspan>GeoPolitical</tspan><tspan fill="#E52539">Media</tspan></text>
+</svg>
+<rect x="60" y="830" width="540" height="190" rx="18" fill="#0B1A2B"/>
+<svg x="90" y="860" width="130" height="130"
+  id="dark-0-01-orbital-g-icon"
+  class="geopoliticalmedia-logo"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 200 200"
+  role="img"
+  aria-labelledby="dark-0-geo-title dark-0-geo-description"
+>
+  <title id="dark-0-geo-title">GeoPoliticalMedia — Orbital G icon</title>
+  <desc id="dark-0-geo-description">A geometric G embraces a gridded globe while a red inclined orbit extends beyond the letter. An editable continuation of the existing G, Earth and red-orbit identity.</desc>
+
+  <defs>
+    <clipPath id="dark-0-geo-globe-clip"><circle cx="100" cy="100" r="43"/></clipPath>
+  </defs>
+  <path id="dark-0-geo-g-letter" class="geo-g-letter" d="M155.9 53.1A73 73 0 1 0 172.4 109.5H141" fill="none" stroke="#FFFFFF" stroke-width="18" stroke-linejoin="round"/>
+  <circle id="dark-0-geo-earth" class="geo-earth" cx="100" cy="100" r="43" fill="#FFFFFF"/>
+  <g id="dark-0-geo-globe-grid" class="geo-globe-grid" clip-path="url(#dark-0-geo-globe-clip)" fill="none" stroke="#0B1A2B" stroke-width="2.3" opacity=".85">
+    <ellipse cx="100" cy="100" rx="18" ry="43"/>
+    <path d="M58 100H142M62 80Q100 92 138 80M62 120Q100 108 138 120"/>
+  </g>
+  <ellipse id="dark-0-geo-red-orbit" class="geo-red-orbit" cx="100" cy="100" rx="26" ry="94" transform="rotate(34 100 100)" fill="none" stroke="#E52539" stroke-width="7.5"/>
+</svg>
+<text x="255" y="924" font-family="Arial, Helvetica, sans-serif" font-size="16" letter-spacing="1" fill="#FFFFFF">DARK PRESENTATION</text>
+<text x="255" y="952" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#B6C0CC">Same mark, inverse ink</text>
+<rect x="630" y="154" width="540" height="650" rx="18" fill="#FFFFFF"/>
+<text x="660" y="204" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#0B1A2B">02 — Studio Frame</text>
+<text x="660" y="235" font-family="Arial, Helvetica, sans-serif" font-size="12" letter-spacing="1.8" fill="#687585">CAMERA / PLAY / LIVE</text>
+<svg x="750" y="280" width="300" height="300"
+  id="light-1-02-studio-frame-icon"
+  class="geopoliticalmedia-logo"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 200 200"
+  role="img"
+  aria-labelledby="light-1-geo-title light-1-geo-description"
+>
+  <title id="light-1-geo-title">GeoPoliticalMedia — Studio Frame icon</title>
+  <desc id="light-1-geo-description">Four red viewfinder corners frame a dark circular camera lens with a white play aperture. A small red live signal links the editorial website, video channel and recording studio.</desc>
+
+  <g id="light-1-geo-frame-corners" class="geo-frame-corners" fill="none" stroke="#E52539" stroke-width="15" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M62 29H39A10 10 0 0 0 29 39V62"/>
+    <path d="M138 171H161A10 10 0 0 0 171 161V138"/>
+    <path d="M29 138V161A10 10 0 0 0 39 171H62"/>
+    <path d="M171 62V39A10 10 0 0 0 161 29H138"/>
+  </g>
+  <circle id="light-1-geo-studio-lens" class="geo-studio-lens" cx="100" cy="100" r="50" fill="#0B1A2B"/>
+  <path id="light-1-geo-play-aperture" class="geo-play-aperture" d="M90 78Q86 76 86 81V119Q86 124 90 122L121 103Q126 100 121 97Z" fill="#FFFFFF"/>
+  <circle id="light-1-geo-live-indicator" class="geo-live-indicator" cx="153" cy="47" r="7" fill="#E52539"/>
+</svg>
+<svg x="652" y="626" width="496" height="114"
+  id="lockup-1-02-studio-frame"
+  class="geopoliticalmedia-logo"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 1040 240"
+  role="img"
+  aria-labelledby="lockup-1-geo-title lockup-1-geo-description"
+>
+  <title id="lockup-1-geo-title">GeoPoliticalMedia — Studio Frame wordmark</title>
+  <desc id="lockup-1-geo-description">Four red viewfinder corners frame a dark circular camera lens with a white play aperture. A small red live signal links the editorial website, video channel and recording studio. Paired with the exact GeoPoliticalMedia wordmark.</desc>
+<g id="lockup-1-geo-lockup-mark" class="geo-lockup-mark" transform="translate(12 14) scale(1.06)">
+  <g id="lockup-1-geo-frame-corners" class="geo-frame-corners" fill="none" stroke="#E52539" stroke-width="15" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M62 29H39A10 10 0 0 0 29 39V62"/>
+    <path d="M138 171H161A10 10 0 0 0 171 161V138"/>
+    <path d="M29 138V161A10 10 0 0 0 39 171H62"/>
+    <path d="M171 62V39A10 10 0 0 0 161 29H138"/>
+  </g>
+  <circle id="lockup-1-geo-studio-lens" class="geo-studio-lens" cx="100" cy="100" r="50" fill="#0B1A2B"/>
+  <path id="lockup-1-geo-play-aperture" class="geo-play-aperture" d="M90 78Q86 76 86 81V119Q86 124 90 122L121 103Q126 100 121 97Z" fill="#FFFFFF"/>
+  <circle id="lockup-1-geo-live-indicator" class="geo-live-indicator" cx="153" cy="47" r="7" fill="#E52539"/>
+</g>
+
+  <text id="lockup-1-geo-wordmark" class="geo-wordmark" x="254" y="140" font-family="Arial, Helvetica, sans-serif" font-size="66" font-weight="700" letter-spacing="-2.5" fill="#0B1A2B"><tspan>GeoPolitical</tspan><tspan fill="#E52539">Media</tspan></text>
+</svg>
+<rect x="630" y="830" width="540" height="190" rx="18" fill="#0B1A2B"/>
+<svg x="660" y="860" width="130" height="130"
+  id="dark-1-02-studio-frame-icon"
+  class="geopoliticalmedia-logo"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 200 200"
+  role="img"
+  aria-labelledby="dark-1-geo-title dark-1-geo-description"
+>
+  <title id="dark-1-geo-title">GeoPoliticalMedia — Studio Frame icon</title>
+  <desc id="dark-1-geo-description">Four red viewfinder corners frame a dark circular camera lens with a white play aperture. A small red live signal links the editorial website, video channel and recording studio.</desc>
+
+  <g id="dark-1-geo-frame-corners" class="geo-frame-corners" fill="none" stroke="#E52539" stroke-width="15" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M62 29H39A10 10 0 0 0 29 39V62"/>
+    <path d="M138 171H161A10 10 0 0 0 171 161V138"/>
+    <path d="M29 138V161A10 10 0 0 0 39 171H62"/>
+    <path d="M171 62V39A10 10 0 0 0 161 29H138"/>
+  </g>
+  <circle id="dark-1-geo-studio-lens" class="geo-studio-lens" cx="100" cy="100" r="50" fill="#FFFFFF"/>
+  <path id="dark-1-geo-play-aperture" class="geo-play-aperture" d="M90 78Q86 76 86 81V119Q86 124 90 122L121 103Q126 100 121 97Z" fill="#0B1A2B"/>
+  <circle id="dark-1-geo-live-indicator" class="geo-live-indicator" cx="153" cy="47" r="7" fill="#E52539"/>
+</svg>
+<text x="825" y="924" font-family="Arial, Helvetica, sans-serif" font-size="16" letter-spacing="1" fill="#FFFFFF">DARK PRESENTATION</text>
+<text x="825" y="952" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#B6C0CC">Same mark, inverse ink</text>
+<rect x="1200" y="154" width="540" height="650" rx="18" fill="#FFFFFF"/>
+<text x="1230" y="204" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#0B1A2B">03 — Editorial GPM</text>
+<text x="1230" y="235" font-family="Arial, Helvetica, sans-serif" font-size="12" letter-spacing="1.8" fill="#687585">MASTHEAD / MONOGRAM</text>
+<svg x="1320" y="280" width="300" height="300"
+  id="light-2-03-editorial-gpm-icon"
+  class="geopoliticalmedia-logo"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 200 200"
+  role="img"
+  aria-labelledby="light-2-geo-title light-2-geo-description"
+>
+  <title id="light-2-geo-title">GeoPoliticalMedia — Editorial GPM icon</title>
+  <desc id="light-2-geo-description">A custom GPM monogram sits inside a red editorial masthead tile. The split baseline and the folded upper-right corner suggest a news page and a studio title slate.</desc>
+
+  <path id="light-2-geo-editorial-tile" class="geo-editorial-tile" d="M23 30H143L177 64V158A12 12 0 0 1 165 170H23A12 12 0 0 1 11 158V42A12 12 0 0 1 23 30Z" fill="#E52539"/>
+  <path id="light-2-geo-editorial-fold" class="geo-editorial-fold" d="M143 30V54A10 10 0 0 0 153 64H177Z" fill="#0B1A2B"/>
+  <g id="light-2-geo-gpm-letters" class="geo-gpm-letters" fill="none" stroke="#FFFFFF" stroke-width="8" stroke-linecap="square" stroke-linejoin="miter">
+    <path id="light-2-geo-monogram-g" d="M55 86H44Q31 86 31 100V116Q31 130 44 130H57V110H47"/>
+    <path id="light-2-geo-monogram-p" d="M73 130V86H86Q100 86 100 98Q100 110 86 110H73"/>
+    <path id="light-2-geo-monogram-m" d="M117 130V86L135 109L153 86V130"/>
+  </g>
+  <path id="light-2-geo-masthead-rule" class="geo-masthead-rule" d="M31 149H100M117 149H153" stroke="#FFFFFF" stroke-width="3.5"/>
+</svg>
+<svg x="1222" y="626" width="496" height="114"
+  id="lockup-2-03-editorial-gpm"
+  class="geopoliticalmedia-logo"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 1040 240"
+  role="img"
+  aria-labelledby="lockup-2-geo-title lockup-2-geo-description"
+>
+  <title id="lockup-2-geo-title">GeoPoliticalMedia — Editorial GPM wordmark</title>
+  <desc id="lockup-2-geo-description">A custom GPM monogram sits inside a red editorial masthead tile. The split baseline and the folded upper-right corner suggest a news page and a studio title slate. Paired with the exact GeoPoliticalMedia wordmark.</desc>
+<g id="lockup-2-geo-lockup-mark" class="geo-lockup-mark" transform="translate(12 14) scale(1.06)">
+  <path id="lockup-2-geo-editorial-tile" class="geo-editorial-tile" d="M23 30H143L177 64V158A12 12 0 0 1 165 170H23A12 12 0 0 1 11 158V42A12 12 0 0 1 23 30Z" fill="#E52539"/>
+  <path id="lockup-2-geo-editorial-fold" class="geo-editorial-fold" d="M143 30V54A10 10 0 0 0 153 64H177Z" fill="#0B1A2B"/>
+  <g id="lockup-2-geo-gpm-letters" class="geo-gpm-letters" fill="none" stroke="#FFFFFF" stroke-width="8" stroke-linecap="square" stroke-linejoin="miter">
+    <path id="lockup-2-geo-monogram-g" d="M55 86H44Q31 86 31 100V116Q31 130 44 130H57V110H47"/>
+    <path id="lockup-2-geo-monogram-p" d="M73 130V86H86Q100 86 100 98Q100 110 86 110H73"/>
+    <path id="lockup-2-geo-monogram-m" d="M117 130V86L135 109L153 86V130"/>
+  </g>
+  <path id="lockup-2-geo-masthead-rule" class="geo-masthead-rule" d="M31 149H100M117 149H153" stroke="#FFFFFF" stroke-width="3.5"/>
+</g>
+
+  <text id="lockup-2-geo-wordmark" class="geo-wordmark" x="254" y="140" font-family="Arial, Helvetica, sans-serif" font-size="66" font-weight="700" letter-spacing="-2.5" fill="#0B1A2B"><tspan>GeoPolitical</tspan><tspan fill="#E52539">Media</tspan></text>
+</svg>
+<rect x="1200" y="830" width="540" height="190" rx="18" fill="#0B1A2B"/>
+<svg x="1230" y="860" width="130" height="130"
+  id="dark-2-03-editorial-gpm-icon"
+  class="geopoliticalmedia-logo"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 200 200"
+  role="img"
+  aria-labelledby="dark-2-geo-title dark-2-geo-description"
+>
+  <title id="dark-2-geo-title">GeoPoliticalMedia — Editorial GPM icon</title>
+  <desc id="dark-2-geo-description">A custom GPM monogram sits inside a red editorial masthead tile. The split baseline and the folded upper-right corner suggest a news page and a studio title slate.</desc>
+
+  <path id="dark-2-geo-editorial-tile" class="geo-editorial-tile" d="M23 30H143L177 64V158A12 12 0 0 1 165 170H23A12 12 0 0 1 11 158V42A12 12 0 0 1 23 30Z" fill="#E52539"/>
+  <path id="dark-2-geo-editorial-fold" class="geo-editorial-fold" d="M143 30V54A10 10 0 0 0 153 64H177Z" fill="#0B1A2B"/>
+  <g id="dark-2-geo-gpm-letters" class="geo-gpm-letters" fill="none" stroke="#FFFFFF" stroke-width="8" stroke-linecap="square" stroke-linejoin="miter">
+    <path id="dark-2-geo-monogram-g" d="M55 86H44Q31 86 31 100V116Q31 130 44 130H57V110H47"/>
+    <path id="dark-2-geo-monogram-p" d="M73 130V86H86Q100 86 100 98Q100 110 86 110H73"/>
+    <path id="dark-2-geo-monogram-m" d="M117 130V86L135 109L153 86V130"/>
+  </g>
+  <path id="dark-2-geo-masthead-rule" class="geo-masthead-rule" d="M31 149H100M117 149H153" stroke="#FFFFFF" stroke-width="3.5"/>
+</svg>
+<text x="1395" y="924" font-family="Arial, Helvetica, sans-serif" font-size="16" letter-spacing="1" fill="#FFFFFF">DARK PRESENTATION</text>
+<text x="1395" y="952" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#B6C0CC">Same mark, inverse ink</text>
+</svg>

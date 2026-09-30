@@ -1,0 +1,24 @@
+<svg
+  id="02-studio-frame"
+  class="geopoliticalmedia-logo"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 1040 240"
+  role="img"
+  aria-labelledby="geo-title geo-description"
+>
+  <title id="geo-title">GeoPoliticalMedia — Studio Frame wordmark</title>
+  <desc id="geo-description">Four red viewfinder corners frame a dark circular camera lens with a white play aperture. A small red live signal links the editorial website, video channel and recording studio. Paired with the exact GeoPoliticalMedia wordmark.</desc>
+<g id="geo-lockup-mark" class="geo-lockup-mark" transform="translate(12 14) scale(1.06)">
+  <g id="geo-frame-corners" class="geo-frame-corners" fill="none" stroke="#E52539" stroke-width="15" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M62 29H39A10 10 0 0 0 29 39V62"/>
+    <path d="M138 171H161A10 10 0 0 0 171 161V138"/>
+    <path d="M29 138V161A10 10 0 0 0 39 171H62"/>
+    <path d="M171 62V39A10 10 0 0 0 161 29H138"/>
+  </g>
+  <circle id="geo-studio-lens" class="geo-studio-lens" cx="100" cy="100" r="50" fill="#0B1A2B"/>
+  <path id="geo-play-aperture" class="geo-play-aperture" d="M90 78Q86 76 86 81V119Q86 124 90 122L121 103Q126 100 121 97Z" fill="#FFFFFF"/>
+  <circle id="geo-live-indicator" class="geo-live-indicator" cx="153" cy="47" r="7" fill="#E52539"/>
+</g>
+
+  <text id="geo-wordmark" class="geo-wordmark" x="254" y="140" font-family="Arial, Helvetica, sans-serif" font-size="66" font-weight="700" letter-spacing="-2.5" fill="#0B1A2B"><tspan>GeoPolitical</tspan><tspan fill="#E52539">Media</tspan></text>
+</svg>
